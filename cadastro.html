@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro | Pingo de Esperança</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <p>Pingo de Esperança</p>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="projetos.html">Projetos</a>
+
+            <a href="cadastro.html" class="link-coracao">
+                <span class="coracao">♡</span>
+                <span>Cadastre-se</span>
+            </a>
+
+            <a href="index.html#contato" class="link-ajuda">
+                <span class="icone-ajuda">?</span>
+                <span>Ajuda</span>
+            </a>
+        </nav>
+    </header>
+
+
+    <main>
+
+        <section class="introducao-cadastro">
+
+            <span class="icone-cadastro">♡</span>
+
+            <h1>Cadastre-se</h1>
+
+            <p>
+                Preencha seus dados para fazer parte das iniciativas
+                da Pingo de Esperança e contribuir para nossas ações.
+            </p>
+
+            <p class="legenda-obrigatorio">
+                <span>*</span> Campo obrigatório
+            </p>
+
+        </section>
+
+
+        <form action="#" method="post">
+
+            <fieldset>
+
+                <legend>Dados pessoais</legend>
+
+                <div class="campos-grid">
+
+                    <div class="campo">
+                        <label for="nome">
+                            Nome completo <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="nome"
+                               name="nome"
+                               required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="nome-social">
+                            Nome social
+                        </label>
+
+                        <input type="text"
+                               id="nome-social"
+                               name="nome-social">
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="email">
+                            E-mail <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="nascimento">
+                            Data de nascimento <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="date"
+                               id="nascimento"
+                               name="nascimento"
+                               required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="cpf">
+                            CPF <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="cpf"
+                               name="cpf"
+                               pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                               placeholder="000.000.000-00"
+                               maxlength="14"
+                               required>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+                <legend>Contato</legend>
+
+                <div class="campo">
+
+                    <label for="telefone">
+                        Telefone <span class="asterisco">*</span>
+                    </label>
+
+                    <input type="tel"
+                           id="telefone"
+                           name="telefone"
+                           pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                           placeholder="(11) 99999-9999"
+                           maxlength="15"
+                           required>
+
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+                <legend>Endereço</legend>
+
+                <div class="campos-grid">
+
+                    <div class="campo">
+                        <label for="cep">
+                            CEP <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="cep"
+                               name="cep"
+                               pattern="[0-9]{5}-[0-9]{3}"
+                               placeholder="00000-000"
+                               maxlength="9"
+                               required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="numero">
+                            Número <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="numero"
+                               name="numero"
+                               placeholder="Ex.: 100 ou s/n"
+                               required>
+                    </div>
+
+
+                    <div class="campo campo-largo">
+                        <label for="endereco">
+                            Endereço <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="endereco"
+                               name="endereco"
+                               required>
+                    </div>
+
+
+                    <div class="campo campo-largo">
+                        <label for="complemento">
+                            Complemento
+                        </label>
+
+                        <input type="text"
+                               id="complemento"
+                               name="complemento"
+                               placeholder="Ex.: apartamento 12">
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="cidade">
+                            Cidade <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="cidade"
+                               name="cidade"
+                               required>
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="estado">
+                            Estado <span class="asterisco">*</span>
+                        </label>
+
+                        <input type="text"
+                               id="estado"
+                               name="estado"
+                               required>
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <fieldset>
+
+                <legend>Como deseja contribuir?</legend>
+
+                <p class="descricao-contribuicao">
+                    Selecione uma ou mais opções:
+                </p>
+
+                <div class="opcoes-contribuicao">
+
+                    <label class="opcao-contribuicao">
+
+                        <input type="checkbox"
+                               name="voluntariado">
+
+                        <span>
+                            <strong>Trabalho voluntário</strong>
+                            <small>Participar das ações e campanhas.</small>
+                        </span>
+
+                    </label>
+
+
+                    <label class="opcao-contribuicao">
+
+                        <input type="checkbox"
+                               name="doacao">
+
+                        <span>
+                            <strong>Contribuição financeira</strong>
+                            <small>Apoiar a manutenção dos projetos.</small>
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <div class="area-envio">
+
+                <button type="submit">
+                    ♡ Enviar cadastro
+                </button>
+
+                <p class="texto-ajuda">
+                    Sua participação pode fazer a diferença.
+                </p>
+
+            </div>
+
+        </form>
+
+
+        <p id="mensagem-sucesso" hidden>
+            Cadastro realizado com sucesso! Obrigado por querer fazer parte
+            da Pingo de Esperança.
+        </p>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Pingo de Esperança. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        const cpf = document.getElementById("cpf");
+        const telefone = document.getElementById("telefone");
+        const cep = document.getElementById("cep");
+        const formulario = document.querySelector("form");
+        const mensagemSucesso = document.getElementById("mensagem-sucesso");
+
+        cpf.addEventListener("input", function () {
+
+            let valor = cpf.value.replace(/\D/g, "");
+
+            valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+            valor = valor.replace(/(\d{3})(\d)/, "$1.$2");
+            valor = valor.replace(/(\d{3})(\d{1,2})$/, "$1-$2");
+
+            cpf.value = valor;
+
+        });
+
+
+        telefone.addEventListener("input", function () {
+
+            let valor = telefone.value.replace(/\D/g, "");
+
+            if (valor.length <= 10) {
+
+                valor = valor.replace(/(\d{2})(\d)/, "($1) $2");
+                valor = valor.replace(/(\d{4})(\d)/, "$1-$2");
+
+            } else {
+
+                valor = valor.replace(/(\d{2})(\d)/, "($1) $2");
+                valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+            }
+
+            telefone.value = valor;
+
+        });
+
+
+        cep.addEventListener("input", function () {
+
+            let valor = cep.value.replace(/\D/g, "");
+
+            valor = valor.replace(/(\d{5})(\d)/, "$1-$2");
+
+            cep.value = valor;
+
+        });
+
+
+        formulario.addEventListener("submit", function (event) {
+
+            event.preventDefault();
+
+            if (formulario.checkValidity()) {
+
+                mensagemSucesso.hidden = false;
+
+                formulario.reset();
+
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
