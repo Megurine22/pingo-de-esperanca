@@ -1,0 +1,2466 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Cadastro | Pingo de Esperança
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+<body>
+
+    <header id="topo">
+
+        <div class="cabecalho-topo">
+
+            <p>
+                Pingo de Esperança
+            </p>
+
+
+            <button
+                type="button"
+                class="botao-menu"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <nav
+            id="menu-principal"
+            class="menu-principal">
+
+            <a href="index.html">
+
+                <span
+                    class="icone-menu-principal"
+                    aria-hidden="true">
+                    ⌂
+                </span>
+
+                <span>
+                    Início
+                </span>
+
+            </a>
+
+
+            <div class="menu-dropdown">
+
+                <button
+                    type="button"
+                    class="botao-dropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="submenu-projetos">
+
+                    <span>
+                        Projetos
+                    </span>
+
+                    <span
+                        class="seta-dropdown"
+                        aria-hidden="true">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="submenu-projetos"
+                    class="submenu">
+
+                    <a href="projetos.html">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ▦
+                        </span>
+
+                        <span>
+                            Todos os projetos
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="projetos.html#voluntariado">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ✚
+                        </span>
+
+                        <span>
+                            Voluntariado
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="projetos.html#doacoes">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ♥
+                        </span>
+
+                        <span>
+                            Doações
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="cadastro.html"
+                class="link-coracao">
+
+                <span
+                    class="coracao"
+                    aria-hidden="true">
+                    ♡
+                </span>
+
+                <span>
+                    Cadastre-se
+                </span>
+
+            </a>
+
+
+            <a
+                href="index.html#contato"
+                class="link-ajuda">
+
+                <span
+                    class="icone-ajuda"
+                    aria-hidden="true">
+                    ?
+                </span>
+
+                <span>
+                    Ajuda
+                </span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+             INTRODUÇÃO
+             ======================================== -->
+
+        <section class="introducao-cadastro">
+
+            <span class="icone-cadastro">
+                ♡
+            </span>
+
+            <h1>
+                Cadastre-se
+            </h1>
+
+            <p>
+                Preencha seus dados para fazer parte das iniciativas
+                da Pingo de Esperança e contribuir para nossas ações.
+            </p>
+
+            <p class="legenda-obrigatorio">
+
+                <span>
+                    *
+                </span>
+
+                Campo obrigatório
+
+            </p>
+
+        </section>
+
+
+        <!-- ========================================
+             FORMULÁRIO
+             ======================================== -->
+
+        <form
+            action="#"
+            method="post"
+            id="formulario-cadastro"
+            novalidate>
+
+
+            <!-- ========================================
+                 DADOS PESSOAIS
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Dados pessoais
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Dados pessoais
+
+                </div>
+
+
+                <div class="campos-grid">
+
+
+                    <div class="campo">
+
+                        <label for="nome">
+
+                            Nome completo
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Ellen Rita"
+                            autocomplete="name"
+                            title="Digite seu nome completo, incluindo pelo menos nome e sobrenome."
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nome-social">
+                            Nome social
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nome-social"
+                            name="nome-social"
+                            placeholder="Digite seu nome social"
+                            autocomplete="nickname">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+
+                            E-mail
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@email.com"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nascimento">
+
+                            Data de nascimento
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            min="1900-01-01"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cpf">
+
+                            CPF
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                            autocomplete="off"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 CONTATO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Contato
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Contato
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefone">
+
+                        Telefone
+
+                        <span class="asterisco">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}"
+                        placeholder="(11) 99999-9999"
+                        maxlength="15"
+                        autocomplete="tel"
+                        required>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 ENDEREÇO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Endereço
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Endereço
+
+                </div>
+
+
+                <div class="campos-grid">
+
+
+                    <div class="campo">
+
+                        <label for="cep">
+
+                            CEP
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            pattern="[0-9]{5}-[0-9]{3}"
+                            placeholder="00000-000"
+                            maxlength="9"
+                            autocomplete="postal-code"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="numero">
+
+                            Número
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="numero"
+                            name="numero"
+                            placeholder="Ex.: 100 ou s/n"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo campo-largo">
+
+                        <label for="endereco">
+
+                            Endereço
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ .'-]{3,100}"
+                            title="Digite somente o nome do logradouro, sem números."
+                            placeholder="Ex.: Avenida das Acácias"
+                            autocomplete="street-address"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo campo-largo">
+
+                        <label for="complemento">
+                            Complemento
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="complemento"
+                            name="complemento"
+                            placeholder="Ex.: apartamento 12">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cidade">
+
+                            Cidade
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            list="lista-cidades"
+                            autocomplete="off"
+                            placeholder="Selecione o estado primeiro"
+                            required
+                            disabled>
+
+
+                        <datalist
+                            id="lista-cidades">
+                        </datalist>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="estado">
+
+                            Estado
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="estado"
+                            name="estado"
+                            list="lista-estados"
+                            autocomplete="off"
+                            placeholder="Digite para buscar"
+                            required>
+
+
+                        <datalist
+                            id="lista-estados">
+                        </datalist>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 CONTRIBUIÇÃO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Como deseja contribuir?
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Como deseja contribuir?
+
+                </div>
+
+
+                <p class="descricao-contribuicao">
+
+                    Selecione uma ou mais opções:
+
+                </p>
+
+
+                <div class="opcoes-contribuicao">
+
+
+                    <label
+                        class="opcao-contribuicao">
+
+
+                        <input
+                            type="checkbox"
+                            name="voluntariado"
+                            value="voluntariado">
+
+
+                        <span
+                            class="icone-opcao"
+                            aria-hidden="true">
+
+                            ✚
+
+                        </span>
+
+
+                        <span class="texto-opcao">
+
+                            <span
+                                class="linha-opcao-titulo">
+
+                                <strong>
+                                    Trabalho voluntário
+                                </strong>
+
+
+                                <span
+                                    class="badge-contribuicao badge-voluntario">
+
+                                    VOLUNTÁRIO
+
+                                </span>
+
+                            </span>
+
+
+                            <small>
+                                Participar das ações e campanhas.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label
+                        class="opcao-contribuicao">
+
+
+                        <input
+                            type="checkbox"
+                            name="doacao"
+                            value="doacao">
+
+
+                        <span
+                            class="icone-opcao"
+                            aria-hidden="true">
+
+                            ♥
+
+                        </span>
+
+
+                        <span class="texto-opcao">
+
+                            <span
+                                class="linha-opcao-titulo">
+
+                                <strong>
+                                    Contribuição financeira
+                                </strong>
+
+
+                                <span
+                                    class="badge-contribuicao badge-doacao">
+
+                                    DOAÇÃO
+
+                                </span>
+
+                            </span>
+
+
+                            <small>
+                                Apoiar a manutenção dos projetos.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 ENVIO
+                 ======================================== -->
+
+            <div class="area-envio">
+
+                <button
+                    type="submit"
+                    id="botao-enviar">
+
+                    ♡ Enviar cadastro
+
+                </button>
+
+
+                <p class="texto-ajuda">
+
+                    Sua participação pode fazer a diferença.
+
+                </p>
+
+            </div>
+
+        </form>
+
+
+        <!-- ========================================
+             MODAL DAS DUAS CONTRIBUIÇÕES
+             ======================================== -->
+
+        <dialog
+            id="modal-contribuicao"
+            class="modal-confirmacao"
+            aria-labelledby="titulo-modal-contribuicao">
+
+
+            <div class="modal-conteudo">
+
+
+                <span
+                    class="modal-icone"
+                    aria-hidden="true">
+
+                    ?
+
+                </span>
+
+
+                <h2 id="titulo-modal-contribuicao">
+
+                    Duas formas de contribuição
+
+                </h2>
+
+
+                <p>
+
+                    Você selecionou trabalho voluntário e
+                    contribuição financeira. Deseja continuar
+                    com as duas opções?
+
+                </p>
+
+
+                <div class="modal-acoes">
+
+
+                    <button
+                        type="button"
+                        class="botao-modal cancelar"
+                        id="cancelar-contribuicao">
+
+                        Não, voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="botao-modal confirmar"
+                        id="confirmar-contribuicao">
+
+                        Sim, continuar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- ========================================
+             MODAL DE FEEDBACK
+             ======================================== -->
+
+        <dialog
+            id="modal-feedback"
+            class="modal-feedback"
+            aria-labelledby="titulo-modal-feedback"
+            aria-describedby="mensagem-modal-feedback">
+
+
+            <div class="modal-conteudo">
+
+
+                <span
+                    id="icone-modal-feedback"
+                    class="modal-icone"
+                    aria-hidden="true">
+
+                    !
+
+                </span>
+
+
+                <h2 id="titulo-modal-feedback">
+
+                    Atenção
+
+                </h2>
+
+
+                <p id="mensagem-modal-feedback">
+
+                    Verifique os campos do formulário.
+
+                </p>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-modal confirmar"
+                        id="acao-modal-feedback">
+
+                        Entendi
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+    </main>
+
+
+    <a
+        href="#topo"
+        class="botao-topo"
+        aria-label="Voltar ao cabeçalho"
+        title="Voltar ao cabeçalho">
+
+        ↑
+
+    </a>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 Pingo de Esperança.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <script>
+
+        /* ========================================
+           MENU
+           ======================================== */
+
+        const botaoMenu =
+            document.querySelector(
+                ".botao-menu"
+            );
+
+
+        const menuPrincipal =
+            document.getElementById(
+                "menu-principal"
+            );
+
+
+        const botoesDropdown =
+            document.querySelectorAll(
+                ".botao-dropdown"
+            );
+
+
+        botaoMenu.addEventListener(
+            "click",
+            function () {
+
+                const aberto =
+                    botaoMenu.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                botaoMenu.setAttribute(
+                    "aria-expanded",
+                    String(!aberto)
+                );
+
+
+                botaoMenu.setAttribute(
+                    "aria-label",
+                    aberto
+                        ? "Abrir menu"
+                        : "Fechar menu"
+                );
+
+
+                menuPrincipal.classList.toggle(
+                    "menu-aberto",
+                    !aberto
+                );
+
+            }
+        );
+
+
+        botoesDropdown.forEach(
+            function (botao) {
+
+                botao.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.stopPropagation();
+
+
+                        const dropdown =
+                            botao.closest(
+                                ".menu-dropdown"
+                            );
+
+
+                        const aberto =
+                            botao.getAttribute(
+                                "aria-expanded"
+                            ) === "true";
+
+
+                        botoesDropdown.forEach(
+                            function (outroBotao) {
+
+                                outroBotao.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+
+                                outroBotao
+                                    .closest(
+                                        ".menu-dropdown"
+                                    )
+                                    .classList.remove(
+                                        "submenu-aberto"
+                                    );
+
+                            }
+                        );
+
+
+                        if (!aberto) {
+
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+
+                            dropdown.classList.add(
+                                "submenu-aberto"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !event.target.closest(
+                        ".menu-dropdown"
+                    )
+                    &&
+                    !event.target.closest(
+                        ".botao-menu"
+                    )
+                ) {
+
+                    botoesDropdown.forEach(
+                        function (botao) {
+
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+
+                            botao
+                                .closest(
+                                    ".menu-dropdown"
+                                )
+                                .classList.remove(
+                                    "submenu-aberto"
+                                );
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth > 699
+                ) {
+
+                    menuPrincipal.classList.remove(
+                        "menu-aberto"
+                    );
+
+
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    botaoMenu.setAttribute(
+                        "aria-label",
+                        "Abrir menu"
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ========================================
+           CAMPOS
+           ======================================== */
+
+        const formulario =
+            document.getElementById(
+                "formulario-cadastro"
+            );
+
+
+        const nome =
+            document.getElementById(
+                "nome"
+            );
+
+
+        const cpf =
+            document.getElementById(
+                "cpf"
+            );
+
+
+        const telefone =
+            document.getElementById(
+                "telefone"
+            );
+
+
+        const cep =
+            document.getElementById(
+                "cep"
+            );
+
+
+        const endereco =
+            document.getElementById(
+                "endereco"
+            );
+
+
+        const estado =
+            document.getElementById(
+                "estado"
+            );
+
+
+        const cidade =
+            document.getElementById(
+                "cidade"
+            );
+
+
+        const nascimento =
+            document.getElementById(
+                "nascimento"
+            );
+
+
+        const listaEstados =
+            document.getElementById(
+                "lista-estados"
+            );
+
+
+        const listaCidades =
+            document.getElementById(
+                "lista-cidades"
+            );
+
+
+        const hoje =
+            new Date();
+
+
+        nascimento.max =
+            `${hoje.getFullYear()}-${
+                String(
+                    hoje.getMonth() + 1
+                ).padStart(
+                    2,
+                    "0"
+                )
+            }-${
+                String(
+                    hoje.getDate()
+                ).padStart(
+                    2,
+                    "0"
+                )
+            }`;
+
+
+        /* ========================================
+           MÁSCARA CPF
+           ======================================== */
+
+        cpf.addEventListener(
+            "input",
+            function () {
+
+                let valor =
+                    cpf.value.replace(
+                        /\D/g,
+                        ""
+                    );
+
+
+                valor =
+                    valor.replace(
+                        /(\d{3})(\d)/,
+                        "$1.$2"
+                    );
+
+
+                valor =
+                    valor.replace(
+                        /(\d{3})(\d)/,
+                        "$1.$2"
+                    );
+
+
+                valor =
+                    valor.replace(
+                        /(\d{3})(\d{1,2})$/,
+                        "$1-$2"
+                    );
+
+
+                cpf.value =
+                    valor;
+
+            }
+        );
+
+
+        /* ========================================
+           MÁSCARA TELEFONE
+           ======================================== */
+
+        telefone.addEventListener(
+            "input",
+            function () {
+
+                let valor =
+                    telefone.value.replace(
+                        /\D/g,
+                        ""
+                    );
+
+
+                if (
+                    valor.length <= 10
+                ) {
+
+                    valor =
+                        valor.replace(
+                            /(\d{2})(\d)/,
+                            "($1) $2"
+                        );
+
+
+                    valor =
+                        valor.replace(
+                            /(\d{4})(\d)/,
+                            "$1-$2"
+                        );
+
+                } else {
+
+                    valor =
+                        valor.replace(
+                            /(\d{2})(\d)/,
+                            "($1) $2"
+                        );
+
+
+                    valor =
+                        valor.replace(
+                            /(\d{5})(\d)/,
+                            "$1-$2"
+                        );
+
+                }
+
+
+                telefone.value =
+                    valor;
+
+            }
+        );
+
+
+        /* ========================================
+           MÁSCARA CEP
+           ======================================== */
+
+        cep.addEventListener(
+            "input",
+            function () {
+
+                let valor =
+                    cep.value.replace(
+                        /\D/g,
+                        ""
+                    );
+
+
+                valor =
+                    valor.replace(
+                        /(\d{5})(\d)/,
+                        "$1-$2"
+                    );
+
+
+                cep.value =
+                    valor;
+
+            }
+        );
+
+
+        /* ========================================
+           NOME COMPLETO
+           ======================================== */
+
+        nome.addEventListener(
+            "input",
+            function () {
+
+                nome.value =
+                    nome.value.replace(
+                        /[^A-Za-zÀ-ÖØ-öø-ÿ '-]/g,
+                        ""
+                    );
+
+
+                const palavras =
+                    nome.value
+                        .trim()
+                        .split(/\s+/)
+                        .filter(
+                            function (
+                                palavra
+                            ) {
+
+                                return (
+                                    palavra.length >
+                                    0
+                                );
+
+                            }
+                        );
+
+
+                if (
+                    nome.value.trim() === ""
+                    ||
+                    palavras.length >= 2
+                ) {
+
+                    nome.setCustomValidity(
+                        ""
+                    );
+
+                } else {
+
+                    nome.setCustomValidity(
+                        "Digite seu nome completo, incluindo pelo menos nome e sobrenome."
+                    );
+
+                }
+
+
+                atualizarEstadoCampo(
+                    nome
+                );
+
+            }
+        );
+
+
+        /* ========================================
+           ENDEREÇO
+           ======================================== */
+
+        endereco.addEventListener(
+            "input",
+            function () {
+
+                endereco.value =
+                    endereco.value.replace(
+                        /[^A-Za-zÀ-ÖØ-öø-ÿ .'-]/g,
+                        ""
+                    );
+
+            }
+        );
+
+
+        /* ========================================
+           ESTADOS DO BRASIL
+           ======================================== */
+
+        const estadosBrasil = [
+
+            {
+                id: 12,
+                sigla: "AC",
+                nome: "Acre"
+            },
+
+            {
+                id: 27,
+                sigla: "AL",
+                nome: "Alagoas"
+            },
+
+            {
+                id: 16,
+                sigla: "AP",
+                nome: "Amapá"
+            },
+
+            {
+                id: 13,
+                sigla: "AM",
+                nome: "Amazonas"
+            },
+
+            {
+                id: 29,
+                sigla: "BA",
+                nome: "Bahia"
+            },
+
+            {
+                id: 23,
+                sigla: "CE",
+                nome: "Ceará"
+            },
+
+            {
+                id: 53,
+                sigla: "DF",
+                nome: "Distrito Federal"
+            },
+
+            {
+                id: 32,
+                sigla: "ES",
+                nome: "Espírito Santo"
+            },
+
+            {
+                id: 52,
+                sigla: "GO",
+                nome: "Goiás"
+            },
+
+            {
+                id: 21,
+                sigla: "MA",
+                nome: "Maranhão"
+            },
+
+            {
+                id: 51,
+                sigla: "MT",
+                nome: "Mato Grosso"
+            },
+
+            {
+                id: 50,
+                sigla: "MS",
+                nome: "Mato Grosso do Sul"
+            },
+
+            {
+                id: 31,
+                sigla: "MG",
+                nome: "Minas Gerais"
+            },
+
+            {
+                id: 15,
+                sigla: "PA",
+                nome: "Pará"
+            },
+
+            {
+                id: 25,
+                sigla: "PB",
+                nome: "Paraíba"
+            },
+
+            {
+                id: 41,
+                sigla: "PR",
+                nome: "Paraná"
+            },
+
+            {
+                id: 26,
+                sigla: "PE",
+                nome: "Pernambuco"
+            },
+
+            {
+                id: 22,
+                sigla: "PI",
+                nome: "Piauí"
+            },
+
+            {
+                id: 33,
+                sigla: "RJ",
+                nome: "Rio de Janeiro"
+            },
+
+            {
+                id: 24,
+                sigla: "RN",
+                nome: "Rio Grande do Norte"
+            },
+
+            {
+                id: 43,
+                sigla: "RS",
+                nome: "Rio Grande do Sul"
+            },
+
+            {
+                id: 11,
+                sigla: "RO",
+                nome: "Rondônia"
+            },
+
+            {
+                id: 14,
+                sigla: "RR",
+                nome: "Roraima"
+            },
+
+            {
+                id: 42,
+                sigla: "SC",
+                nome: "Santa Catarina"
+            },
+
+            {
+                id: 35,
+                sigla: "SP",
+                nome: "São Paulo"
+            },
+
+            {
+                id: 28,
+                sigla: "SE",
+                nome: "Sergipe"
+            },
+
+            {
+                id: 17,
+                sigla: "TO",
+                nome: "Tocantins"
+            }
+
+        ];
+
+
+        estadosBrasil.forEach(
+            function (item) {
+
+                const opcao =
+                    document.createElement(
+                        "option"
+                    );
+
+
+                opcao.value =
+                    item.nome;
+
+
+                listaEstados.appendChild(
+                    opcao
+                );
+
+            }
+        );
+
+
+        /* ========================================
+           CIDADES
+           ======================================== */
+
+        let cidadesDisponiveis = [];
+
+
+        async function carregarCidades(
+            estadoSelecionado
+        ) {
+
+            cidade.value =
+                "";
+
+            listaCidades.innerHTML =
+                "";
+
+            cidade.disabled =
+                true;
+
+            cidade.placeholder =
+                "Carregando cidades...";
+
+            cidade.setCustomValidity(
+                ""
+            );
+
+
+            const estadoEncontrado =
+                estadosBrasil.find(
+                    function (item) {
+
+                        return (
+                            item.nome
+                                .toLowerCase() ===
+                            estadoSelecionado
+                                .trim()
+                                .toLowerCase()
+                        );
+
+                    }
+                );
+
+
+            if (
+                !estadoEncontrado
+            ) {
+
+                cidade.placeholder =
+                    "Selecione um estado válido";
+
+
+                cidade.setCustomValidity(
+                    "Selecione um estado da lista."
+                );
+
+                return;
+
+            }
+
+
+            try {
+
+                const resposta =
+                    await fetch(
+                        "https://servicodados.ibge.gov.br/api/v1/localidades/estados/"
+                        + estadoEncontrado.id
+                        + "/municipios"
+                    );
+
+
+                if (
+                    !resposta.ok
+                ) {
+
+                    throw new Error(
+                        "Erro ao carregar municípios."
+                    );
+
+                }
+
+
+                const municipios =
+                    await resposta.json();
+
+
+                cidadesDisponiveis =
+                    municipios
+                        .map(
+                            function (item) {
+                                return item.nome;
+                            }
+                        )
+                        .sort(
+                            function (
+                                a,
+                                b
+                            ) {
+
+                                return a.localeCompare(
+                                    b,
+                                    "pt-BR"
+                                );
+
+                            }
+                        );
+
+
+                cidadesDisponiveis.forEach(
+                    function (
+                        nomeCidade
+                    ) {
+
+                        const opcao =
+                            document.createElement(
+                                "option"
+                            );
+
+
+                        opcao.value =
+                            nomeCidade;
+
+
+                        listaCidades.appendChild(
+                            opcao
+                        );
+
+                    }
+                );
+
+
+                cidade.disabled =
+                    false;
+
+
+                cidade.placeholder =
+                    "Digite para buscar a cidade";
+
+
+                cidade.focus();
+
+
+            } catch (erro) {
+
+                console.error(
+                    "Não foi possível carregar as cidades:",
+                    erro
+                );
+
+
+                cidadesDisponiveis =
+                    [];
+
+
+                cidade.disabled =
+                    false;
+
+
+                cidade.placeholder =
+                    "Digite a cidade";
+
+
+                cidade.setCustomValidity(
+                    ""
+                );
+
+            }
+
+        }
+
+
+        estado.addEventListener(
+            "change",
+            function () {
+
+                carregarCidades(
+                    estado.value
+                );
+
+            }
+        );
+
+
+        estado.addEventListener(
+            "input",
+            function () {
+
+                const estadoEncontrado =
+                    estadosBrasil.some(
+                        function (item) {
+
+                            return (
+                                item.nome
+                                    .toLowerCase() ===
+                                estado.value
+                                    .trim()
+                                    .toLowerCase()
+                            );
+
+                        }
+                    );
+
+
+                if (
+                    estadoEncontrado
+                ) {
+
+                    estado.setCustomValidity(
+                        ""
+                    );
+
+
+                    carregarCidades(
+                        estado.value
+                    );
+
+                } else {
+
+                    cidade.value =
+                        "";
+
+
+                    cidade.disabled =
+                        true;
+
+
+                    listaCidades.innerHTML =
+                        "";
+
+
+                    cidade.placeholder =
+                        "Selecione o estado primeiro";
+
+
+                    estado.setCustomValidity(
+                        "Selecione um estado da lista."
+                    );
+
+                }
+
+            }
+        );
+
+
+        cidade.addEventListener(
+            "input",
+            function () {
+
+                if (
+                    cidadesDisponiveis.length ===
+                    0
+                ) {
+
+                    cidade.setCustomValidity(
+                        ""
+                    );
+
+                    return;
+
+                }
+
+
+                const cidadeValida =
+                    cidadesDisponiveis.some(
+                        function (
+                            nomeCidade
+                        ) {
+
+                            return (
+                                nomeCidade
+                                    .toLowerCase() ===
+                                cidade.value
+                                    .trim()
+                                    .toLowerCase()
+                            );
+
+                        }
+                    );
+
+
+                if (
+                    cidade.value.trim() === ""
+                    ||
+                    cidadeValida
+                ) {
+
+                    cidade.setCustomValidity(
+                        ""
+                    );
+
+                } else {
+
+                    cidade.setCustomValidity(
+                        "Selecione uma cidade da lista."
+                    );
+
+                }
+
+            }
+        );
+
+
+        /* ========================================
+           FEEDBACK VISUAL
+           ======================================== */
+
+        const camposValidacao =
+            formulario.querySelectorAll(
+                'input[type="text"], ' +
+                'input[type="email"], ' +
+                'input[type="date"], ' +
+                'input[type="tel"]'
+            );
+
+
+        function atualizarEstadoCampo(
+            campo,
+            marcarVazioComoErro = false
+        ) {
+
+            if (
+                campo.value.trim() === ""
+            ) {
+
+                campo.classList.remove(
+                    "campo-valido"
+                );
+
+
+                if (
+                    marcarVazioComoErro &&
+                    campo.required
+                ) {
+
+                    campo.classList.add(
+                        "campo-invalido"
+                    );
+
+                } else {
+
+                    campo.classList.remove(
+                        "campo-invalido"
+                    );
+
+                }
+
+                return;
+
+            }
+
+
+            if (
+                campo.checkValidity()
+            ) {
+
+                campo.classList.add(
+                    "campo-valido"
+                );
+
+                campo.classList.remove(
+                    "campo-invalido"
+                );
+
+            } else {
+
+                campo.classList.add(
+                    "campo-invalido"
+                );
+
+                campo.classList.remove(
+                    "campo-valido"
+                );
+
+            }
+
+        }
+
+
+        camposValidacao.forEach(
+            function (campo) {
+
+                campo.addEventListener(
+                    "input",
+                    function () {
+
+                        atualizarEstadoCampo(
+                            campo
+                        );
+
+                    }
+                );
+
+
+                campo.addEventListener(
+                    "blur",
+                    function () {
+
+                        atualizarEstadoCampo(
+                            campo
+                        );
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ========================================
+           CONTRIBUIÇÕES
+           ======================================== */
+
+        const checkboxVoluntariado =
+            document.querySelector(
+                'input[name="voluntariado"]'
+            );
+
+
+        const checkboxDoacao =
+            document.querySelector(
+                'input[name="doacao"]'
+            );
+
+
+        const opcoesContribuicao =
+            document.querySelectorAll(
+                ".opcao-contribuicao"
+            );
+
+
+        let ultimaOpcaoSelecionada =
+            null;
+
+
+        function atualizarVisualCheckboxes() {
+
+            opcoesContribuicao.forEach(
+                function (opcao) {
+
+                    const checkbox =
+                        opcao.querySelector(
+                            'input[type="checkbox"]'
+                        );
+
+
+                    opcao.classList.toggle(
+                        "selecionada",
+                        checkbox.checked
+                    );
+
+                }
+            );
+
+        }
+
+
+        opcoesContribuicao.forEach(
+            function (opcao) {
+
+                const checkbox =
+                    opcao.querySelector(
+                        'input[type="checkbox"]'
+                    );
+
+
+                checkbox.addEventListener(
+                    "change",
+                    function () {
+
+                        if (
+                            checkbox.checked
+                        ) {
+
+                            ultimaOpcaoSelecionada =
+                                checkbox;
+
+                        }
+
+
+                        atualizarVisualCheckboxes();
+
+
+                        if (
+                            checkboxVoluntariado.checked
+                            &&
+                            checkboxDoacao.checked
+                        ) {
+
+                            abrirConfirmacao();
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* ========================================
+           MODAL DAS DUAS CONTRIBUIÇÕES
+           ======================================== */
+
+        const modalContribuicao =
+            document.getElementById(
+                "modal-contribuicao"
+            );
+
+
+        const confirmarContribuicao =
+            document.getElementById(
+                "confirmar-contribuicao"
+            );
+
+
+        const cancelarContribuicao =
+            document.getElementById(
+                "cancelar-contribuicao"
+            );
+
+
+        function abrirConfirmacao() {
+
+            if (
+                typeof modalContribuicao.showModal ===
+                "function"
+            ) {
+
+                modalContribuicao.showModal();
+
+            }
+
+        }
+
+
+        confirmarContribuicao.addEventListener(
+            "click",
+            function () {
+
+                modalContribuicao.close();
+
+                atualizarVisualCheckboxes();
+
+            }
+        );
+
+
+        cancelarContribuicao.addEventListener(
+            "click",
+            function () {
+
+                if (
+                    ultimaOpcaoSelecionada
+                ) {
+
+                    ultimaOpcaoSelecionada.checked =
+                        false;
+
+                }
+
+
+                modalContribuicao.close();
+
+                atualizarVisualCheckboxes();
+
+            }
+        );
+
+
+        /* ========================================
+           MODAL DE FEEDBACK
+           ======================================== */
+
+        const modalFeedback =
+            document.getElementById(
+                "modal-feedback"
+            );
+
+
+        const tituloModalFeedback =
+            document.getElementById(
+                "titulo-modal-feedback"
+            );
+
+
+        const mensagemModalFeedback =
+            document.getElementById(
+                "mensagem-modal-feedback"
+            );
+
+
+        const iconeModalFeedback =
+            document.getElementById(
+                "icone-modal-feedback"
+            );
+
+
+        const acaoModalFeedback =
+            document.getElementById(
+                "acao-modal-feedback"
+            );
+
+
+        let acaoFeedback =
+            null;
+
+
+        function abrirFeedback(
+            tipo,
+            titulo,
+            mensagem,
+            textoBotao,
+            acao
+        ) {
+
+            modalFeedback.classList.remove(
+                "feedback-alerta",
+                "feedback-sucesso"
+            );
+
+
+            modalFeedback.classList.add(
+                tipo
+            );
+
+
+            tituloModalFeedback.textContent =
+                titulo;
+
+
+            mensagemModalFeedback.textContent =
+                mensagem;
+
+
+            acaoModalFeedback.textContent =
+                textoBotao;
+
+
+            iconeModalFeedback.textContent =
+                tipo === "feedback-sucesso"
+                    ? "✓"
+                    : "!";
+
+
+            acaoFeedback =
+                acao;
+
+
+            if (
+                typeof modalFeedback.showModal ===
+                "function"
+            ) {
+
+                modalFeedback.showModal();
+
+            }
+
+        }
+
+
+        acaoModalFeedback.addEventListener(
+            "click",
+            function () {
+
+                modalFeedback.close();
+
+
+                if (
+                    typeof acaoFeedback ===
+                    "function"
+                ) {
+
+                    acaoFeedback();
+
+                }
+
+            }
+        );
+
+
+        modalFeedback.addEventListener(
+            "close",
+            function () {
+
+                acaoFeedback =
+                    null;
+
+            }
+        );
+
+
+        /* ========================================
+           ENVIO
+           ======================================== */
+
+        formulario.addEventListener(
+            "submit",
+            function (event) {
+
+                event.preventDefault();
+
+
+                camposValidacao.forEach(
+                    function (campo) {
+
+                        atualizarEstadoCampo(
+                            campo,
+                            true
+                        );
+
+                    }
+                );
+
+
+                if (
+                    !formulario.checkValidity()
+                ) {
+
+                    const primeiroInvalido =
+                        formulario.querySelector(
+                            ":invalid"
+                        );
+
+
+                    abrirFeedback(
+
+                        "feedback-alerta",
+
+                        "Verifique o formulário",
+
+                        "Existem campos obrigatórios vazios ou preenchidos incorretamente. Vamos direcionar você para o primeiro campo que precisa de correção.",
+
+                        "Ir para o campo",
+
+                        function () {
+
+                            if (
+                                primeiroInvalido
+                            ) {
+
+                                primeiroInvalido.scrollIntoView(
+                                    {
+                                        behavior:
+                                            "smooth",
+
+                                        block:
+                                            "center"
+                                    }
+                                );
+
+
+                                primeiroInvalido.focus();
+
+                            }
+
+                        }
+
+                    );
+
+
+                    return;
+
+                }
+
+
+                if (
+                    !checkboxVoluntariado.checked
+                    &&
+                    !checkboxDoacao.checked
+                ) {
+
+                    const primeiraOpcao =
+                        document.querySelector(
+                            ".opcao-contribuicao input"
+                        );
+
+
+                    abrirFeedback(
+
+                        "feedback-alerta",
+
+                        "Escolha uma forma de contribuição",
+
+                        "Selecione pelo menos uma opção: trabalho voluntário ou contribuição financeira.",
+
+                        "Escolher opção",
+
+                        function () {
+
+                            primeiraOpcao
+                                .closest(
+                                    ".opcao-contribuicao"
+                                )
+                                .scrollIntoView(
+                                    {
+                                        behavior:
+                                            "smooth",
+
+                                        block:
+                                            "center"
+                                    }
+                                );
+
+
+                            primeiraOpcao.focus();
+
+                        }
+
+                    );
+
+
+                    return;
+
+                }
+
+
+                /* ========================================
+                   SUCESSO
+                   ======================================== */
+
+                formulario.reset();
+
+
+                cidade.value =
+                    "";
+
+
+                cidade.disabled =
+                    true;
+
+
+                cidade.placeholder =
+                    "Selecione o estado primeiro";
+
+
+                listaCidades.innerHTML =
+                    "";
+
+
+                cidadesDisponiveis =
+                    [];
+
+
+                camposValidacao.forEach(
+                    function (campo) {
+
+                        campo.classList.remove(
+                            "campo-valido",
+                            "campo-invalido"
+                        );
+
+                    }
+                );
+
+
+                atualizarVisualCheckboxes();
+
+
+                abrirFeedback(
+
+                    "feedback-sucesso",
+
+                    "Cadastro realizado com sucesso!",
+
+                    "Obrigado por querer fazer parte da Pingo de Esperança.",
+
+                    "Fechar",
+
+                    null
+
+                );
+
+            }
+        );
+
+        </script>
+
+
+    <!-- =================================================
+         VALIDAÇÃO DO FORMULÁRIO
+         ================================================= -->
+
+    <script
+        src="../js/jsvalidacao-formulario.js">
+    </script>
+
+
+</body>
+
+</html>

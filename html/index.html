@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Pingo de Esperança
+    </title>
+
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================================
+         CABEÇALHO
+         ===================================================== -->
+
+    <header id="topo">
+
+
+        <div class="cabecalho-topo">
+
+
+            <h1>
+
+                Pingo de Esperança
+
+            </h1>
+
+
+            <button
+                type="button"
+                class="botao-menu"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+
+                <span></span>
+
+                <span></span>
+
+                <span></span>
+
+            </button>
+
+
+        </div>
+
+
+        <!-- =================================================
+             NAVEGAÇÃO PRINCIPAL
+             ================================================= -->
+
+        <nav
+            id="menu-principal"
+            class="menu-principal">
+
+
+            <!-- INÍCIO -->
+
+            <a
+                href="#inicio"
+                data-rota="inicio">
+
+
+                <span
+                    class="icone-menu-principal"
+                    aria-hidden="true">
+
+                    ⌂
+
+                </span>
+
+
+                <span>
+
+                    Início
+
+                </span>
+
+
+            </a>
+
+
+            <!-- PROJETOS -->
+
+            <div class="menu-dropdown">
+
+
+                <button
+                    type="button"
+                    class="botao-dropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="submenu-projetos">
+
+
+                    <span>
+
+                        Projetos
+
+                    </span>
+
+
+                    <span
+                        class="seta-dropdown"
+                        aria-hidden="true">
+
+                        ⌄
+
+                    </span>
+
+
+                </button>
+
+
+                <div
+                    id="submenu-projetos"
+                    class="submenu">
+
+
+                    <a
+                        href="#projetos/projetos-sociais"
+                        data-rota="projetos"
+                        data-alvo="projetos-sociais">
+
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+
+                            ▦
+
+                        </span>
+
+
+                        <span>
+
+                            Todos os projetos
+
+                        </span>
+
+
+                    </a>
+
+
+                    <a
+                        href="#projetos/voluntariado"
+                        data-rota="projetos"
+                        data-alvo="voluntariado">
+
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+
+                            ✚
+
+                        </span>
+
+
+                        <span>
+
+                            Voluntariado
+
+                        </span>
+
+
+                    </a>
+
+
+                    <a
+                        href="#projetos/doacoes"
+                        data-rota="projetos"
+                        data-alvo="doacoes">
+
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+
+                            ♥
+
+                        </span>
+
+
+                        <span>
+
+                            Doações
+
+                        </span>
+
+
+                    </a>
+
+
+                    <a
+                        href="#projetos/campanhas"
+                        data-rota="projetos"
+                        data-alvo="campanhas">
+
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+
+                            ✦
+
+                        </span>
+
+
+                        <span>
+
+                            Campanhas e atividades
+
+                        </span>
+
+
+                    </a>
+
+
+                </div>
+
+
+            </div>
+
+
+            <!-- CADASTRO -->
+
+            <a
+                href="#cadastro"
+                data-rota="cadastro"
+                class="link-coracao">
+
+
+                <span
+                    class="coracao"
+                    aria-hidden="true">
+
+                    ♡
+
+                </span>
+
+
+                <span>
+
+                    Cadastre-se
+
+                </span>
+
+
+            </a>
+
+
+            <!-- AJUDA -->
+
+            <a
+                href="#inicio/contato"
+                data-rota="inicio"
+                data-alvo="contato"
+                class="link-ajuda">
+
+
+                <span
+                    class="icone-ajuda"
+                    aria-hidden="true">
+
+                    ?
+
+                </span>
+
+
+                <span>
+
+                    Ajuda
+
+                </span>
+
+
+            </a>
+
+
+        </nav>
+
+
+    </header>
+
+
+    <!-- =====================================================
+         ÁREA PRINCIPAL DA SPA
+         ===================================================== -->
+
+    <main>
+
+
+        <div id="app"></div>
+
+
+    </main>
+
+
+    <!-- =====================================================
+         BOTÃO INTELIGENTE DE ROLAGEM
+         ===================================================== -->
+
+    <button
+        type="button"
+        id="botao-scroll"
+        class="botao-scroll"
+        hidden
+        aria-label="Descer para o final da página"
+        title="Descer para o final da página">
+
+
+        ↓
+
+
+    </button>
+
+
+    <!-- =====================================================
+         RODAPÉ
+         ===================================================== -->
+
+    <footer>
+
+
+        <p>
+
+            &copy; 2026 Pingo de Esperança.
+            Todos os direitos reservados.
+
+
+        </p>
+
+
+    </footer>
+
+
+    <!-- =====================================================
+         CONTROLE DO MENU HAMBÚRGUER E DROPDOWN
+         ===================================================== -->
+
+    <script>
+
+        const botaoMenu =
+            document.querySelector(
+                ".botao-menu"
+            );
+
+
+        const menuPrincipal =
+            document.getElementById(
+                "menu-principal"
+            );
+
+
+        const botoesDropdown =
+            document.querySelectorAll(
+                ".botao-dropdown"
+            );
+
+
+        /* =================================================
+           MENU HAMBÚRGUER
+           ================================================= */
+
+        if (
+            botaoMenu &&
+            menuPrincipal
+        ) {
+
+            botaoMenu.addEventListener(
+                "click",
+                function () {
+
+                    const aberto =
+                        botaoMenu.getAttribute(
+                            "aria-expanded"
+                        ) ===
+                        "true";
+
+
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        String(
+                            !aberto
+                        )
+                    );
+
+
+                    botaoMenu.setAttribute(
+                        "aria-label",
+                        aberto
+                            ? "Abrir menu"
+                            : "Fechar menu"
+                    );
+
+
+                    menuPrincipal.classList.toggle(
+                        "menu-aberto",
+                        !aberto
+                    );
+
+                }
+            );
+
+        }
+
+
+        /* =================================================
+           DROPDOWN DE PROJETOS
+           ================================================= */
+
+        botoesDropdown.forEach(
+            function (
+                botao
+            ) {
+
+                botao.addEventListener(
+                    "click",
+                    function (
+                        event
+                    ) {
+
+                        event.stopPropagation();
+
+
+                        const dropdown =
+                            botao.closest(
+                                ".menu-dropdown"
+                            );
+
+
+                        if (
+                            !dropdown
+                        ) {
+
+                            return;
+
+                        }
+
+
+                        const aberto =
+                            botao.getAttribute(
+                                "aria-expanded"
+                            ) ===
+                            "true";
+
+
+                        /*
+                         * Fecha outros dropdowns.
+                         */
+
+                        botoesDropdown.forEach(
+                            function (
+                                outroBotao
+                            ) {
+
+                                outroBotao.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+
+                                const outroDropdown =
+                                    outroBotao.closest(
+                                        ".menu-dropdown"
+                                    );
+
+
+                                if (
+                                    outroDropdown
+                                ) {
+
+                                    outroDropdown.classList.remove(
+                                        "submenu-aberto"
+                                    );
+
+                                }
+
+                            }
+                        );
+
+
+                        /*
+                         * Abre o atual caso estivesse fechado.
+                         */
+
+                        if (
+                            !aberto
+                        ) {
+
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+
+                            dropdown.classList.add(
+                                "submenu-aberto"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           CLICAR FORA DO MENU
+           ================================================= */
+
+        document.addEventListener(
+            "click",
+            function (
+                event
+            ) {
+
+                if (
+                    event.target.closest(
+                        ".menu-dropdown"
+                    )
+                    ||
+                    event.target.closest(
+                        ".botao-menu"
+                    )
+                ) {
+
+                    return;
+
+                }
+
+
+                botoesDropdown.forEach(
+                    function (
+                        botao
+                    ) {
+
+                        botao.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        const dropdown =
+                            botao.closest(
+                                ".menu-dropdown"
+                            );
+
+
+                        if (
+                            dropdown
+                        ) {
+
+                            dropdown.classList.remove(
+                                "submenu-aberto"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        /* =================================================
+           REDIMENSIONAMENTO
+           ================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth >
+                    699
+                ) {
+
+                    if (
+                        menuPrincipal
+                    ) {
+
+                        menuPrincipal.classList.remove(
+                            "menu-aberto"
+                        );
+
+                    }
+
+
+                    if (
+                        botaoMenu
+                    ) {
+
+                        botaoMenu.setAttribute(
+                            "aria-expanded",
+                            "false"
+                        );
+
+
+                        botaoMenu.setAttribute(
+                            "aria-label",
+                            "Abrir menu"
+                        );
+
+                    }
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <!-- =====================================================
+         VUE 3
+         ===================================================== -->
+
+    <script
+        src="https://unpkg.com/vue@3/dist/vue.global.js">
+    </script>
+
+
+    <!-- =====================================================
+         COMPONENTE VUE
+         ===================================================== -->
+
+    <script
+        src="../js/vue-widget.js">
+    </script>
+
+
+    <!-- =====================================================
+         APLICAÇÃO PRINCIPAL
+         ===================================================== -->
+
+    <script
+        type="module"
+        src="../js/app.js">
+    </script>
+
+
+</body>
+
+</html>
