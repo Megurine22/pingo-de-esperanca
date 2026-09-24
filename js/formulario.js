@@ -1263,27 +1263,10 @@ export function inicializarFormulario() {
         }
 
 
-        telefone.classList.remove(
-            "campo-valido",
-            "campo-invalido"
+        atualizarEstadoCampo(
+            telefone,
+            true
         );
-
-
-        if (
-            valido
-        ) {
-
-            telefone.classList.add(
-                "campo-valido"
-            );
-
-        } else {
-
-            telefone.classList.add(
-                "campo-invalido"
-            );
-
-        }
 
 
         return valido;
@@ -1466,6 +1449,12 @@ export function inicializarFormulario() {
             );
 
 
+            numero.setAttribute(
+                "aria-invalid",
+                "false"
+            );
+
+
             numero.classList.remove(
                 "campo-valido",
                 "campo-invalido"
@@ -1494,27 +1483,10 @@ export function inicializarFormulario() {
         );
 
 
-        numero.classList.remove(
-            "campo-valido",
-            "campo-invalido"
+        atualizarEstadoCampo(
+            numero,
+            true
         );
-
-
-        if (
-            valido
-        ) {
-
-            numero.classList.add(
-                "campo-valido"
-            );
-
-        } else {
-
-            numero.classList.add(
-                "campo-invalido"
-            );
-
-        }
 
 
         return valido;
@@ -1559,6 +1531,12 @@ export function inicializarFormulario() {
             numero.classList.remove(
                 "campo-valido",
                 "campo-invalido"
+            );
+
+
+            numero.setAttribute(
+                "aria-invalid",
+                "false"
             );
 
         } else {
@@ -2135,6 +2113,12 @@ export function inicializarFormulario() {
             !campo.value.trim()
         ) {
 
+            campo.setAttribute(
+                "aria-invalid",
+                "false"
+            );
+
+
             if (
                 marcarVazio &&
                 campo.required
@@ -2142,6 +2126,12 @@ export function inicializarFormulario() {
 
                 campo.classList.add(
                     "campo-invalido"
+                );
+
+
+                campo.setAttribute(
+                    "aria-invalid",
+                    "true"
                 );
 
             }
@@ -2160,10 +2150,22 @@ export function inicializarFormulario() {
                 "campo-valido"
             );
 
+
+            campo.setAttribute(
+                "aria-invalid",
+                "false"
+            );
+
         } else {
 
             campo.classList.add(
                 "campo-invalido"
+            );
+
+
+            campo.setAttribute(
+                "aria-invalid",
+                "true"
             );
 
         }
