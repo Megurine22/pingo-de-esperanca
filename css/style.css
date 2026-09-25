@@ -1,10 +1,5 @@
-/* =========================================================
-   DESIGN SYSTEM
-   ========================================================= */
-
 :root {
 
-    /* CORES */
     --cor-azul-escuro: #0d47a1;
     --cor-azul-principal: #1565c0;
     --cor-azul-medio: #1976d2;
@@ -30,7 +25,6 @@
     --cor-placeholder: #90a4ae;
 
 
-    /* TIPOGRAFIA */
     --fonte-principal:
         "Segoe UI",
         Arial,
@@ -42,6 +36,7 @@
         Arial,
         sans-serif;
 
+
     --texto-xs: 0.875rem;
     --texto-sm: 1rem;
     --texto-md: 1.375rem;
@@ -49,7 +44,6 @@
     --texto-xl: 2.25rem;
 
 
-    /* ESPAÇAMENTOS */
     --espaco-1: 0.5rem;
     --espaco-2: 1rem;
     --espaco-3: 1.5rem;
@@ -58,7 +52,6 @@
     --espaco-6: 4rem;
 
 
-    /* RAIOS */
     --raio-sm: 9px;
     --raio-md: 12px;
     --raio-lg: 16px;
@@ -66,7 +59,6 @@
     --raio-pill: 30px;
 
 
-    /* SOMBRAS */
     --sombra-suave:
         0 5px 18px
         rgba(21, 101, 192, 0.08);
@@ -92,12 +84,10 @@
         rgba(211, 47, 47, 0.12);
 
 
-    /* TRANSIÇÕES */
     --transicao-padrao: 0.25s ease;
     --transicao-rapida: 0.2s ease;
 
 
-    /* GRADIENTES */
     --gradiente-cabecalho:
         linear-gradient(
             135deg,
@@ -136,17 +126,15 @@
 }
 
 
-/* =========================================================
-   RESET
-   ========================================================= */
-
 * {
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
+
 
 body {
 
@@ -167,14 +155,17 @@ body {
         var(--cor-fundo);
 }
 
+
 img {
     max-width: 100%;
 }
+
 
 a {
     color:
         var(--cor-azul-principal);
 }
+
 
 button,
 input,
@@ -190,11 +181,9 @@ textarea {
 
 main {
 
-    width:
-        100%;
+    width: 100%;
 
-    max-width:
-        1150px;
+    max-width: 1150px;
 
     margin:
         0 auto;
@@ -219,6 +208,7 @@ main {
         var(--espaco-5);
 }
 
+
 main > section,
 main > form {
 
@@ -227,15 +217,12 @@ main > form {
 }
 
 
-/* =========================================================
-   CONTÊINER DA SPA
-   ========================================================= */
-
 #app {
 
     display:
         contents;
 }
+
 
 #app > section,
 #app > form {
@@ -274,6 +261,7 @@ header {
         );
 }
 
+
 .cabecalho-topo {
 
     display:
@@ -289,14 +277,15 @@ header {
         column;
 }
 
-.cabecalho-topo h1 {
+
+.cabecalho-topo p {
 
     margin:
         0 0
         var(--espaco-3);
 
     color:
-        var(--cor-azul-escuro);
+        var(--cor-branco);
 
     font-family:
         var(--fonte-titulos);
@@ -331,6 +320,7 @@ header {
         wrap;
 }
 
+
 .menu-principal > a,
 .botao-dropdown {
 
@@ -359,6 +349,7 @@ header {
         var(--transicao-padrao);
 }
 
+
 .menu-principal > a {
 
     display:
@@ -374,6 +365,7 @@ header {
         var(--espaco-1);
 }
 
+
 .menu-principal > a:hover,
 .botao-dropdown:hover {
 
@@ -388,6 +380,7 @@ header {
     transform:
         translateY(-2px);
 }
+
 
 .menu-principal > a:focus-visible,
 .botao-dropdown:focus-visible {
@@ -443,6 +436,7 @@ header {
         var(--transicao-padrao);
 }
 
+
 .menu-principal > a:hover
 .icone-menu-principal {
 
@@ -463,6 +457,7 @@ header {
     position:
         relative;
 }
+
 
 .botao-dropdown {
 
@@ -488,6 +483,7 @@ header {
         pointer;
 }
 
+
 .seta-dropdown {
 
     font-size:
@@ -498,6 +494,7 @@ header {
         var(--transicao-padrao);
 }
 
+
 .menu-dropdown.submenu-aberto
 .seta-dropdown {
 
@@ -507,6 +504,7 @@ header {
     color:
         var(--cor-destaque);
 }
+
 
 .submenu {
 
@@ -567,13 +565,12 @@ header {
     transition:
         opacity
         var(--transicao-padrao),
-
         transform
         var(--transicao-padrao),
-
         visibility
         var(--transicao-padrao);
 }
+
 
 .menu-dropdown.submenu-aberto
 .submenu {
@@ -593,6 +590,7 @@ header {
             0
         );
 }
+
 
 .submenu a {
 
@@ -621,6 +619,7 @@ header {
         var(--transicao-rapida);
 }
 
+
 .submenu a:hover,
 .submenu a:focus-visible {
 
@@ -630,6 +629,7 @@ header {
     transform:
         translateX(3px);
 }
+
 
 .icone-menu-item {
 
@@ -672,6 +672,7 @@ header {
         700;
 }
 
+
 .submenu a:hover
 .icone-menu-item {
 
@@ -711,6 +712,7 @@ header {
         );
 }
 
+
 .coracao {
 
     color:
@@ -722,6 +724,7 @@ header {
     transition:
         var(--transicao-padrao);
 }
+
 
 .link-coracao:hover {
 
@@ -736,6 +739,7 @@ header {
     border-color:
         var(--cor-branco);
 }
+
 
 .link-coracao:hover
 .coracao {
@@ -763,6 +767,7 @@ header {
     gap:
         var(--espaco-1);
 }
+
 
 .icone-ajuda {
 
@@ -797,7 +802,7 @@ header {
 
 
 /* =========================================================
-   HAMBÚRGUER
+   MENU HAMBÚRGUER
    ========================================================= */
 
 .botao-menu {
@@ -828,6 +833,7 @@ header {
         pointer;
 }
 
+
 .botao-menu span {
 
     display:
@@ -852,6 +858,7 @@ header {
         var(--transicao-padrao);
 }
 
+
 .botao-menu[aria-expanded="true"]
 span:nth-child(1) {
 
@@ -860,12 +867,14 @@ span:nth-child(1) {
         rotate(45deg);
 }
 
+
 .botao-menu[aria-expanded="true"]
 span:nth-child(2) {
 
     opacity:
         0;
 }
+
 
 .botao-menu[aria-expanded="true"]
 span:nth-child(3) {
@@ -877,7 +886,7 @@ span:nth-child(3) {
 
 
 /* =========================================================
-   TÍTULOS
+   TIPOGRAFIA
    ========================================================= */
 
 h1,
@@ -891,15 +900,18 @@ h3 {
         var(--cor-azul-escuro);
 }
 
+
 h1 {
     font-size:
         var(--texto-xl);
 }
 
+
 h2 {
     font-size:
         var(--texto-lg);
 }
+
 
 h3 {
     font-size:
@@ -943,6 +955,7 @@ main > section {
     overflow:
         hidden;
 }
+
 
 .sobre .carrossel {
 
@@ -989,6 +1002,7 @@ main > section {
         );
 }
 
+
 .sobre .carrossel img {
 
     position:
@@ -1017,6 +1031,7 @@ main > section {
         0.25s ease;
 }
 
+
 .indicadores {
 
     display:
@@ -1035,6 +1050,7 @@ main > section {
         14px 0
         var(--espaco-3);
 }
+
 
 .indicador {
 
@@ -1063,11 +1079,13 @@ main > section {
         var(--transicao-padrao);
 }
 
+
 .indicador:hover {
 
     transform:
         scale(1.2);
 }
+
 
 .indicador.ativo {
 
@@ -1077,6 +1095,7 @@ main > section {
     background:
         var(--cor-azul-principal);
 }
+
 
 .sobre p {
 
@@ -1092,7 +1111,7 @@ main > section {
 
 
 /* =========================================================
-   PARTICIPE
+   PARTICIPE / CHAMADA
    ========================================================= */
 
 .participe,
@@ -1104,6 +1123,7 @@ main > section {
     background:
         var(--gradiente-claro);
 }
+
 
 .decoracao-coracao,
 .icone-chamada {
@@ -1118,6 +1138,7 @@ main > section {
         42px;
 }
 
+
 .participe p,
 .chamada-projetos p {
 
@@ -1129,10 +1150,6 @@ main > section {
         var(--espaco-3);
 }
 
-
-/* =========================================================
-   BOTÃO PRINCIPAL
-   ========================================================= */
 
 .botao-participar {
 
@@ -1164,6 +1181,7 @@ main > section {
         var(--transicao-padrao);
 }
 
+
 .botao-participar:hover {
 
     color:
@@ -1193,6 +1211,7 @@ main > section {
         hidden;
 }
 
+
 .icone-redes {
 
     display:
@@ -1204,6 +1223,7 @@ main > section {
     font-size:
         35px;
 }
+
 
 .lista-redes {
 
@@ -1231,6 +1251,7 @@ main > section {
     z-index:
         1;
 }
+
 
 .lista-redes .rede {
 
@@ -1283,19 +1304,16 @@ main > section {
     transition:
         background-color
         var(--transicao-padrao),
-
         color
         var(--transicao-padrao),
-
         transform
         var(--transicao-padrao),
-
         box-shadow
         var(--transicao-padrao),
-
         border-color
         var(--transicao-padrao);
 }
+
 
 .simbolo-rede {
 
@@ -1333,16 +1351,14 @@ main > section {
         var(--transicao-padrao);
 }
 
-.rede-linkedin .simbolo-rede {
+
+.rede-linkedin
+.simbolo-rede {
 
     font-size:
         18px;
 }
 
-
-/* =========================================================
-   HOVER INDIVIDUAL DAS REDES
-   ========================================================= */
 
 .lista-redes .rede:hover {
 
@@ -1366,8 +1382,6 @@ main > section {
 }
 
 
-/* INSTAGRAM */
-
 .lista-redes .rede.rede-instagram:hover {
 
     background:
@@ -1377,41 +1391,29 @@ main > section {
             #fd1d1d,
             #fcb045
         ) !important;
-
 }
 
-
-/* FACEBOOK */
 
 .lista-redes .rede.rede-facebook:hover {
 
     background:
         #1877f2 !important;
-
 }
 
-
-/* YOUTUBE */
 
 .lista-redes .rede.rede-youtube:hover {
 
     background:
         #e62117 !important;
-
 }
 
-
-/* LINKEDIN */
 
 .lista-redes .rede.rede-linkedin:hover {
 
     background:
         #0a66c2 !important;
-
 }
 
-
-/* ÍCONE DURANTE O HOVER */
 
 .lista-redes .rede:hover
 .simbolo-rede {
@@ -1426,10 +1428,6 @@ main > section {
         scale(1.08);
 }
 
-
-/* =========================================================
-   FOCO DAS REDES
-   ========================================================= */
 
 .lista-redes .rede:focus-visible {
 
@@ -1457,6 +1455,7 @@ main > section {
     gap:
         var(--espaco-3);
 }
+
 
 .icone-contato {
 
@@ -1487,6 +1486,7 @@ main > section {
     color:
         var(--cor-branco);
 }
+
 
 address {
 
@@ -1525,6 +1525,7 @@ address {
         var(--gradiente-claro);
 }
 
+
 .simbolo-projetos {
 
     display:
@@ -1536,6 +1537,7 @@ address {
     font-size:
         42px;
 }
+
 
 .projetos {
 
@@ -1555,11 +1557,13 @@ address {
         var(--espaco-3);
 }
 
+
 .projetos h2 {
 
     grid-column:
         1 / -1;
 }
+
 
 .card-projeto {
 
@@ -1586,6 +1590,7 @@ address {
         var(--transicao-padrao);
 }
 
+
 .card-projeto:hover {
 
     transform:
@@ -1600,6 +1605,7 @@ address {
             0.14
         );
 }
+
 
 .icone-projeto,
 .icone-secao {
@@ -1619,33 +1625,38 @@ address {
    VOLUNTARIADO
    ========================================================= */
 
-.voluntariado {
+.voluntariado,
+.doacoes {
 
     text-align:
         center;
 }
 
-.voluntariado > ol {
+
+.voluntariado ol {
 
     max-width:
-        820px;
+        900px;
 
     margin:
         var(--espaco-3)
-        auto;
+        auto
+        0;
 
     padding-left:
-        24px;
+        28px;
 
     text-align:
         left;
 }
 
-.voluntariado > ol li {
 
-    padding:
-        4px 0;
+.voluntariado li {
+
+    margin-bottom:
+        8px;
 }
+
 
 .niveis-voluntariado {
 
@@ -1670,6 +1681,7 @@ address {
     text-align:
         left;
 }
+
 
 .nivel-voluntario {
 
@@ -1708,6 +1720,7 @@ address {
         var(--transicao-padrao);
 }
 
+
 .nivel-voluntario:hover {
 
     transform:
@@ -1723,6 +1736,7 @@ address {
         );
 }
 
+
 .nivel-voluntario h3 {
 
     margin:
@@ -1731,6 +1745,7 @@ address {
     font-size:
         1.05rem;
 }
+
 
 .nivel-voluntario p {
 
@@ -1743,6 +1758,7 @@ address {
     font-size:
         var(--texto-xs);
 }
+
 
 .nivel-icone {
 
@@ -1785,6 +1801,7 @@ address {
         700;
 }
 
+
 .badge-nivel {
 
     display:
@@ -1806,6 +1823,7 @@ address {
         800;
 }
 
+
 .badge-novo {
 
     color:
@@ -1814,6 +1832,7 @@ address {
     background:
         #d9edff;
 }
+
 
 .badge-ativo {
 
@@ -1824,6 +1843,7 @@ address {
         #e4f4e6;
 }
 
+
 .badge-destaque {
 
     color:
@@ -1832,6 +1852,7 @@ address {
     background:
         #ffe0e8;
 }
+
 
 .badge-embaixador {
 
@@ -1853,6 +1874,7 @@ address {
         center;
 }
 
+
 .texto-campanhas {
 
     max-width:
@@ -1865,6 +1887,7 @@ address {
     color:
         var(--cor-texto-secundario);
 }
+
 
 .lista-campanhas {
 
@@ -1886,6 +1909,7 @@ address {
     text-align:
         left;
 }
+
 
 .campanha-card {
 
@@ -1915,6 +1939,7 @@ address {
         var(--transicao-padrao);
 }
 
+
 .campanha-card:hover {
 
     transform:
@@ -1929,6 +1954,7 @@ address {
             0.14
         );
 }
+
 
 .campanha-cabecalho {
 
@@ -1945,11 +1971,13 @@ address {
         var(--espaco-2);
 }
 
+
 .campanha-cabecalho h3 {
 
     margin:
         0 0 8px;
 }
+
 
 .campanha-icone {
 
@@ -1989,6 +2017,7 @@ address {
         20px;
 }
 
+
 .badge-status {
 
     display:
@@ -2007,6 +2036,7 @@ address {
         800;
 }
 
+
 .status-andamento {
 
     color:
@@ -2015,6 +2045,7 @@ address {
     background:
         #e4f4e6;
 }
+
 
 .status-planejada {
 
@@ -2025,12 +2056,14 @@ address {
         #d9edff;
 }
 
+
 .campanha-card > p {
 
     margin:
         var(--espaco-2)
         0;
 }
+
 
 .campanha-meta {
 
@@ -2056,11 +2089,13 @@ address {
         var(--texto-xs);
 }
 
+
 .campanha-meta strong {
 
     color:
         var(--cor-azul-principal);
 }
+
 
 .barra-progresso {
 
@@ -2082,6 +2117,7 @@ address {
     background:
         #dceaf6;
 }
+
 
 .barra-progresso span {
 
@@ -2122,6 +2158,7 @@ address {
         var(--raio-lg);
 }
 
+
 .opcoes-votacao {
 
     display:
@@ -2139,6 +2176,7 @@ address {
     gap:
         var(--espaco-2);
 }
+
 
 .opcao-votacao {
 
@@ -2189,6 +2227,7 @@ address {
         var(--transicao-padrao);
 }
 
+
 .opcao-votacao:hover {
 
     border-color:
@@ -2201,6 +2240,7 @@ address {
         var(--sombra-suave);
 }
 
+
 .opcao-votacao:focus-visible {
 
     outline:
@@ -2210,6 +2250,7 @@ address {
     outline-offset:
         3px;
 }
+
 
 .opcao-votacao.voto-selecionado {
 
@@ -2223,6 +2264,7 @@ address {
         var(--sombra-sucesso);
 }
 
+
 .opcao-votacao:disabled:not(
     .voto-selecionado
 ) {
@@ -2233,6 +2275,7 @@ address {
     cursor:
         not-allowed;
 }
+
 
 .icone-voto {
 
@@ -2246,10 +2289,10 @@ address {
         center;
 
     width:
-        38px;
+        42px;
 
     height:
-        38px;
+        42px;
 
     flex-shrink:
         0;
@@ -2269,18 +2312,9 @@ address {
         var(--cor-destaque);
 
     font-size:
-        18px;
+        20px;
 }
 
-.voto-selecionado
-.icone-voto {
-
-    background:
-        var(--cor-sucesso);
-
-    color:
-        var(--cor-branco);
-}
 
 .texto-voto {
 
@@ -2297,6 +2331,7 @@ address {
         1;
 }
 
+
 .texto-voto small {
 
     color:
@@ -2305,6 +2340,7 @@ address {
     font-size:
         var(--texto-xs);
 }
+
 
 .contador-votos {
 
@@ -2321,6 +2357,7 @@ address {
         700;
 }
 
+
 .mensagem-votacao {
 
     min-height:
@@ -2328,8 +2365,7 @@ address {
 
     margin:
         var(--espaco-2)
-        0
-        0;
+        0 0;
 
     color:
         var(--cor-sucesso);
@@ -2337,6 +2373,7 @@ address {
     font-weight:
         700;
 }
+
 
 .acao-campanha {
 
@@ -2346,6 +2383,7 @@ address {
     text-align:
         center;
 }
+
 
 .botao-campanha {
 
@@ -2380,6 +2418,7 @@ address {
         var(--transicao-padrao);
 }
 
+
 .botao-campanha:hover {
 
     transform:
@@ -2394,38 +2433,26 @@ address {
    FORMULÁRIO DE CAMPANHA
    ========================================================= */
 
-.form-campanha-grid {
+.form-campanha {
 
-    display:
-        grid;
+    max-width:
+        100%;
 
-    grid-template-columns:
-        repeat(
-            12,
-            minmax(
-                0,
-                1fr
-            )
-        );
+    margin:
+        var(--espaco-3)
+        0 0;
 
-    gap:
-        var(--espaco-2);
+    text-align:
+        left;
 }
+
 
 .campo-campanha {
 
-    grid-column:
-        span 6;
-
-    min-width:
-        0;
+    margin-bottom:
+        var(--espaco-2);
 }
 
-.campo-campanha-largo {
-
-    grid-column:
-        1 / -1;
-}
 
 .campo-campanha label {
 
@@ -2439,6 +2466,7 @@ address {
         600;
 }
 
+
 .campo-campanha input,
 .campo-campanha textarea {
 
@@ -2446,7 +2474,7 @@ address {
         100%;
 
     padding:
-        11px 13px;
+        12px 14px;
 
     border:
         1px solid
@@ -2455,24 +2483,26 @@ address {
     border-radius:
         var(--raio-sm);
 
-    background:
-        var(--cor-branco);
-
     font-family:
         inherit;
 
     font-size:
         15px;
 
+    background:
+        var(--cor-branco);
+
     transition:
         var(--transicao-rapida);
 }
+
 
 .campo-campanha textarea {
 
     resize:
         vertical;
 }
+
 
 .campo-campanha input:focus,
 .campo-campanha textarea:focus {
@@ -2494,58 +2524,28 @@ address {
 }
 
 
-/* =========================================================
-   FORMULÁRIO
-   ========================================================= */
-
-.introducao-cadastro {
-
-    text-align:
-        center;
-
-    background:
-        var(--gradiente-claro);
-}
-
-.icone-cadastro {
+.form-campanha-grid {
 
     display:
-        block;
+        grid;
 
-    color:
-        var(--cor-destaque);
+    grid-template-columns:
+        repeat(
+            2,
+            minmax(
+                0,
+                1fr
+            )
+        );
 
-    font-size:
-        46px;
-
-    line-height:
-        1;
-}
-
-.introducao-cadastro h1 {
-
-    margin:
-        0 0
+    gap:
         var(--espaco-2);
 }
 
-.introducao-cadastro p {
 
-    max-width:
-        850px;
-
-    margin:
-        8px auto;
-}
-
-.legenda-obrigatorio {
-
-    color:
-        var(--cor-texto-secundario);
-
-    font-size:
-        var(--texto-xs);
-}
+/* =========================================================
+   FORMULÁRIO
+   ========================================================= */
 
 form {
 
@@ -2560,6 +2560,7 @@ form {
         auto
         0;
 }
+
 
 fieldset {
 
@@ -2593,6 +2594,7 @@ fieldset {
         );
 }
 
+
 legend {
 
     color:
@@ -2610,6 +2612,7 @@ legend {
     padding:
         0 10px;
 }
+
 
 .campos-grid {
 
@@ -2630,6 +2633,7 @@ legend {
         22px;
 }
 
+
 .campo {
 
     grid-column:
@@ -2639,11 +2643,13 @@ legend {
         0;
 }
 
+
 .campo-largo {
 
     grid-column:
         1 / -1;
 }
+
 
 label {
 
@@ -2656,6 +2662,7 @@ label {
     font-weight:
         600;
 }
+
 
 input[type="text"],
 input[type="email"],
@@ -2688,6 +2695,7 @@ input[type="tel"] {
         var(--transicao-rapida);
 }
 
+
 input:focus {
 
     outline:
@@ -2706,11 +2714,13 @@ input:focus {
         );
 }
 
+
 input::placeholder {
 
     color:
         var(--cor-placeholder);
 }
+
 
 input:disabled {
 
@@ -2719,10 +2729,8 @@ input:disabled {
 
     color:
         var(--cor-texto-secundario);
-
-    cursor:
-        not-allowed;
 }
+
 
 input.campo-valido {
 
@@ -2736,6 +2744,7 @@ input.campo-valido {
         var(--sombra-sucesso);
 }
 
+
 input.campo-invalido {
 
     border-color:
@@ -2748,6 +2757,7 @@ input.campo-invalido {
         var(--sombra-erro);
 }
 
+
 .asterisco {
 
     color:
@@ -2759,7 +2769,65 @@ input.campo-invalido {
 
 
 /* =========================================================
-   CONTRIBUIÇÕES
+   INTRODUÇÃO CADASTRO
+   ========================================================= */
+
+.introducao-cadastro {
+
+    text-align:
+        center;
+
+    background:
+        var(--gradiente-claro);
+}
+
+
+.icone-cadastro {
+
+    display:
+        block;
+
+    color:
+        var(--cor-destaque);
+
+    font-size:
+        46px;
+
+    line-height:
+        1;
+}
+
+
+.introducao-cadastro h1 {
+
+    margin:
+        0 0
+        var(--espaco-2);
+}
+
+
+.introducao-cadastro p {
+
+    max-width:
+        850px;
+
+    margin:
+        8px auto;
+}
+
+
+.legenda-obrigatorio {
+
+    color:
+        var(--cor-texto-secundario);
+
+    font-size:
+        var(--texto-xs);
+}
+
+
+/* =========================================================
+   CONTRIBUIÇÃO
    ========================================================= */
 
 .descricao-contribuicao {
@@ -2767,6 +2835,7 @@ input.campo-invalido {
     color:
         var(--cor-texto-secundario);
 }
+
 
 .opcoes-contribuicao {
 
@@ -2788,6 +2857,7 @@ input.campo-invalido {
     gap:
         var(--espaco-2);
 }
+
 
 .opcao-contribuicao {
 
@@ -2826,6 +2896,7 @@ input.campo-invalido {
         var(--transicao-rapida);
 }
 
+
 .opcao-contribuicao:hover {
 
     background:
@@ -2837,6 +2908,7 @@ input.campo-invalido {
     transform:
         translateY(-2px);
 }
+
 
 .opcao-contribuicao.selecionada {
 
@@ -2856,6 +2928,7 @@ input.campo-invalido {
         );
 }
 
+
 .opcao-contribuicao
 input[type="checkbox"] {
 
@@ -2868,9 +2941,101 @@ input[type="checkbox"] {
     flex-shrink:
         0;
 
-    accent-color:
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+    display:
+        grid;
+
+    place-content:
+        center;
+
+    border:
+        2px solid
+        #9e9e9e;
+
+    border-radius:
+        4px;
+
+    background:
+        var(--cor-branco);
+
+    cursor:
+        pointer;
+}
+
+
+.opcao-contribuicao
+input[type="checkbox"]::before {
+
+    content:
+        "✓";
+
+    color:
+        var(--cor-branco);
+
+    font-size:
+        14px;
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    transform:
+        scale(0);
+
+    transition:
+        transform
+        0.1s ease-in-out;
+}
+
+
+.opcao-contribuicao
+input[type="checkbox"]:checked {
+
+    background:
+        var(--cor-sucesso);
+
+    border-color:
         var(--cor-sucesso);
 }
+
+
+.opcao-contribuicao
+input[type="checkbox"]:checked::before {
+
+    transform:
+        scale(1);
+}
+
+
+.opcao-contribuicao
+input[type="checkbox"]:focus-visible {
+
+    outline:
+        3px solid
+        var(--cor-azul-escuro);
+
+    outline-offset:
+        3px;
+}
+
+
+.opcao-contribuicao
+input[type="checkbox"]:disabled {
+
+    opacity:
+        0.55;
+
+    cursor:
+        not-allowed;
+}
+
 
 .icone-opcao {
 
@@ -2913,6 +3078,7 @@ input[type="checkbox"] {
         700;
 }
 
+
 .opcao-contribuicao.selecionada
 .icone-opcao {
 
@@ -2922,6 +3088,7 @@ input[type="checkbox"] {
     color:
         var(--cor-branco);
 }
+
 
 .texto-opcao {
 
@@ -2938,6 +3105,7 @@ input[type="checkbox"] {
         0;
 }
 
+
 .linha-opcao-titulo {
 
     display:
@@ -2953,6 +3121,7 @@ input[type="checkbox"] {
         8px;
 }
 
+
 .opcao-contribuicao small {
 
     color:
@@ -2961,6 +3130,7 @@ input[type="checkbox"] {
     font-size:
         var(--texto-xs);
 }
+
 
 .badge-contribuicao {
 
@@ -2980,6 +3150,7 @@ input[type="checkbox"] {
         800;
 }
 
+
 .badge-voluntario {
 
     color:
@@ -2988,6 +3159,7 @@ input[type="checkbox"] {
     background:
         #d9edff;
 }
+
 
 .badge-doacao {
 
@@ -3000,6 +3172,138 @@ input[type="checkbox"] {
 
 
 /* =========================================================
+   SEM NÚMERO
+   ========================================================= */
+
+.opcao-sem-numero {
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    gap:
+        8px;
+
+    margin-top:
+        8px;
+
+    color:
+        var(--cor-texto);
+
+    font-size:
+        var(--texto-xs);
+
+    font-weight:
+        600;
+
+    cursor:
+        pointer;
+}
+
+
+.opcao-sem-numero
+input[type="checkbox"] {
+
+    width:
+        19px;
+
+    height:
+        19px;
+
+    margin:
+        0;
+
+    flex-shrink:
+        0;
+
+    appearance:
+        none;
+
+    -webkit-appearance:
+        none;
+
+    display:
+        grid;
+
+    place-content:
+        center;
+
+    border:
+        2px solid
+        #9e9e9e;
+
+    border-radius:
+        4px;
+
+    background:
+        var(--cor-branco);
+
+    cursor:
+        pointer;
+}
+
+
+.opcao-sem-numero
+input[type="checkbox"]::before {
+
+    content:
+        "✓";
+
+    color:
+        var(--cor-branco);
+
+    font-size:
+        14px;
+
+    line-height:
+        1;
+
+    font-weight:
+        700;
+
+    transform:
+        scale(0);
+
+    transition:
+        transform
+        0.1s ease-in-out;
+}
+
+
+.opcao-sem-numero
+input[type="checkbox"]:checked {
+
+    background:
+        var(--cor-sucesso);
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+.opcao-sem-numero
+input[type="checkbox"]:checked::before {
+
+    transform:
+        scale(1);
+}
+
+
+.opcao-sem-numero
+input[type="checkbox"]:focus-visible {
+
+    outline:
+        3px solid
+        var(--cor-azul-escuro);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
    ENVIO
    ========================================================= */
 
@@ -3008,6 +3312,7 @@ input[type="checkbox"] {
     text-align:
         center;
 }
+
 
 .area-envio button {
 
@@ -3042,6 +3347,7 @@ input[type="checkbox"] {
         var(--transicao-padrao);
 }
 
+
 .area-envio button:hover {
 
     transform:
@@ -3050,6 +3356,7 @@ input[type="checkbox"] {
     box-shadow:
         var(--sombra-azul-forte);
 }
+
 
 .area-envio button:focus-visible {
 
@@ -3060,6 +3367,7 @@ input[type="checkbox"] {
     outline-offset:
         4px;
 }
+
 
 .texto-ajuda {
 
@@ -3106,6 +3414,7 @@ input[type="checkbox"] {
         );
 }
 
+
 .modal-confirmacao::backdrop,
 .modal-feedback::backdrop {
 
@@ -3121,6 +3430,7 @@ input[type="checkbox"] {
         blur(2px);
 }
 
+
 .modal-conteudo {
 
     padding:
@@ -3129,6 +3439,7 @@ input[type="checkbox"] {
     text-align:
         center;
 }
+
 
 .modal-icone {
 
@@ -3167,6 +3478,7 @@ input[type="checkbox"] {
         bold;
 }
 
+
 .feedback-alerta
 .modal-icone {
 
@@ -3176,6 +3488,7 @@ input[type="checkbox"] {
     color:
         #9a6700;
 }
+
 
 .feedback-sucesso
 .modal-icone {
@@ -3187,6 +3500,7 @@ input[type="checkbox"] {
         var(--cor-sucesso);
 }
 
+
 .modal-conteudo h2 {
 
     margin:
@@ -3194,12 +3508,14 @@ input[type="checkbox"] {
         var(--espaco-2);
 }
 
+
 .modal-conteudo p {
 
     margin:
         0 0
         var(--espaco-4);
 }
+
 
 .modal-acoes {
 
@@ -3215,6 +3531,7 @@ input[type="checkbox"] {
     flex-wrap:
         wrap;
 }
+
 
 .botao-modal {
 
@@ -3234,6 +3551,7 @@ input[type="checkbox"] {
         pointer;
 }
 
+
 .botao-modal.cancelar {
 
     background:
@@ -3246,6 +3564,7 @@ input[type="checkbox"] {
         2px solid
         var(--cor-azul-principal);
 }
+
 
 .botao-modal.confirmar {
 
@@ -3260,6 +3579,7 @@ input[type="checkbox"] {
         var(--cor-sucesso);
 }
 
+
 .botao-modal:hover {
 
     transform:
@@ -3268,10 +3588,10 @@ input[type="checkbox"] {
 
 
 /* =========================================================
-   BOTÃO INTELIGENTE DE ROLAGEM
+   BOTÃO VOLTAR AO TOPO
    ========================================================= */
 
-.botao-scroll {
+.botao-topo {
 
     position:
         fixed;
@@ -3283,13 +3603,7 @@ input[type="checkbox"] {
         24px;
 
     z-index:
-        100;
-
-    width:
-        48px;
-
-    height:
-        48px;
+        50;
 
     display:
         flex;
@@ -3300,8 +3614,11 @@ input[type="checkbox"] {
     align-items:
         center;
 
-    border:
-        none;
+    width:
+        48px;
+
+    height:
+        48px;
 
     border-radius:
         50%;
@@ -3312,90 +3629,27 @@ input[type="checkbox"] {
     color:
         var(--cor-branco);
 
+    text-decoration:
+        none;
+
     font-size:
-        26px;
+        25px;
 
     font-weight:
         700;
 
-    line-height:
-        1;
-
-    cursor:
-        pointer;
-
     box-shadow:
         var(--sombra-azul);
-
-    transition:
-        transform
-        var(--transicao-padrao),
-
-        box-shadow
-        var(--transicao-padrao),
-
-        opacity
-        var(--transicao-padrao);
 }
 
-.botao-scroll:hover {
+
+.botao-topo:hover {
 
     transform:
-        translateY(-5px)
-        scale(1.05);
+        translateY(-4px);
 
     box-shadow:
         var(--sombra-azul-forte);
-}
-
-.botao-scroll:focus-visible {
-
-    outline:
-        3px solid
-        var(--cor-destaque);
-
-    outline-offset:
-        4px;
-}
-
-.botao-scroll[hidden] {
-
-    display:
-        none;
-}
-
-
-/* =========================================================
-   ESTADOS GERAIS DOS BOTÕES
-   ========================================================= */
-
-button:active {
-
-    transform:
-        translateY(1px);
-
-    box-shadow:
-        var(--sombra-suave);
-}
-
-button:disabled:not(
-    .opcao-votacao
-) {
-
-    opacity:
-        0.55;
-
-    background:
-        #e0e6eb;
-
-    color:
-        var(--cor-texto-secundario);
-
-    box-shadow:
-        none;
-
-    cursor:
-        not-allowed;
 }
 
 
@@ -3421,15 +3675,9 @@ footer {
         var(--espaco-5);
 }
 
-footer p {
-
-    margin:
-        0;
-}
-
 
 /* =========================================================
-   RESPONSIVIDADE - 1400px
+   RESPONSIVIDADE
    ========================================================= */
 
 @media (min-width: 1400px) {
@@ -3446,11 +3694,13 @@ footer p {
             60px;
     }
 
+
     main > section {
 
         padding:
             44px;
     }
+
 
     .sobre .carrossel {
 
@@ -3462,10 +3712,6 @@ footer p {
     }
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE - 1199px
-   ========================================================= */
 
 @media (max-width: 1199px) {
 
@@ -3481,6 +3727,7 @@ footer p {
             var(--espaco-3);
     }
 
+
     .sobre .carrossel {
 
         max-width:
@@ -3488,10 +3735,6 @@ footer p {
     }
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE - 899px
-   ========================================================= */
 
 @media (max-width: 899px) {
 
@@ -3505,11 +3748,13 @@ footer p {
             var(--espaco-4);
     }
 
+
     main > section {
 
         padding:
             30px;
     }
+
 
     .card-projeto,
     .campo,
@@ -3521,6 +3766,7 @@ footer p {
             span 6;
     }
 
+
     .opcao-votacao {
 
         grid-column:
@@ -3528,10 +3774,6 @@ footer p {
     }
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE - 699px
-   ========================================================= */
 
 @media (max-width: 699px) {
 
@@ -3544,6 +3786,7 @@ footer p {
         gap:
             var(--espaco-3);
     }
+
 
     main > section {
 
@@ -3561,7 +3804,8 @@ footer p {
             space-between;
     }
 
-    .cabecalho-topo h1 {
+
+    .cabecalho-topo p {
 
         margin:
             0;
@@ -3595,6 +3839,7 @@ footer p {
         margin-top:
             var(--espaco-3);
     }
+
 
     .menu-principal.menu-aberto {
 
@@ -3665,10 +3910,8 @@ footer p {
         transition:
             max-height
             0.3s ease,
-
             opacity
             0.25s ease,
-
             visibility
             0.25s ease;
     }
@@ -3743,7 +3986,24 @@ footer p {
     }
 
 
-    .botao-scroll {
+    .voto-info {
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+
+    .botao-voto {
+
+        width:
+            100%;
+    }
+
+
+    .botao-topo {
 
         width:
             44px;
@@ -3756,16 +4016,9 @@ footer p {
 
         bottom:
             16px;
-
-        font-size:
-            23px;
     }
 }
 
-
-/* =========================================================
-   RESPONSIVIDADE - 449px
-   ========================================================= */
 
 @media (max-width: 449px) {
 
@@ -3779,11 +4032,13 @@ footer p {
             var(--espaco-2);
     }
 
+
     main > section {
 
         padding:
             22px 16px;
     }
+
 
     header {
 
@@ -3791,17 +4046,20 @@ footer p {
             22px 10px;
     }
 
-    .cabecalho-topo h1 {
+
+    .cabecalho-topo p {
 
         font-size:
             24px;
     }
+
 
     h1 {
 
         font-size:
             28px;
     }
+
 
     h2 {
 
@@ -3879,5 +4137,980 @@ footer p {
 
         align-items:
             flex-start;
+    }
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE - FOCO VISÍVEL
+   ========================================================= */
+
+input[type="text"]:focus-visible,
+input[type="email"]:focus-visible,
+input[type="date"]:focus-visible,
+input[type="tel"]:focus-visible,
+.campo-campanha input:focus-visible,
+.campo-campanha textarea:focus-visible {
+
+    outline:
+        3px solid
+        var(--cor-azul-escuro);
+
+    outline-offset:
+        3px;
+}
+
+
+/* =========================================================
+   BOTÃO DE TEMA
+   ========================================================= */
+
+.cabecalho-topo {
+
+    position:
+        relative;
+}
+
+
+.botao-tema {
+
+    position:
+        absolute;
+
+    top:
+        50%;
+
+    right:
+        24px;
+
+    z-index:
+        10;
+
+    width:
+        44px;
+
+    height:
+        44px;
+
+    display:
+        flex;
+
+    justify-content:
+        center;
+
+    align-items:
+        center;
+
+    padding:
+        0;
+
+    border:
+        2px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.75
+        );
+
+    border-radius:
+        50%;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.12
+        );
+
+    color:
+        var(--cor-branco);
+
+    font-size:
+        20px;
+
+    line-height:
+        1;
+
+    cursor:
+        pointer;
+
+    transition:
+        background-color
+        var(--transicao-padrao),
+        transform
+        var(--transicao-padrao),
+        border-color
+        var(--transicao-padrao);
+}
+
+
+.botao-tema:hover {
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.22
+        );
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+}
+
+
+.botao-tema:focus-visible {
+
+    outline:
+        3px solid
+        var(--cor-destaque);
+
+    outline-offset:
+        4px;
+}
+
+
+/* =========================================================
+   TEMA ESCURO
+   ========================================================= */
+
+html[data-theme="dark"] {
+
+    color-scheme:
+        dark;
+
+    --cor-azul-escuro:
+        #90caf9;
+
+    --cor-azul-principal:
+        #64b5f6;
+
+    --cor-azul-medio:
+        #42a5f5;
+
+    --cor-azul-claro:
+        #90caf9;
+
+    --cor-destaque:
+        #ffb6c8;
+
+    --cor-sucesso:
+        #66bb6a;
+
+    --cor-erro:
+        #ef5350;
+
+    --cor-fundo:
+        #0f1419;
+
+    --cor-fundo-claro:
+        #1b2630;
+
+    --cor-fundo-suave:
+        #17212b;
+
+    --cor-neutro-claro:
+        #24313c;
+
+    --cor-neutro-borda:
+        #465563;
+
+    --cor-neutro-borda-clara:
+        #3a4a57;
+
+    --cor-texto:
+        #f1f5f9;
+
+    --cor-texto-secundario:
+        #cbd5e1;
+
+    --cor-placeholder:
+        #b0bec5;
+
+
+    --gradiente-cabecalho:
+        linear-gradient(
+            135deg,
+            #0b2239,
+            #123d63,
+            #175b91
+        );
+
+    --gradiente-botao:
+        linear-gradient(
+            135deg,
+            #185a8a,
+            #287fbd
+        );
+
+    --gradiente-claro:
+        linear-gradient(
+            135deg,
+            #1b2630,
+            #22313d
+        );
+
+    --gradiente-suave:
+        linear-gradient(
+            135deg,
+            #1a2530,
+            #22313d
+        );
+
+    --gradiente-card:
+        linear-gradient(
+            145deg,
+            #1e2933,
+            #24313c
+        );
+}
+
+
+html[data-theme="dark"] body {
+
+    background:
+        var(--cor-fundo);
+
+    color:
+        var(--cor-texto);
+}
+
+
+html[data-theme="dark"] header,
+html[data-theme="dark"] footer {
+
+    background:
+        var(--gradiente-cabecalho);
+}
+
+
+html[data-theme="dark"]
+.cabecalho-topo p {
+
+    color:
+        #ffffff;
+}
+
+
+html[data-theme="dark"] h1,
+html[data-theme="dark"] h2,
+html[data-theme="dark"] h3,
+html[data-theme="dark"] legend {
+
+    color:
+        var(--cor-azul-escuro);
+}
+
+
+html[data-theme="dark"] p,
+html[data-theme="dark"] li,
+html[data-theme="dark"] label {
+
+    color:
+        var(--cor-texto);
+}
+
+
+html[data-theme="dark"]
+.texto-campanhas,
+html[data-theme="dark"]
+.texto-secao,
+html[data-theme="dark"]
+.descricao-contribuicao,
+html[data-theme="dark"]
+.legenda-obrigatorio,
+html[data-theme="dark"]
+.meta-campanha,
+html[data-theme="dark"]
+.card-campanha small,
+html[data-theme="dark"]
+.voto-info span,
+html[data-theme="dark"]
+.acao-campanha p,
+html[data-theme="dark"]
+.texto-ajuda,
+html[data-theme="dark"]
+.nivel-voluntario p {
+
+    color:
+        var(--cor-texto-secundario);
+}
+
+
+html[data-theme="dark"]
+.menu-principal > a,
+html[data-theme="dark"]
+.botao-dropdown {
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   SUPERFÍCIES ESCURAS
+   ========================================================= */
+
+html[data-theme="dark"]
+main > section,
+html[data-theme="dark"]
+fieldset,
+html[data-theme="dark"]
+.sobre .carrossel,
+html[data-theme="dark"]
+.card-projeto,
+html[data-theme="dark"]
+.card-doacao,
+html[data-theme="dark"]
+.nivel-voluntario,
+html[data-theme="dark"]
+.campanha-card,
+html[data-theme="dark"]
+.votacao-campanha,
+html[data-theme="dark"]
+.opcao-votacao,
+html[data-theme="dark"]
+.modal-confirmacao,
+html[data-theme="dark"]
+.modal-feedback {
+
+    background:
+        var(--cor-fundo-suave);
+
+    color:
+        var(--cor-texto);
+
+    border-color:
+        var(--cor-neutro-borda);
+}
+
+
+html[data-theme="dark"]
+.introducao-projetos,
+html[data-theme="dark"]
+.introducao-cadastro,
+html[data-theme="dark"]
+.participe,
+html[data-theme="dark"]
+.chamada-projetos {
+
+    background:
+        var(--gradiente-claro);
+}
+
+
+/* =========================================================
+   DROPDOWN ESCURO
+   ========================================================= */
+
+html[data-theme="dark"]
+.submenu {
+
+    background:
+        #1e2933;
+
+    border-color:
+        var(--cor-neutro-borda);
+}
+
+
+html[data-theme="dark"]
+.submenu a {
+
+    color:
+        #f1f5f9;
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.05
+        );
+}
+
+
+html[data-theme="dark"]
+.submenu a:hover,
+html[data-theme="dark"]
+.submenu a:focus-visible {
+
+    background:
+        var(--cor-fundo-claro);
+
+    color:
+        #ffffff;
+}
+
+
+/* =========================================================
+   REDES
+   ========================================================= */
+
+html[data-theme="dark"]
+.lista-redes .rede {
+
+    background:
+        var(--cor-fundo-suave);
+
+    color:
+        var(--cor-azul-escuro);
+
+    border-color:
+        var(--cor-neutro-borda-clara);
+}
+
+
+html[data-theme="dark"]
+.lista-redes .rede:hover
+.simbolo-rede {
+
+    background:
+        #ffffff;
+
+    color:
+        var(--cor-azul-principal);
+}
+
+
+html[data-theme="dark"]
+.simbolo-rede,
+html[data-theme="dark"]
+.nivel-icone,
+html[data-theme="dark"]
+.campanha-icone,
+html[data-theme="dark"]
+.icone-opcao,
+html[data-theme="dark"]
+.icone-voto {
+
+    background:
+        rgba(
+            255,
+            182,
+            200,
+            0.12
+        );
+}
+
+
+/* =========================================================
+   CONTRIBUIÇÕES
+   ========================================================= */
+
+html[data-theme="dark"]
+.opcao-contribuicao {
+
+    background:
+        var(--cor-fundo-suave);
+
+    border-color:
+        var(--cor-neutro-borda-clara);
+}
+
+
+html[data-theme="dark"]
+.opcao-contribuicao:hover {
+
+    background:
+        var(--cor-fundo-claro);
+
+    border-color:
+        var(--cor-azul-claro);
+}
+
+
+html[data-theme="dark"]
+.opcao-contribuicao.selecionada {
+
+    background:
+        #19311f;
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+/* =========================================================
+   SEM NÚMERO - TEMA ESCURO
+   ========================================================= */
+
+html[data-theme="dark"]
+.opcao-sem-numero {
+
+    color:
+        var(--cor-texto);
+}
+
+
+html[data-theme="dark"]
+.opcao-sem-numero
+input[type="checkbox"] {
+
+    background:
+        #1b2530;
+
+    border-color:
+        #8fa1af;
+}
+
+
+html[data-theme="dark"]
+.opcao-sem-numero
+input[type="checkbox"]:checked {
+
+    background:
+        var(--cor-sucesso);
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+/* =========================================================
+   BADGES
+   ========================================================= */
+
+html[data-theme="dark"]
+.badge-voluntario,
+html[data-theme="dark"]
+.badge-novo,
+html[data-theme="dark"]
+.status-planejada {
+
+    color:
+        #e3f2fd;
+
+    background:
+        #23415a;
+}
+
+
+html[data-theme="dark"]
+.badge-doacao,
+html[data-theme="dark"]
+.badge-destaque {
+
+    color:
+        #ffdce6;
+
+    background:
+        #572b3b;
+}
+
+
+html[data-theme="dark"]
+.badge-ativo,
+html[data-theme="dark"]
+.status-andamento {
+
+    color:
+        #d8f5dc;
+
+    background:
+        #244a2b;
+}
+
+
+/* =========================================================
+   VOTAÇÃO ESCURA
+   ========================================================= */
+
+html[data-theme="dark"]
+.barra-progresso {
+
+    background:
+        #344451;
+}
+
+
+html[data-theme="dark"]
+.opcao-votacao:hover {
+
+    border-color:
+        var(--cor-azul-claro);
+}
+
+
+html[data-theme="dark"]
+.opcao-votacao.voto-selecionado {
+
+    background:
+        #19311f;
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+html[data-theme="dark"]
+.contador-votos {
+
+    color:
+        var(--cor-azul-principal);
+}
+
+
+html[data-theme="dark"]
+.mensagem-votacao {
+
+    color:
+        var(--cor-sucesso);
+}
+
+
+/* =========================================================
+   CAMPOS ESCUROS
+   ========================================================= */
+
+html[data-theme="dark"]
+input[type="text"],
+html[data-theme="dark"]
+input[type="email"],
+html[data-theme="dark"]
+input[type="date"],
+html[data-theme="dark"]
+input[type="tel"],
+html[data-theme="dark"]
+textarea,
+html[data-theme="dark"]
+.campo-campanha input,
+html[data-theme="dark"]
+.campo-campanha textarea {
+
+    background:
+        #1e2933;
+
+    color:
+        var(--cor-texto);
+
+    border-color:
+        #64748b;
+}
+
+
+html[data-theme="dark"]
+input::placeholder,
+html[data-theme="dark"]
+textarea::placeholder {
+
+    color:
+        var(--cor-placeholder);
+}
+
+
+html[data-theme="dark"]
+input:disabled {
+
+    background:
+        #26323d;
+
+    color:
+        var(--cor-texto-secundario);
+}
+
+
+html[data-theme="dark"]
+input.campo-valido {
+
+    background:
+        #19311f;
+
+    color:
+        var(--cor-texto);
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+html[data-theme="dark"]
+input.campo-invalido {
+
+    background:
+        #351d20;
+
+    color:
+        var(--cor-texto);
+
+    border-color:
+        var(--cor-erro);
+}
+
+
+/* =========================================================
+   CHECKBOXES ESCUROS
+   ========================================================= */
+
+html[data-theme="dark"]
+.opcao-contribuicao
+input[type="checkbox"] {
+
+    background:
+        #1b2530;
+
+    border-color:
+        #8fa1af;
+}
+
+
+html[data-theme="dark"]
+.opcao-contribuicao
+input[type="checkbox"]:checked {
+
+    background:
+        var(--cor-sucesso);
+
+    border-color:
+        var(--cor-sucesso);
+}
+
+
+/* =========================================================
+   BOTÕES ESCUROS
+   ========================================================= */
+
+html[data-theme="dark"]
+.botao-participar,
+html[data-theme="dark"]
+.area-envio button,
+html[data-theme="dark"]
+.botao-campanha,
+html[data-theme="dark"]
+.botao-topo {
+
+    background:
+        var(--gradiente-botao);
+
+    color:
+        #ffffff;
+}
+
+
+html[data-theme="dark"]
+.botao-modal.cancelar {
+
+    background:
+        #1e2933;
+
+    color:
+        var(--cor-azul-principal);
+
+    border-color:
+        var(--cor-azul-principal);
+}
+
+
+html[data-theme="dark"]
+.botao-modal.confirmar {
+
+    background:
+        var(--cor-sucesso);
+
+    color:
+        #0f1419;
+}
+
+
+/* =========================================================
+   ENDEREÇO
+   ========================================================= */
+
+html[data-theme="dark"]
+address {
+
+    background:
+        var(--gradiente-suave);
+
+    border-left-color:
+        var(--cor-azul-claro);
+
+    color:
+        var(--cor-texto);
+}
+
+
+html[data-theme="dark"]
+address a {
+
+    color:
+        var(--cor-azul-principal);
+}
+
+
+/* =========================================================
+   MODAIS
+   ========================================================= */
+
+html[data-theme="dark"]
+.modal-icone {
+
+    background:
+        var(--cor-neutro-claro);
+
+    color:
+        var(--cor-azul-principal);
+}
+
+
+html[data-theme="dark"]
+.feedback-alerta
+.modal-icone {
+
+    background:
+        #4a3c17;
+
+    color:
+        #ffe082;
+}
+
+
+html[data-theme="dark"]
+.feedback-sucesso
+.modal-icone {
+
+    background:
+        #19311f;
+
+    color:
+        var(--cor-sucesso);
+}
+
+
+html[data-theme="dark"]
+.modal-confirmacao::backdrop,
+html[data-theme="dark"]
+.modal-feedback::backdrop {
+
+    background:
+        rgba(
+            0,
+            0,
+            0,
+            0.68
+        );
+}
+
+
+/* =========================================================
+   INDICADORES
+   ========================================================= */
+
+html[data-theme="dark"]
+.indicador {
+
+    background:
+        #5b7286;
+}
+
+
+html[data-theme="dark"]
+.indicador.ativo {
+
+    background:
+        var(--cor-azul-principal);
+}
+
+
+/* =========================================================
+   FOCO ESCURO
+   ========================================================= */
+
+html[data-theme="dark"]
+.botao-tema:focus-visible,
+html[data-theme="dark"]
+.menu-principal > a:focus-visible,
+html[data-theme="dark"]
+.botao-dropdown:focus-visible,
+html[data-theme="dark"]
+.submenu a:focus-visible,
+html[data-theme="dark"]
+.lista-redes .rede:focus-visible,
+html[data-theme="dark"]
+.opcao-votacao:focus-visible,
+html[data-theme="dark"]
+.area-envio button:focus-visible,
+html[data-theme="dark"]
+.botao-topo:focus-visible,
+html[data-theme="dark"]
+.opcao-contribuicao
+input[type="checkbox"]:focus-visible,
+html[data-theme="dark"]
+.opcao-sem-numero
+input[type="checkbox"]:focus-visible,
+html[data-theme="dark"]
+input[type="text"]:focus-visible,
+html[data-theme="dark"]
+input[type="email"]:focus-visible,
+html[data-theme="dark"]
+input[type="date"]:focus-visible,
+html[data-theme="dark"]
+input[type="tel"]:focus-visible {
+
+    outline-color:
+        var(--cor-destaque);
+}
+
+
+/* =========================================================
+   SELEÇÃO DE TEXTO
+   ========================================================= */
+
+html[data-theme="dark"]
+::selection {
+
+    color:
+        #0f1419;
+
+    background:
+        var(--cor-destaque);
+}
+
+
+/* =========================================================
+   BOTÃO DE TEMA - RESPONSIVIDADE
+   ========================================================= */
+
+@media (max-width: 699px) {
+
+    .botao-tema {
+
+        top:
+            16px;
+
+        right:
+            66px;
+
+        transform:
+            none;
+    }
+
+
+    .botao-tema:hover {
+
+        transform:
+            scale(1.05);
+    }
+}
+
+
+@media (max-width: 449px) {
+
+    .botao-tema {
+
+        width:
+            40px;
+
+        height:
+            40px;
+
+        right:
+            62px;
+
+        font-size:
+            18px;
     }
 }

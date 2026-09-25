@@ -13,32 +13,38 @@
         Pingo de Esperança
     </title>
 
-
     <link
         rel="stylesheet"
         href="../css/style.css">
 
-</head>
+    <script
+        src="../js/tema.js">
+    </script>
 
+</head>
 
 <body>
 
-
-    <!-- =====================================================
-         CABEÇALHO
-         ===================================================== -->
-
     <header id="topo">
-
 
         <div class="cabecalho-topo">
 
-
             <h1>
-
                 Pingo de Esperança
-
             </h1>
+
+
+            <button
+                type="button"
+                class="botao-tema"
+                id="botao-tema"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+                title="Ativar modo escuro">
+
+                🌙
+
+            </button>
 
 
             <button
@@ -49,56 +55,35 @@
                 aria-controls="menu-principal">
 
                 <span></span>
-
                 <span></span>
-
                 <span></span>
 
             </button>
 
-
         </div>
 
-
-        <!-- =================================================
-             NAVEGAÇÃO PRINCIPAL
-             ================================================= -->
 
         <nav
             id="menu-principal"
             class="menu-principal">
 
 
-            <!-- INÍCIO -->
-
-            <a
-                href="#inicio"
-                data-rota="inicio">
-
+            <a href="index.html">
 
                 <span
                     class="icone-menu-principal"
                     aria-hidden="true">
-
                     ⌂
-
                 </span>
-
 
                 <span>
-
                     Início
-
                 </span>
-
 
             </a>
 
 
-            <!-- PROJETOS -->
-
             <div class="menu-dropdown">
-
 
                 <button
                     type="button"
@@ -107,22 +92,15 @@
                     aria-haspopup="true"
                     aria-controls="submenu-projetos">
 
-
                     <span>
-
                         Projetos
-
                     </span>
-
 
                     <span
                         class="seta-dropdown"
                         aria-hidden="true">
-
                         ⌄
-
                     </span>
-
 
                 </button>
 
@@ -131,230 +109,443 @@
                     id="submenu-projetos"
                     class="submenu">
 
-
-                    <a
-                        href="#projetos/projetos-sociais"
-                        data-rota="projetos"
-                        data-alvo="projetos-sociais">
-
+                    <a href="projetos.html">
 
                         <span
                             class="icone-menu-item"
                             aria-hidden="true">
-
                             ▦
-
                         </span>
 
-
                         <span>
-
                             Todos os projetos
-
                         </span>
-
 
                     </a>
 
 
                     <a
-                        href="#projetos/voluntariado"
-                        data-rota="projetos"
-                        data-alvo="voluntariado">
-
+                        href="projetos.html#voluntariado">
 
                         <span
                             class="icone-menu-item"
                             aria-hidden="true">
-
                             ✚
-
                         </span>
 
-
                         <span>
-
                             Voluntariado
-
                         </span>
-
 
                     </a>
 
 
                     <a
-                        href="#projetos/doacoes"
-                        data-rota="projetos"
-                        data-alvo="doacoes">
-
+                        href="projetos.html#doacoes">
 
                         <span
                             class="icone-menu-item"
                             aria-hidden="true">
-
                             ♥
-
                         </span>
 
-
                         <span>
-
                             Doações
-
                         </span>
-
 
                     </a>
-
-
-                    <a
-                        href="#projetos/campanhas"
-                        data-rota="projetos"
-                        data-alvo="campanhas">
-
-
-                        <span
-                            class="icone-menu-item"
-                            aria-hidden="true">
-
-                            ✦
-
-                        </span>
-
-
-                        <span>
-
-                            Campanhas e atividades
-
-                        </span>
-
-
-                    </a>
-
 
                 </div>
-
 
             </div>
 
 
-            <!-- CADASTRO -->
-
             <a
-                href="#cadastro"
-                data-rota="cadastro"
+                href="cadastro.html"
                 class="link-coracao">
-
 
                 <span
                     class="coracao"
                     aria-hidden="true">
-
                     ♡
-
                 </span>
-
 
                 <span>
-
                     Cadastre-se
-
                 </span>
-
 
             </a>
 
 
-            <!-- AJUDA -->
-
             <a
-                href="#inicio/contato"
-                data-rota="inicio"
-                data-alvo="contato"
+                href="#contato"
                 class="link-ajuda">
-
 
                 <span
                     class="icone-ajuda"
                     aria-hidden="true">
-
                     ?
-
                 </span>
-
 
                 <span>
-
                     Ajuda
-
                 </span>
-
 
             </a>
 
-
         </nav>
-
 
     </header>
 
 
-    <!-- =====================================================
-         ÁREA PRINCIPAL DA SPA
-         ===================================================== -->
-
     <main>
 
+        <section class="sobre">
 
-        <div id="app"></div>
+            <h2>
+                Sobre a ONG
+            </h2>
 
+
+            <div class="carrossel">
+
+                <img
+                    id="imagem-carrossel"
+                    src="../imagens/ong.jpg.png"
+                    alt="Cachorro caramelo e gato preto e branco representando o cuidado com os animais">
+
+            </div>
+
+
+            <div class="indicadores">
+
+                <button
+                    type="button"
+                    class="indicador ativo"
+                    aria-label="Mostrar imagem sobre animais"
+                    data-imagem="0">
+                </button>
+
+                <button
+                    type="button"
+                    class="indicador"
+                    aria-label="Mostrar imagem sobre ações sociais"
+                    data-imagem="1">
+                </button>
+
+            </div>
+
+
+            <p>
+                A Pingo de Esperança é uma organização do terceiro setor
+                dedicada a promover ações sociais e contribuir para a
+                melhoria da qualidade de vida de pessoas e animais
+                em situação de vulnerabilidade.
+            </p>
+
+
+            <p>
+                Nosso trabalho é realizado por meio de projetos sociais,
+                voluntariado e campanhas de doação, buscando gerar impacto
+                positivo e levar cuidado, apoio e esperança a quem precisa.
+            </p>
+
+        </section>
+
+
+        <section class="participe">
+
+            <span class="decoracao-coracao">
+                ♡
+            </span>
+
+            <h2>
+                Faça parte dessa causa
+            </h2>
+
+            <p>
+                Pequenas ações podem gerar grandes mudanças.
+                Você pode participar das iniciativas da Pingo de Esperança
+                por meio do voluntariado e de outras formas de contribuição.
+            </p>
+
+            <a
+                href="cadastro.html"
+                class="botao-participar">
+
+                ♡ Quero participar
+
+            </a>
+
+        </section>
+
+
+        <section class="redes-sociais">
+
+            <span class="icone-redes">
+                ♡
+            </span>
+
+            <h2>
+                Siga nossas redes sociais
+            </h2>
+
+            <p>
+                Acompanhe nossas ações, campanhas e projetos e ajude a
+                divulgar a Pingo de Esperança.
+            </p>
+
+
+            <div class="lista-redes">
+
+                <a
+                    href="#"
+                    class="rede rede-instagram">
+
+                    <span class="simbolo-rede">
+                        ◎
+                    </span>
+
+                    Instagram
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="rede rede-facebook">
+
+                    <span class="simbolo-rede">
+                        f
+                    </span>
+
+                    Facebook
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="rede rede-youtube">
+
+                    <span class="simbolo-rede">
+                        ▶
+                    </span>
+
+                    YouTube
+
+                </a>
+
+
+                <a
+                    href="#"
+                    class="rede rede-linkedin">
+
+                    <span class="simbolo-rede">
+                        in
+                    </span>
+
+                    LinkedIn
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <section
+            class="contato"
+            id="contato">
+
+            <div class="titulo-contato">
+
+                <span class="icone-contato">
+                    ?
+                </span>
+
+
+                <div>
+
+                    <h2>
+                        Entre em contato
+                    </h2>
+
+                    <p>
+                        Tem alguma dúvida ou quer saber mais sobre nossos
+                        projetos? Entre em contato com a nossa equipe.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <address>
+
+                <p>
+                    Av. das Acácias, 850 - Vila Mariana, São Paulo/SP
+                </p>
+
+                <p>
+                    CNPJ: 12.345.678/0001-90
+                </p>
+
+                <p>
+                    Telefone: (11) 99999-9999
+                </p>
+
+                <p>
+                    E-mail:
+
+                    <a
+                        href="mailto:contato@pingodeesperanca.org.br">
+
+                        contato@pingodeesperanca.org.br
+
+                    </a>
+
+                </p>
+
+            </address>
+
+        </section>
 
     </main>
 
 
-    <!-- =====================================================
-         BOTÃO INTELIGENTE DE ROLAGEM
-         ===================================================== -->
+    <a
+        href="#topo"
+        class="botao-topo"
+        aria-label="Voltar ao cabeçalho"
+        title="Voltar ao cabeçalho">
 
-    <button
-        type="button"
-        id="botao-scroll"
-        class="botao-scroll"
-        hidden
-        aria-label="Descer para o final da página"
-        title="Descer para o final da página">
+        ↑
 
+    </a>
 
-        ↓
-
-
-    </button>
-
-
-    <!-- =====================================================
-         RODAPÉ
-         ===================================================== -->
 
     <footer>
 
-
         <p>
-
             &copy; 2026 Pingo de Esperança.
             Todos os direitos reservados.
-
-
         </p>
-
 
     </footer>
 
 
-    <!-- =====================================================
-         CONTROLE DO MENU HAMBÚRGUER E DROPDOWN
-         ===================================================== -->
-
     <script>
+
+        const imagens = [
+
+            {
+                src: "../imagens/ong.jpg.png",
+                alt:
+                    "Cachorro caramelo e gato preto e branco representando o cuidado com os animais"
+            },
+
+            {
+                src: "../imagens/doacoes.png",
+                alt:
+                    "Voluntária organizando alimentos e doações em uma ação social da Pingo de Esperança"
+            }
+
+        ];
+
+
+        const imagemCarrossel =
+            document.getElementById(
+                "imagem-carrossel"
+            );
+
+
+        const indicadores =
+            document.querySelectorAll(
+                ".indicador"
+            );
+
+
+        let imagemAtual = 0;
+
+
+        function trocarImagem(numero) {
+
+            imagemAtual = numero;
+
+            imagemCarrossel.style.opacity =
+                "0";
+
+
+            setTimeout(
+                function () {
+
+                    imagemCarrossel.src =
+                        imagens[imagemAtual].src;
+
+                    imagemCarrossel.alt =
+                        imagens[imagemAtual].alt;
+
+                    imagemCarrossel.style.opacity =
+                        "1";
+
+                },
+                250
+            );
+
+
+            indicadores.forEach(
+                function (
+                    indicador,
+                    indice
+                ) {
+
+                    indicador.classList.toggle(
+                        "ativo",
+                        indice === imagemAtual
+                    );
+
+                }
+            );
+
+        }
+
+
+        setInterval(
+            function () {
+
+                imagemAtual =
+                    (imagemAtual + 1)
+                    % imagens.length;
+
+                trocarImagem(
+                    imagemAtual
+                );
+
+            },
+            3000
+        );
+
+
+        indicadores.forEach(
+            function (indicador) {
+
+                indicador.addEventListener(
+                    "click",
+                    function () {
+
+                        trocarImagem(
+                            Number(
+                                indicador.dataset.imagem
+                            )
+                        );
+
+                    }
+                );
+
+            }
+        );
+
 
         const botaoMenu =
             document.querySelector(
@@ -374,67 +565,45 @@
             );
 
 
-        /* =================================================
-           MENU HAMBÚRGUER
-           ================================================= */
+        botaoMenu.addEventListener(
+            "click",
+            function () {
 
-        if (
-            botaoMenu &&
-            menuPrincipal
-        ) {
-
-            botaoMenu.addEventListener(
-                "click",
-                function () {
-
-                    const aberto =
-                        botaoMenu.getAttribute(
-                            "aria-expanded"
-                        ) ===
-                        "true";
+                const aberto =
+                    botaoMenu.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
 
 
-                    botaoMenu.setAttribute(
-                        "aria-expanded",
-                        String(
-                            !aberto
-                        )
-                    );
+                botaoMenu.setAttribute(
+                    "aria-expanded",
+                    String(!aberto)
+                );
 
 
-                    botaoMenu.setAttribute(
-                        "aria-label",
-                        aberto
-                            ? "Abrir menu"
-                            : "Fechar menu"
-                    );
+                botaoMenu.setAttribute(
+                    "aria-label",
+                    aberto
+                        ? "Abrir menu"
+                        : "Fechar menu"
+                );
 
 
-                    menuPrincipal.classList.toggle(
-                        "menu-aberto",
-                        !aberto
-                    );
+                menuPrincipal.classList.toggle(
+                    "menu-aberto",
+                    !aberto
+                );
 
-                }
-            );
+            }
+        );
 
-        }
-
-
-        /* =================================================
-           DROPDOWN DE PROJETOS
-           ================================================= */
 
         botoesDropdown.forEach(
-            function (
-                botao
-            ) {
+            function (botao) {
 
                 botao.addEventListener(
                     "click",
-                    function (
-                        event
-                    ) {
+                    function (event) {
 
                         event.stopPropagation();
 
@@ -445,30 +614,14 @@
                             );
 
 
-                        if (
-                            !dropdown
-                        ) {
-
-                            return;
-
-                        }
-
-
                         const aberto =
                             botao.getAttribute(
                                 "aria-expanded"
-                            ) ===
-                            "true";
+                            ) === "true";
 
-
-                        /*
-                         * Fecha outros dropdowns.
-                         */
 
                         botoesDropdown.forEach(
-                            function (
-                                outroBotao
-                            ) {
+                            function (outroBotao) {
 
                                 outroBotao.setAttribute(
                                     "aria-expanded",
@@ -476,33 +629,19 @@
                                 );
 
 
-                                const outroDropdown =
-                                    outroBotao.closest(
+                                outroBotao
+                                    .closest(
                                         ".menu-dropdown"
-                                    );
-
-
-                                if (
-                                    outroDropdown
-                                ) {
-
-                                    outroDropdown.classList.remove(
+                                    )
+                                    .classList.remove(
                                         "submenu-aberto"
                                     );
-
-                                }
 
                             }
                         );
 
 
-                        /*
-                         * Abre o atual caso estivesse fechado.
-                         */
-
-                        if (
-                            !aberto
-                        ) {
+                        if (!aberto) {
 
                             botao.setAttribute(
                                 "aria-expanded",
@@ -523,105 +662,69 @@
         );
 
 
-        /* =================================================
-           CLICAR FORA DO MENU
-           ================================================= */
-
         document.addEventListener(
             "click",
-            function (
-                event
-            ) {
+            function (event) {
 
                 if (
-                    event.target.closest(
+                    !event.target.closest(
                         ".menu-dropdown"
                     )
-                    ||
-                    event.target.closest(
+                    &&
+                    !event.target.closest(
                         ".botao-menu"
                     )
                 ) {
 
-                    return;
+                    botoesDropdown.forEach(
+                        function (botao) {
 
-                }
-
-
-                botoesDropdown.forEach(
-                    function (
-                        botao
-                    ) {
-
-                        botao.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
-
-
-                        const dropdown =
-                            botao.closest(
-                                ".menu-dropdown"
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "false"
                             );
 
 
-                        if (
-                            dropdown
-                        ) {
-
-                            dropdown.classList.remove(
-                                "submenu-aberto"
-                            );
+                            botao
+                                .closest(
+                                    ".menu-dropdown"
+                                )
+                                .classList.remove(
+                                    "submenu-aberto"
+                                );
 
                         }
+                    );
 
-                    }
-                );
+                }
 
             }
         );
 
-
-        /* =================================================
-           REDIMENSIONAMENTO
-           ================================================= */
 
         window.addEventListener(
             "resize",
             function () {
 
                 if (
-                    window.innerWidth >
-                    699
+                    window.innerWidth > 699
                 ) {
 
-                    if (
-                        menuPrincipal
-                    ) {
-
-                        menuPrincipal.classList.remove(
-                            "menu-aberto"
-                        );
-
-                    }
+                    menuPrincipal.classList.remove(
+                        "menu-aberto"
+                    );
 
 
-                    if (
-                        botaoMenu
-                    ) {
-
-                        botaoMenu.setAttribute(
-                            "aria-expanded",
-                            "false"
-                        );
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
 
 
-                        botaoMenu.setAttribute(
-                            "aria-label",
-                            "Abrir menu"
-                        );
-
-                    }
+                    botaoMenu.setAttribute(
+                        "aria-label",
+                        "Abrir menu"
+                    );
 
                 }
 
@@ -629,35 +732,6 @@
         );
 
     </script>
-
-
-    <!-- =====================================================
-         VUE 3
-         ===================================================== -->
-
-    <script
-        src="https://unpkg.com/vue@3/dist/vue.global.js">
-    </script>
-
-
-    <!-- =====================================================
-         COMPONENTE VUE
-         ===================================================== -->
-
-    <script
-        src="../js/vue-widget.js">
-    </script>
-
-
-    <!-- =====================================================
-         APLICAÇÃO PRINCIPAL
-         ===================================================== -->
-
-    <script
-        type="module"
-        src="../js/app.js">
-    </script>
-
 
 </body>
 

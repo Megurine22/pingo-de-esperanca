@@ -17,6 +17,10 @@
         rel="stylesheet"
         href="../css/style.css">
 
+    <script
+        src="../js/tema.js">
+    </script>
+
 </head>
 
 <body>
@@ -28,6 +32,19 @@
             <p>
                 Pingo de Esperança
             </p>
+
+
+            <button
+                type="button"
+                class="botao-tema"
+                id="botao-tema"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+                title="Ativar modo escuro">
+
+                🌙
+
+            </button>
 
 
             <button
@@ -108,7 +125,8 @@
                     </a>
 
 
-                    <a href="#voluntariado">
+                    <a
+                        href="#voluntariado">
 
                         <span
                             class="icone-menu-item"
@@ -123,7 +141,8 @@
                     </a>
 
 
-                    <a href="#doacoes">
+                    <a
+                        href="#doacoes">
 
                         <span
                             class="icone-menu-item"
@@ -133,21 +152,6 @@
 
                         <span>
                             Doações
-                        </span>
-
-                    </a>
-
-
-                    <a href="#campanhas">
-
-                        <span
-                            class="icone-menu-item"
-                            aria-hidden="true">
-                            ✦
-                        </span>
-
-                        <span>
-                            Campanhas e atividades
                         </span>
 
                     </a>
@@ -197,12 +201,12 @@
 
     <main>
 
-
         <!-- =====================================================
              INTRODUÇÃO
              ===================================================== -->
 
-        <section class="introducao-projetos">
+        <section
+            class="introducao-projetos">
 
             <span class="simbolo-projetos">
                 ♡
@@ -235,7 +239,9 @@
 
             <article class="card-projeto">
 
-                <span class="icone-projeto">
+                <span
+                    class="icone-projeto"
+                    aria-hidden="true">
                     ♥
                 </span>
 
@@ -254,7 +260,9 @@
 
             <article class="card-projeto">
 
-                <span class="icone-projeto">
+                <span
+                    class="icone-projeto"
+                    aria-hidden="true">
                     🐾
                 </span>
 
@@ -281,7 +289,9 @@
             class="voluntariado"
             id="voluntariado">
 
-            <span class="icone-secao">
+            <span
+                class="icone-secao"
+                aria-hidden="true">
                 ✚
             </span>
 
@@ -309,25 +319,21 @@
                     Faça seu cadastro.
                 </li>
 
-                <li>
-                    Participe das ações e conquiste níveis e badges.
-                </li>
-
-                <li>
-                    Desbloqueie medalhas e benefícios conforme sua participação.
-                </li>
-
             </ol>
 
 
             <div class="niveis-voluntariado">
 
-
                 <article class="nivel-voluntario">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span class="nivel-icone"
+                            aria-hidden="true">
+                            ♡
+                        </span>
+
+                    </div>
 
                     <div>
 
@@ -336,7 +342,7 @@
                         </h3>
 
                         <p>
-                            0 a 2 ações
+                            Primeiros passos na causa.
                         </p>
 
                         <span class="badge-nivel badge-novo">
@@ -350,9 +356,14 @@
 
                 <article class="nivel-voluntario">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span class="nivel-icone"
+                            aria-hidden="true">
+                            ✚
+                        </span>
+
+                    </div>
 
                     <div>
 
@@ -361,7 +372,7 @@
                         </h3>
 
                         <p>
-                            3 a 5 ações
+                            Participação frequente.
                         </p>
 
                         <span class="badge-nivel badge-ativo">
@@ -375,9 +386,14 @@
 
                 <article class="nivel-voluntario">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span class="nivel-icone"
+                            aria-hidden="true">
+                            ♥
+                        </span>
+
+                    </div>
 
                     <div>
 
@@ -386,7 +402,7 @@
                         </h3>
 
                         <p>
-                            6 a 9 ações
+                            Apoio contínuo às ações.
                         </p>
 
                         <span class="badge-nivel badge-destaque">
@@ -400,18 +416,23 @@
 
                 <article class="nivel-voluntario">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span class="nivel-icone"
+                            aria-hidden="true">
+                            ★
+                        </span>
+
+                    </div>
 
                     <div>
 
                         <h3>
-                            Embaixador da causa
+                            Embaixador
                         </h3>
 
                         <p>
-                            10 ou mais ações
+                            Representa a causa.
                         </p>
 
                         <span class="badge-nivel badge-embaixador">
@@ -421,7 +442,6 @@
                     </div>
 
                 </article>
-
 
             </div>
 
@@ -436,7 +456,9 @@
             class="campanhas-atividades"
             id="campanhas">
 
-            <span class="icone-secao">
+            <span
+                class="icone-secao"
+                aria-hidden="true">
                 ✦
             </span>
 
@@ -453,10 +475,12 @@
             <div class="lista-campanhas">
 
 
-                <!-- CAMPANHA 1 -->
+                <!-- =================================================
+                     CESTA SOLIDÁRIA
+                     ================================================= -->
 
-                <article class="campanha-card">
-
+                <article
+                    class="campanha-card">
 
                     <div class="campanha-cabecalho">
 
@@ -471,7 +495,6 @@
                             </span>
 
                         </div>
-
 
                         <span
                             class="campanha-icone"
@@ -491,7 +514,10 @@
                     <div class="campanha-meta">
 
                         <span>
-                            Meta: <strong>100 cestas</strong>
+                            Meta:
+                            <strong>
+                                100 cestas
+                            </strong>
                         </span>
 
                         <strong>
@@ -501,7 +527,13 @@
                     </div>
 
 
-                    <div class="barra-progresso">
+                    <div
+                        class="barra-progresso"
+                        role="progressbar"
+                        aria-label="Progresso da campanha Cesta Solidária"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="67">
 
                         <span
                             style="width: 67%;">
@@ -517,10 +549,12 @@
                 </article>
 
 
-                <!-- CAMPANHA 2 -->
+                <!-- =================================================
+                     APOIO ANIMAL
+                     ================================================= -->
 
-                <article class="campanha-card">
-
+                <article
+                    class="campanha-card">
 
                     <div class="campanha-cabecalho">
 
@@ -535,7 +569,6 @@
                             </span>
 
                         </div>
-
 
                         <span
                             class="campanha-icone"
@@ -555,7 +588,10 @@
                     <div class="campanha-meta">
 
                         <span>
-                            Meta: <strong>80 kg</strong>
+                            Meta:
+                            <strong>
+                                80 kg
+                            </strong>
                         </span>
 
                         <strong>
@@ -565,7 +601,13 @@
                     </div>
 
 
-                    <div class="barra-progresso">
+                    <div
+                        class="barra-progresso"
+                        role="progressbar"
+                        aria-label="Progresso da campanha Apoio Animal"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="68">
 
                         <span
                             style="width: 68%;">
@@ -580,15 +622,16 @@
 
                 </article>
 
-
             </div>
 
 
-            <!-- =================================================
+            <!-- =====================================================
                  VOTAÇÃO
-                 ================================================= -->
+                 ===================================================== -->
 
-            <div class="votacao-campanha">
+            <div
+                class="votacao-campanha"
+                id="votacao">
 
                 <h3>
                     Qual deve ser nossa próxima campanha?
@@ -602,19 +645,18 @@
                 <div class="opcoes-votacao">
 
 
+                    <!-- INVERNO SOLIDÁRIO -->
+
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="inverno"
-                        aria-pressed="false">
-
+                        data-voto="inverno">
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             ❄
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -628,31 +670,27 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="inverno">
-
+                            id="votos-inverno">
                             31 votos
-
                         </span>
 
                     </button>
 
 
+                    <!-- CESTA SOLIDÁRIA -->
+
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="cesta"
-                        aria-pressed="false">
-
+                        data-voto="cesta">
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             ♥
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -666,31 +704,27 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="cesta">
-
-                            58 votos
-
+                            id="votos-cesta">
+                            59 votos
                         </span>
 
                     </button>
 
 
+                    <!-- APOIO ANIMAL -->
+
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="animal"
-                        aria-pressed="false">
-
+                        data-voto="animal">
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             🐾
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -704,43 +738,113 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="animal">
-
+                            id="votos-animal">
                             42 votos
-
                         </span>
 
                     </button>
-
 
                 </div>
 
 
                 <p
                     class="mensagem-votacao"
+                    id="mensagem-votacao"
                     aria-live="polite">
                 </p>
 
             </div>
 
 
-            <!-- =================================================
-                 INICIAR CAMPANHA
-                 ================================================= -->
+            <!-- =====================================================
+                 NOVA CAMPANHA
+                 ===================================================== -->
 
             <div class="acao-campanha">
 
                 <button
                     type="button"
                     class="botao-campanha"
-                    id="botao-iniciar-campanha">
+                    id="botao-campanha">
 
-                    ＋ Iniciar uma campanha
+                    + Sugerir nova campanha
 
                 </button>
+
+
+                <form
+                    class="form-campanha"
+                    id="form-campanha"
+                    hidden>
+
+                    <div
+                        class="form-campanha-grid">
+
+                        <div class="campo-campanha">
+
+                            <label for="nome-campanha">
+                                Nome da campanha
+                            </label>
+
+                            <input
+                                type="text"
+                                id="nome-campanha"
+                                name="nome-campanha"
+                                required>
+
+                        </div>
+
+
+                        <div class="campo-campanha">
+
+                            <label for="responsavel-campanha">
+                                Responsável
+                            </label>
+
+                            <input
+                                type="text"
+                                id="responsavel-campanha"
+                                name="responsavel-campanha"
+                                required>
+
+                        </div>
+
+
+                        <div class="campo-campanha campo-campanha-largo">
+
+                            <label for="descricao-campanha">
+                                Descrição
+                            </label>
+
+                            <textarea
+                                id="descricao-campanha"
+                                name="descricao-campanha"
+                                rows="4"
+                                required>
+                            </textarea>
+
+                        </div>
+
+                    </div>
+
+
+                    <button
+                        type="submit"
+                        class="botao-campanha">
+
+                        Enviar proposta
+
+                    </button>
+
+
+                    <p
+                        id="mensagem-campanha"
+                        aria-live="polite">
+                    </p>
+
+                </form>
 
             </div>
 
@@ -755,7 +859,9 @@
             class="doacoes"
             id="doacoes">
 
-            <span class="icone-secao">
+            <span
+                class="icone-secao"
+                aria-hidden="true">
                 ♥
             </span>
 
@@ -787,7 +893,9 @@
 
         <section class="chamada-projetos">
 
-            <span class="icone-chamada">
+            <span
+                class="icone-chamada"
+                aria-hidden="true">
                 ♡
             </span>
 
@@ -814,140 +922,7 @@
 
 
     <!-- =========================================================
-         MODAL - NOVA CAMPANHA
-         ========================================================= -->
-
-    <dialog
-        id="modal-campanha"
-        class="modal-confirmacao"
-        aria-labelledby="titulo-modal-campanha">
-
-
-        <div class="modal-conteudo">
-
-
-            <span
-                class="modal-icone"
-                aria-hidden="true">
-                ＋
-            </span>
-
-
-            <h2 id="titulo-modal-campanha">
-                Iniciar uma campanha
-            </h2>
-
-
-            <p>
-                Preencha os dados básicos para registrar uma nova campanha.
-            </p>
-
-
-            <form
-                id="form-campanha">
-
-
-                <div class="form-campanha-grid">
-
-
-                    <div class="campo-campanha campo-campanha-largo">
-
-                        <label for="nome-campanha">
-                            Nome da campanha
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nome-campanha"
-                            name="nome-campanha"
-                            placeholder="Ex.: Inverno Solidário"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo-campanha campo-campanha-largo">
-
-                        <label for="objetivo-campanha">
-                            Objetivo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="objetivo-campanha"
-                            name="objetivo-campanha"
-                            placeholder="Ex.: Arrecadar roupas e cobertores"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo-campanha">
-
-                        <label for="meta-campanha">
-                            Meta
-                        </label>
-
-                        <input
-                            type="text"
-                            id="meta-campanha"
-                            name="meta-campanha"
-                            placeholder="Ex.: 100"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo-campanha">
-
-                        <label for="data-inicio-campanha">
-                            Data de início
-                        </label>
-
-                        <input
-                            type="date"
-                            id="data-inicio-campanha"
-                            name="data-inicio-campanha"
-                            required>
-
-                    </div>
-
-
-                </div>
-
-
-                <div class="modal-acoes">
-
-
-                    <button
-                        type="button"
-                        class="botao-modal cancelar"
-                        id="cancelar-campanha">
-
-                        Voltar
-
-                    </button>
-
-
-                    <button
-                        type="submit"
-                        class="botao-modal confirmar">
-
-                        Iniciar campanha
-
-                    </button>
-
-                </div>
-
-            </form>
-
-        </div>
-
-    </dialog>
-
-
-    <!-- =========================================================
-         BOTÃO TOPO
+         VOLTAR AO TOPO
          ========================================================= -->
 
     <a
@@ -981,9 +956,8 @@
 
     <script>
 
-
         /* =====================================================
-           MENU PRINCIPAL
+           MENU
            ===================================================== */
 
         const botaoMenu =
@@ -1175,94 +1149,244 @@
            VOTAÇÃO
            ===================================================== */
 
-        const botoesVotacao =
+        const opcoesVotacao =
             document.querySelectorAll(
                 ".opcao-votacao"
             );
 
 
         const mensagemVotacao =
-            document.querySelector(
-                ".mensagem-votacao"
+            document.getElementById(
+                "mensagem-votacao"
             );
 
 
-        const votos = {
+        const CHAVE_VOTO =
+            "pingo-de-esperanca-voto";
 
-            inverno: 31,
 
-            cesta: 58,
+        const votosIniciais = {
 
-            animal: 42
+            inverno:
+                31,
+
+            cesta:
+                59,
+
+            animal:
+                42
 
         };
 
 
-        botoesVotacao.forEach(
-            function (botao) {
+        let votos =
+            {
+                ...votosIniciais
+            };
 
-                botao.addEventListener(
+
+        let votoRegistrado =
+            null;
+
+
+        function carregarVotacao() {
+
+            try {
+
+                const votosSalvos =
+                    localStorage.getItem(
+                        "pingo-de-esperanca-votos"
+                    );
+
+
+                const votoSalvo =
+                    localStorage.getItem(
+                        CHAVE_VOTO
+                    );
+
+
+                if (
+                    votosSalvos
+                ) {
+
+                    votos =
+                        JSON.parse(
+                            votosSalvos
+                        );
+
+                }
+
+
+                if (
+                    votoSalvo
+                ) {
+
+                    votoRegistrado =
+                        votoSalvo;
+
+                }
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível carregar a votação.",
+                    erro
+                );
+
+            }
+
+        }
+
+
+        function salvarVotacao() {
+
+            try {
+
+                localStorage.setItem(
+                    "pingo-de-esperanca-votos",
+                    JSON.stringify(
+                        votos
+                    )
+                );
+
+
+                if (
+                    votoRegistrado
+                ) {
+
+                    localStorage.setItem(
+                        CHAVE_VOTO,
+                        votoRegistrado
+                    );
+
+                }
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível salvar a votação.",
+                    erro
+                );
+
+            }
+
+        }
+
+
+        function atualizarVotacao() {
+
+            document.getElementById(
+                "votos-inverno"
+            ).textContent =
+                votos.inverno +
+                " votos";
+
+
+            document.getElementById(
+                "votos-cesta"
+            ).textContent =
+                votos.cesta +
+                " votos";
+
+
+            document.getElementById(
+                "votos-animal"
+            ).textContent =
+                votos.animal +
+                " votos";
+
+
+            opcoesVotacao.forEach(
+                function (opcao) {
+
+                    const selecionada =
+                        opcao.dataset.voto ===
+                        votoRegistrado;
+
+
+                    opcao.classList.toggle(
+                        "voto-selecionado",
+                        selecionada
+                    );
+
+
+                    opcao.setAttribute(
+                        "aria-pressed",
+                        selecionada
+                            ? "true"
+                            : "false"
+                    );
+
+
+                    if (
+                        votoRegistrado
+                    ) {
+
+                        opcao.disabled =
+                            true;
+
+                    }
+
+                }
+            );
+
+
+            if (
+                votoRegistrado
+            ) {
+
+                mensagemVotacao.textContent =
+                    "Seu voto já foi registrado neste navegador.";
+
+            }
+
+        }
+
+
+        opcoesVotacao.forEach(
+            function (opcao) {
+
+                opcao.addEventListener(
                     "click",
                     function () {
 
-                        const campanha =
-                            botao.dataset.campanha;
+                        if (
+                            votoRegistrado
+                        ) {
+
+                            return;
+
+                        }
 
 
-                        votos[campanha]++;
+                        const voto =
+                            opcao.dataset.voto;
 
 
-                        const contador =
-                            document.querySelector(
-                                '.contador-votos[data-campanha="' +
-                                campanha +
-                                '"]'
-                            );
+                        if (
+                            !voto ||
+                            !Object.hasOwn(
+                                votos,
+                                voto
+                            )
+                        ) {
+
+                            return;
+
+                        }
 
 
-                        contador.textContent =
-                            votos[campanha] +
-                            " votos";
+                        votos[voto] +=
+                            1;
 
 
-                        botoesVotacao.forEach(
-                            function (outroBotao) {
-
-                                outroBotao.disabled =
-                                    true;
+                        votoRegistrado =
+                            voto;
 
 
-                                outroBotao.classList.remove(
-                                    "voto-selecionado"
-                                );
+                        salvarVotacao();
 
-
-                                outroBotao.setAttribute(
-                                    "aria-pressed",
-                                    "false"
-                                );
-
-                            }
-                        );
-
-
-                        botao.disabled =
-                            true;
-
-
-                        botao.classList.add(
-                            "voto-selecionado"
-                        );
-
-
-                        botao.setAttribute(
-                            "aria-pressed",
-                            "true"
-                        );
-
-
-                        mensagemVotacao.textContent =
-                            "Seu voto foi registrado. Obrigado por participar!";
+                        atualizarVotacao();
 
                     }
                 );
@@ -1271,25 +1395,18 @@
         );
 
 
+        carregarVotacao();
+
+        atualizarVotacao();
+
+
         /* =====================================================
-           MODAL DE NOVA CAMPANHA
+           FORMULÁRIO DE NOVA CAMPANHA
            ===================================================== */
 
-        const modalCampanha =
+        const botaoCampanha =
             document.getElementById(
-                "modal-campanha"
-            );
-
-
-        const botaoIniciarCampanha =
-            document.getElementById(
-                "botao-iniciar-campanha"
-            );
-
-
-        const botaoCancelarCampanha =
-            document.getElementById(
-                "cancelar-campanha"
+                "botao-campanha"
             );
 
 
@@ -1299,21 +1416,44 @@
             );
 
 
-        botaoIniciarCampanha.addEventListener(
+        const mensagemCampanha =
+            document.getElementById(
+                "mensagem-campanha"
+            );
+
+
+        botaoCampanha.addEventListener(
             "click",
             function () {
 
-                modalCampanha.showModal();
+                const fechado =
+                    formCampanha.hasAttribute(
+                        "hidden"
+                    );
 
-            }
-        );
 
+                if (
+                    fechado
+                ) {
 
-        botaoCancelarCampanha.addEventListener(
-            "click",
-            function () {
+                    formCampanha.removeAttribute(
+                        "hidden"
+                    );
 
-                modalCampanha.close();
+                    botaoCampanha.textContent =
+                        "− Fechar formulário";
+
+                } else {
+
+                    formCampanha.setAttribute(
+                        "hidden",
+                        ""
+                    );
+
+                    botaoCampanha.textContent =
+                        "+ Sugerir nova campanha";
+
+                }
 
             }
         );
@@ -1332,140 +1472,91 @@
                     ).value.trim();
 
 
-                const objetivo =
+                const responsavel =
                     document.getElementById(
-                        "objetivo-campanha"
+                        "responsavel-campanha"
                     ).value.trim();
 
 
-                const meta =
+                const descricao =
                     document.getElementById(
-                        "meta-campanha"
+                        "descricao-campanha"
                     ).value.trim();
-
-
-                const data =
-                    document.getElementById(
-                        "data-inicio-campanha"
-                    ).value;
 
 
                 if (
                     !nome ||
-                    !objetivo ||
-                    !meta ||
-                    !data
+                    !responsavel ||
+                    !descricao
                 ) {
+
+                    mensagemCampanha.textContent =
+                        "Preencha todos os campos da proposta.";
 
                     return;
 
                 }
 
 
-                const listaCampanhas =
-                    document.querySelector(
-                        ".lista-campanhas"
+                const proposta = {
+
+                    nome:
+                        nome,
+
+                    responsavel:
+                        responsavel,
+
+                    descricao:
+                        descricao,
+
+                    status:
+                        "pendente",
+
+                    data:
+                        new Date()
+                            .toISOString()
+
+                };
+
+
+                try {
+
+                    const propostasSalvas =
+                        JSON.parse(
+                            localStorage.getItem(
+                                "pingo-de-esperanca-propostas"
+                            )
+                            || "[]"
+                        );
+
+
+                    propostasSalvas.push(
+                        proposta
                     );
 
 
-                const novaCampanha =
-                    document.createElement(
-                        "article"
+                    localStorage.setItem(
+                        "pingo-de-esperanca-propostas",
+                        JSON.stringify(
+                            propostasSalvas
+                        )
                     );
 
 
-                novaCampanha.className =
-                    "campanha-card";
+                    mensagemCampanha.textContent =
+                        "Proposta enviada para análise.";
 
+                    formCampanha.reset();
 
-                const dataFormatada =
-                    data.split("-").reverse().join("/");
+                } catch (erro) {
 
+                    mensagemCampanha.textContent =
+                        "Não foi possível salvar a proposta.";
 
-                novaCampanha.innerHTML = `
-
-                    <div class="campanha-cabecalho">
-
-                        <div>
-
-                            <h3>
-                                ${nome}
-                            </h3>
-
-                            <span class="badge-status status-planejada">
-                                PLANEJADA
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="campanha-icone"
-                            aria-hidden="true">
-                            ✦
-                        </span>
-
-                    </div>
-
-
-                    <p>
-                        ${objetivo}
-                    </p>
-
-
-                    <div class="campanha-meta">
-
-                        <span>
-                            Meta: <strong>${meta}</strong>
-                        </span>
-
-                        <strong>
-                            0%
-                        </strong>
-
-                    </div>
-
-
-                    <div class="barra-progresso">
-
-                        <span
-                            style="width: 0%;">
-                        </span>
-
-                    </div>
-
-
-                    <small>
-                        Início previsto: ${dataFormatada}
-                    </small>
-
-                `;
-
-
-                listaCampanhas.appendChild(
-                    novaCampanha
-                );
-
-
-                formCampanha.reset();
-
-
-                modalCampanha.close();
-
-            }
-        );
-
-
-        modalCampanha.addEventListener(
-            "click",
-            function (event) {
-
-                if (
-                    event.target ===
-                    modalCampanha
-                ) {
-
-                    modalCampanha.close();
+                    console.warn(
+                        "Erro ao salvar proposta.",
+                        erro
+                    );
 
                 }
 
