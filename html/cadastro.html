@@ -17,9 +17,10 @@
         rel="stylesheet"
         href="../css/style.css">
 
-    <script
-        src="../js/tema.js">
-    </script>
+  <script
+    type="module"
+    src="../js/tema.js">
+</script>
 
 </head>
 
@@ -908,17 +909,17 @@
 
 
     <a
-        href="#topo"
+        href="#fim-pagina"
         class="botao-topo"
-        aria-label="Voltar ao cabeçalho"
-        title="Voltar ao cabeçalho">
+        aria-label="Ir para o final da página"
+        title="Ir para o final da página">
 
-        ↑
+        ↓
 
     </a>
 
 
-    <footer>
+    <footer id="fim-pagina">
 
         <p>
             &copy; 2026 Pingo de Esperança.
@@ -1117,6 +1118,133 @@
 
             }
         );
+
+    </script>
+
+
+    <!-- =================================================
+         BOTÃO DE ROLAGEM
+         ================================================= -->
+
+    <script>
+
+        const botaoTopo =
+            document.querySelector(
+                ".botao-topo"
+            );
+
+
+        function atualizarBotaoTopo() {
+
+            if (!botaoTopo) {
+                return;
+            }
+
+
+            const estaNoTopo =
+                window.scrollY <= 120;
+
+
+            if (estaNoTopo) {
+
+                botaoTopo.textContent =
+                    "↓";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#fim-pagina"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Ir para o final da página"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Ir para o final da página"
+                );
+
+            } else {
+
+                botaoTopo.textContent =
+                    "↑";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#topo"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Voltar ao cabeçalho"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Voltar ao cabeçalho"
+                );
+
+            }
+
+        }
+
+
+        if (botaoTopo) {
+
+            botaoTopo.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const estaNoTopo =
+                        window.scrollY <= 120;
+
+
+                    if (estaNoTopo) {
+
+                        const alturaMaxima =
+                            Math.max(
+                                document.body.scrollHeight,
+                                document.documentElement.scrollHeight
+                            ) -
+                            window.innerHeight;
+
+
+                        window.scrollTo({
+                            top:
+                                Math.max(
+                                    alturaMaxima,
+                                    0
+                                ),
+                            behavior: "smooth"
+                        });
+
+                    } else {
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                }
+            );
+
+
+            window.addEventListener(
+                "scroll",
+                atualizarBotaoTopo,
+                { passive: true }
+            );
+
+
+            atualizarBotaoTopo();
+
+        }
 
     </script>
 

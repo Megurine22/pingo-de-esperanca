@@ -1,3 +1,5 @@
+/* :chatgpt-content-reference{index="0"} */
+
 :root {
 
     --cor-azul-escuro: #0d47a1;
@@ -1683,7 +1685,7 @@ address {
 }
 
 
-.nivel-voluntario {
+.nivel-voluntariado {
 
     grid-column:
         span 3;
@@ -1721,7 +1723,7 @@ address {
 }
 
 
-.nivel-voluntario:hover {
+.nivel-voluntariado:hover {
 
     transform:
         translateY(-4px);
@@ -1737,7 +1739,7 @@ address {
 }
 
 
-.nivel-voluntario h3 {
+.nivel-voluntariado h3 {
 
     margin:
         0 0 4px;
@@ -1747,7 +1749,7 @@ address {
 }
 
 
-.nivel-voluntario p {
+.nivel-voluntariado p {
 
     margin:
         0 0 8px;
@@ -3759,7 +3761,7 @@ footer {
     .card-projeto,
     .campo,
     .opcao-contribuicao,
-    .nivel-voluntario,
+    .nivel-voluntariado,
     .campanha-card {
 
         grid-column:
@@ -3956,7 +3958,7 @@ footer {
     .card-projeto,
     .campo,
     .opcao-contribuicao,
-    .nivel-voluntario,
+    .nivel-voluntariado,
     .campanha-card,
     .opcao-votacao {
 
@@ -4433,7 +4435,7 @@ html[data-theme="dark"]
 html[data-theme="dark"]
 .texto-ajuda,
 html[data-theme="dark"]
-.nivel-voluntario p {
+.nivel-voluntariado p {
 
     color:
         var(--cor-texto-secundario);
@@ -4465,7 +4467,7 @@ html[data-theme="dark"]
 html[data-theme="dark"]
 .card-doacao,
 html[data-theme="dark"]
-.nivel-voluntario,
+.nivel-voluntariado,
 html[data-theme="dark"]
 .campanha-card,
 html[data-theme="dark"]
