@@ -155,12 +155,46 @@ cd pingo-de-esperanca
 
 3. Abra o projeto no Visual Studio Code.
 
-4. Inicie um servidor local na pasta do projeto:
+4. Instale as dependências:
 
 ```bash
-python -m http.server 5500
+npm install
 ```
 
-5. Abra no navegador:
+5. Inicie o servidor de desenvolvimento:
+
+```bash
+npm run dev
+```
+
+6. Abra no navegador:
+
+```text
+http://localhost:5173/html/index.html
+```
+
+### Build de produção
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+Para visualizar localmente a versão de produção:
+
+```bash
+npm run preview
+```
+
+Acesse:
+
+```text
+http://localhost:4173/html/index.html
+```
+
+### Site publicado
+
+A versão publicada do projeto está disponível em:
 
 https://megurine22.github.io/pingo-de-esperanca/
