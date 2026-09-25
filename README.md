@@ -163,4 +163,4 @@ python -m http.server 5500
 
 5. Abra no navegador:
 
-http://localhost:5500/html/index.html
+https://megurine22.github.io/pingo-de-esperanca/
