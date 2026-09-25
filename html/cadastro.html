@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        Cadastro | Pingo de Esperança
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../css/style.css">
+
+  <script
+    type="module"
+    src="../js/tema.js">
+</script>
+
+</head>
+
+<body>
+
+    <header id="topo">
+
+        <div class="cabecalho-topo">
+
+            <p>
+                Pingo de Esperança
+            </p>
+
+
+            <button
+                type="button"
+                class="botao-tema"
+                id="botao-tema"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+                title="Ativar modo escuro">
+
+                🌙
+
+            </button>
+
+
+            <button
+                type="button"
+                class="botao-menu"
+                aria-label="Abrir menu"
+                aria-expanded="false"
+                aria-controls="menu-principal">
+
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </button>
+
+        </div>
+
+
+        <nav
+            id="menu-principal"
+            class="menu-principal">
+
+            <a href="index.html">
+
+                <span
+                    class="icone-menu-principal"
+                    aria-hidden="true">
+                    ⌂
+                </span>
+
+                <span>
+                    Início
+                </span>
+
+            </a>
+
+
+            <div class="menu-dropdown">
+
+                <button
+                    type="button"
+                    class="botao-dropdown"
+                    aria-expanded="false"
+                    aria-haspopup="true"
+                    aria-controls="submenu-projetos">
+
+                    <span>
+                        Projetos
+                    </span>
+
+                    <span
+                        class="seta-dropdown"
+                        aria-hidden="true">
+                        ⌄
+                    </span>
+
+                </button>
+
+
+                <div
+                    id="submenu-projetos"
+                    class="submenu">
+
+                    <a href="projetos.html">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ▦
+                        </span>
+
+                        <span>
+                            Todos os projetos
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="projetos.html#voluntariado">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ✚
+                        </span>
+
+                        <span>
+                            Voluntariado
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="projetos.html#doacoes">
+
+                        <span
+                            class="icone-menu-item"
+                            aria-hidden="true">
+                            ♥
+                        </span>
+
+                        <span>
+                            Doações
+                        </span>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <a
+                href="cadastro.html"
+                class="link-coracao">
+
+                <span
+                    class="coracao"
+                    aria-hidden="true">
+                    ♡
+                </span>
+
+                <span>
+                    Cadastre-se
+                </span>
+
+            </a>
+
+
+            <a
+                href="index.html#contato"
+                class="link-ajuda">
+
+                <span
+                    class="icone-ajuda"
+                    aria-hidden="true">
+                    ?
+                </span>
+
+                <span>
+                    Ajuda
+                </span>
+
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main>
+
+        <!-- ========================================
+             INTRODUÇÃO
+             ======================================== -->
+
+        <section class="introducao-cadastro">
+
+            <span class="icone-cadastro">
+                ♡
+            </span>
+
+            <h1>
+                Cadastre-se
+            </h1>
+
+            <p>
+                Preencha seus dados para fazer parte das iniciativas
+                da Pingo de Esperança e contribuir para nossas ações.
+            </p>
+
+            <p class="legenda-obrigatorio">
+
+                <span class="asterisco">
+                    *
+                </span>
+
+                Campo obrigatório
+
+            </p>
+
+        </section>
+
+
+        <!-- ========================================
+             FORMULÁRIO
+             ======================================== -->
+
+        <form
+            action="#"
+            method="post"
+            id="formulario-cadastro"
+            novalidate>
+
+
+            <!-- ========================================
+                 DADOS PESSOAIS
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Dados pessoais
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Dados pessoais
+
+                </div>
+
+
+                <div class="campos-grid">
+
+
+                    <div class="campo">
+
+                        <label for="nome">
+
+                            Nome completo
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nome"
+                            name="nome"
+                            placeholder="Ex.: Ellen Rita"
+                            autocomplete="name"
+                            title="Digite seu nome completo, incluindo pelo menos nome e sobrenome."
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nome-social">
+
+                            Nome social
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="nome-social"
+                            name="nome-social"
+                            placeholder="Digite seu nome social"
+                            autocomplete="nickname">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="email">
+
+                            E-mail
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="exemplo@email.com"
+                            autocomplete="email"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="nascimento">
+
+                            Data de nascimento
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="date"
+                            id="nascimento"
+                            name="nascimento"
+                            min="1900-01-01"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cpf">
+
+                            CPF
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cpf"
+                            name="cpf"
+                            placeholder="000.000.000-00"
+                            maxlength="14"
+                            autocomplete="off"
+                            required>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 CONTATO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Contato
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Contato
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="telefone">
+
+                        Telefone
+
+                        <span class="asterisco">
+                            *
+                        </span>
+
+                    </label>
+
+
+                    <input
+                        type="tel"
+                        id="telefone"
+                        name="telefone"
+                        placeholder="(11) 99999-9999"
+                        maxlength="15"
+                        autocomplete="tel"
+                        required>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 ENDEREÇO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Endereço
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Endereço
+
+                </div>
+
+
+                <div class="campos-grid">
+
+
+                    <div class="campo">
+
+                        <label for="cep">
+
+                            CEP
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cep"
+                            name="cep"
+                            placeholder="00000-000"
+                            maxlength="9"
+                            autocomplete="postal-code"
+                            inputmode="numeric"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="numero">
+
+                            Número
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="numero"
+                            name="numero"
+                            placeholder="Ex.: 100"
+                            inputmode="numeric"
+                            autocomplete="address-line2"
+                            required>
+
+
+                        <label
+                            for="sem-numero"
+                            class="opcao-sem-numero">
+
+                            <input
+                                type="checkbox"
+                                id="sem-numero"
+                                name="sem-numero"
+                                value="sim">
+
+                            Este endereço não possui número
+
+                        </label>
+
+                    </div>
+
+
+                    <div class="campo campo-largo">
+
+                        <label for="endereco">
+
+                            Endereço
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="endereco"
+                            name="endereco"
+                            pattern="[A-Za-zÀ-ÖØ-öø-ÿ .'-]{3,100}"
+                            title="Digite somente o nome do logradouro, sem números."
+                            placeholder="Ex.: Avenida das Acácias"
+                            autocomplete="street-address"
+                            required>
+
+                    </div>
+
+
+                    <div class="campo campo-largo">
+
+                        <label for="complemento">
+
+                            Complemento
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="complemento"
+                            name="complemento"
+                            placeholder="Ex.: apartamento 12">
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="cidade">
+
+                            Cidade
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            list="lista-cidades"
+                            autocomplete="address-level2"
+                            placeholder="Selecione primeiro o estado"
+                            required
+                            disabled>
+
+
+                        <datalist
+                            id="lista-cidades">
+                        </datalist>
+
+                    </div>
+
+
+                    <div class="campo">
+
+                        <label for="estado">
+
+                            Estado
+
+                            <span class="asterisco">
+                                *
+                            </span>
+
+                        </label>
+
+
+                        <input
+                            type="text"
+                            id="estado"
+                            name="estado"
+                            list="lista-estados"
+                            autocomplete="address-level1"
+                            placeholder="Digite para buscar"
+                            required>
+
+
+                        <datalist
+                            id="lista-estados">
+                        </datalist>
+
+                    </div>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 CONTRIBUIÇÃO
+                 ======================================== -->
+
+            <fieldset>
+
+                <legend class="legend-acessivel">
+                    Como deseja contribuir?
+                </legend>
+
+                <div
+                    class="titulo-fieldset"
+                    aria-hidden="true">
+
+                    Como deseja contribuir?
+
+                </div>
+
+
+                <p class="descricao-contribuicao">
+
+                    Selecione uma ou mais opções:
+
+                </p>
+
+
+                <div class="opcoes-contribuicao">
+
+
+                    <label
+                        class="opcao-contribuicao">
+
+
+                        <input
+                            type="checkbox"
+                            name="voluntariado"
+                            value="voluntariado">
+
+
+                        <span
+                            class="icone-opcao"
+                            aria-hidden="true">
+
+                            ✚
+
+                        </span>
+
+
+                        <span class="texto-opcao">
+
+                            <span
+                                class="linha-opcao-titulo">
+
+                                <strong>
+                                    Trabalho voluntário
+                                </strong>
+
+
+                                <span
+                                    class="badge-contribuicao badge-voluntario">
+
+                                    VOLUNTÁRIO
+
+                                </span>
+
+                            </span>
+
+
+                            <small>
+                                Participar das ações e campanhas.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+
+                    <label
+                        class="opcao-contribuicao">
+
+
+                        <input
+                            type="checkbox"
+                            name="doacao"
+                            value="doacao">
+
+
+                        <span
+                            class="icone-opcao"
+                            aria-hidden="true">
+
+                            ♥
+
+                        </span>
+
+
+                        <span class="texto-opcao">
+
+                            <span
+                                class="linha-opcao-titulo">
+
+                                <strong>
+                                    Contribuição financeira
+                                </strong>
+
+
+                                <span
+                                    class="badge-contribuicao badge-doacao">
+
+                                    DOAÇÃO
+
+                                </span>
+
+                            </span>
+
+
+                            <small>
+                                Apoiar a manutenção dos projetos.
+                            </small>
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+            </fieldset>
+
+
+            <!-- ========================================
+                 ENVIO
+                 ======================================== -->
+
+            <div class="area-envio">
+
+                <button
+                    type="submit"
+                    id="botao-enviar">
+
+                    ♡ Enviar cadastro
+
+                </button>
+
+
+                <p class="texto-ajuda">
+
+                    Sua participação pode fazer a diferença.
+
+                </p>
+
+            </div>
+
+        </form>
+
+
+        <!-- ========================================
+             MODAL DAS DUAS CONTRIBUIÇÕES
+             ======================================== -->
+
+        <dialog
+            id="modal-contribuicao"
+            class="modal-confirmacao"
+            aria-labelledby="titulo-modal-contribuicao">
+
+
+            <div class="modal-conteudo">
+
+
+                <span
+                    class="modal-icone"
+                    aria-hidden="true">
+
+                    ?
+
+                </span>
+
+
+                <h2 id="titulo-modal-contribuicao">
+
+                    Duas formas de contribuição
+
+                </h2>
+
+
+                <p>
+
+                    Você selecionou trabalho voluntário e
+                    contribuição financeira. Deseja continuar
+                    com as duas opções?
+
+                </p>
+
+
+                <div class="modal-acoes">
+
+
+                    <button
+                        type="button"
+                        class="botao-modal cancelar"
+                        id="cancelar-contribuicao">
+
+                        Não, voltar
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="botao-modal confirmar"
+                        id="confirmar-contribuicao">
+
+                        Sim, continuar
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+
+        <!-- ========================================
+             MODAL DE FEEDBACK
+             ======================================== -->
+
+        <dialog
+            id="modal-feedback"
+            class="modal-feedback"
+            aria-labelledby="titulo-modal-feedback"
+            aria-describedby="mensagem-modal-feedback">
+
+
+            <div class="modal-conteudo">
+
+
+                <span
+                    id="icone-modal-feedback"
+                    class="modal-icone"
+                    aria-hidden="true">
+
+                    !
+
+                </span>
+
+
+                <h2 id="titulo-modal-feedback">
+
+                    Atenção
+
+                </h2>
+
+
+                <p id="mensagem-modal-feedback">
+
+                    Verifique os campos do formulário.
+
+                </p>
+
+
+                <div class="modal-acoes">
+
+                    <button
+                        type="button"
+                        class="botao-modal confirmar"
+                        id="acao-modal-feedback">
+
+                        Entendi
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </dialog>
+
+    </main>
+
+
+    <a
+        href="#fim-pagina"
+        class="botao-topo"
+        aria-label="Ir para o final da página"
+        title="Ir para o final da página">
+
+        ↓
+
+    </a>
+
+
+    <footer id="fim-pagina">
+
+        <p>
+            &copy; 2026 Pingo de Esperança.
+            Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+
+    <!-- =================================================
+         MENU
+         ================================================= -->
+
+    <script>
+
+        const botaoMenu =
+            document.querySelector(
+                ".botao-menu"
+            );
+
+
+        const menuPrincipal =
+            document.getElementById(
+                "menu-principal"
+            );
+
+
+        const botoesDropdown =
+            document.querySelectorAll(
+                ".botao-dropdown"
+            );
+
+
+        botaoMenu.addEventListener(
+            "click",
+            function () {
+
+                const aberto =
+                    botaoMenu.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                botaoMenu.setAttribute(
+                    "aria-expanded",
+                    String(!aberto)
+                );
+
+
+                botaoMenu.setAttribute(
+                    "aria-label",
+                    aberto
+                        ? "Abrir menu"
+                        : "Fechar menu"
+                );
+
+
+                menuPrincipal.classList.toggle(
+                    "menu-aberto",
+                    !aberto
+                );
+
+            }
+        );
+
+
+        botoesDropdown.forEach(
+            function (botao) {
+
+                botao.addEventListener(
+                    "click",
+                    function (event) {
+
+                        event.stopPropagation();
+
+
+                        const dropdown =
+                            botao.closest(
+                                ".menu-dropdown"
+                            );
+
+
+                        const aberto =
+                            botao.getAttribute(
+                                "aria-expanded"
+                            ) === "true";
+
+
+                        botoesDropdown.forEach(
+                            function (outroBotao) {
+
+                                outroBotao.setAttribute(
+                                    "aria-expanded",
+                                    "false"
+                                );
+
+
+                                outroBotao
+                                    .closest(
+                                        ".menu-dropdown"
+                                    )
+                                    .classList.remove(
+                                        "submenu-aberto"
+                                    );
+
+                            }
+                        );
+
+
+                        if (!aberto) {
+
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "true"
+                            );
+
+
+                            dropdown.classList.add(
+                                "submenu-aberto"
+                            );
+
+                        }
+
+                    }
+                );
+
+            }
+        );
+
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                if (
+                    !event.target.closest(
+                        ".menu-dropdown"
+                    )
+                    &&
+                    !event.target.closest(
+                        ".botao-menu"
+                    )
+                ) {
+
+                    botoesDropdown.forEach(
+                        function (botao) {
+
+                            botao.setAttribute(
+                                "aria-expanded",
+                                "false"
+                            );
+
+
+                            botao
+                                .closest(
+                                    ".menu-dropdown"
+                                )
+                                .classList.remove(
+                                    "submenu-aberto"
+                                );
+
+                        }
+                    );
+
+                }
+
+            }
+        );
+
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (
+                    window.innerWidth > 699
+                ) {
+
+                    menuPrincipal.classList.remove(
+                        "menu-aberto"
+                    );
+
+
+                    botaoMenu.setAttribute(
+                        "aria-expanded",
+                        "false"
+                    );
+
+
+                    botaoMenu.setAttribute(
+                        "aria-label",
+                        "Abrir menu"
+                    );
+
+                }
+
+            }
+        );
+
+    </script>
+
+
+    <!-- =================================================
+         BOTÃO DE ROLAGEM
+         ================================================= -->
+
+    <script>
+
+        const botaoTopo =
+            document.querySelector(
+                ".botao-topo"
+            );
+
+
+        function atualizarBotaoTopo() {
+
+            if (!botaoTopo) {
+                return;
+            }
+
+
+            const estaNoTopo =
+                window.scrollY <= 120;
+
+
+            if (estaNoTopo) {
+
+                botaoTopo.textContent =
+                    "↓";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#fim-pagina"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Ir para o final da página"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Ir para o final da página"
+                );
+
+            } else {
+
+                botaoTopo.textContent =
+                    "↑";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#topo"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Voltar ao cabeçalho"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Voltar ao cabeçalho"
+                );
+
+            }
+
+        }
+
+
+        if (botaoTopo) {
+
+            botaoTopo.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const estaNoTopo =
+                        window.scrollY <= 120;
+
+
+                    if (estaNoTopo) {
+
+                        const alturaMaxima =
+                            Math.max(
+                                document.body.scrollHeight,
+                                document.documentElement.scrollHeight
+                            ) -
+                            window.innerHeight;
+
+
+                        window.scrollTo({
+                            top:
+                                Math.max(
+                                    alturaMaxima,
+                                    0
+                                ),
+                            behavior: "smooth"
+                        });
+
+                    } else {
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                }
+            );
+
+
+            window.addEventListener(
+                "scroll",
+                atualizarBotaoTopo,
+                { passive: true }
+            );
+
+
+            atualizarBotaoTopo();
+
+        }
+
+    </script>
+
+
+    <!-- =================================================
+         FORMULÁRIO MODULAR
+         ================================================= -->
+
+    <script type="module">
+
+        import {
+            inicializarFormulario
+        } from "../js/formulario.js";
+
+
+        inicializarFormulario();
+
+    </script>
+
+</body>
+
+</html>
