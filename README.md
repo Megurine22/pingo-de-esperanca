@@ -4,9 +4,13 @@ Projeto front-end desenvolvido para uma ONG fictícia, com foco em semântica, a
 
 ## Sobre o projeto
 
-O Pingo de Esperança é uma aplicação web desenvolvida como projeto acadêmico de Desenvolvimento Front-end. A proposta é apresentar uma interface digital para uma organização do terceiro setor, permitindo apresentar projetos, incentivar o voluntariado, receber contribuições e realizar cadastro de participantes.
+O Pingo de Esperança é uma aplicação web desenvolvida como projeto acadêmico de Desenvolvimento Front-end.
 
-O projeto foi desenvolvido priorizando organização do código, separação de responsabilidades, acessibilidade e experiência de utilização.
+A proposta é apresentar uma interface digital para uma organização do terceiro setor,
+permitindo apresentar projetos, incentivar o voluntariado, receber contribuições e realizar cadastro de participantes.
+
+O projeto foi desenvolvido priorizando organização do código, separação de responsabilidades,
+acessibilidade e experiência de utilização.
 
 ## Objetivos
 
@@ -23,23 +27,28 @@ O projeto foi desenvolvido priorizando organização do código, separação de 
 
 ### HTML5
 
-Utilizado para estruturar semanticamente as páginas da aplicação, incluindo formulários, navegação, seções, campos agrupados com `fieldset` e `legend`, elementos interativos e conteúdo acessível.
+Utilizado para estruturar semanticamente as páginas da aplicação, incluindo formulários,
+navegação, seções, campos agrupados com `fieldset` e `legend`, elementos interativos e conteúdo acessível.
 
 ### CSS3
 
-Utilizado para apresentação visual da aplicação, incluindo layout, tipografia, espaçamento, componentes, estados dos campos e responsividade.
+Utilizado para apresentação visual da aplicação, incluindo layout, tipografia,
+espaçamento, componentes, estados dos campos e responsividade.
 
 ### JavaScript
 
-Utilizado para implementar a lógica da aplicação, manipulação do DOM, navegação, eventos, validações, máscaras, armazenamento de dados e integração com serviços externos.
+Utilizado para implementar a lógica da aplicação, manipulação do DOM, navegação,
+eventos, validações, máscaras, armazenamento de dados e integração com serviços externos.
 
 ### JavaScript ES6 Modules
 
-A aplicação utiliza `import` e `export` para separar as funcionalidades em módulos, reduzindo o acoplamento e facilitando a manutenção.
+A aplicação utiliza `import` e `export` para separar as funcionalidades em módulos,
+reduzindo o acoplamento e facilitando a manutenção.
 
 ### Vue 3
 
-Utilizado como complemento ao JavaScript para o componente relacionado às campanhas e atividades, mantendo a integração isolada das demais funcionalidades.
+Utilizado como complemento ao JavaScript para o componente relacionado às campanhas e atividades,
+mantendo a integração isolada das demais funcionalidades.
 
 ### APIs externas
 
@@ -50,9 +59,15 @@ Utilizado como complemento ao JavaScript para o componente relacionado às campa
 
 O `localStorage` é utilizado para manter dados do formulário e informações da aplicação no navegador.
 
+### Vite
+
+Utilizado como ferramenta de desenvolvimento e build de produção,
+permitindo executar o projeto localmente e gerar os arquivos para publicação.
+
 ### Git e GitHub
 
-Utilizados para controle de versão, organização de branches, commits semânticos, Pull Requests, releases e acompanhamento das atividades do projeto.
+Utilizados para controle de versão, organização de branches, commits semânticos,
+Pull Requests, releases, GitHub Actions e acompanhamento das atividades do projeto.
 
 ## Funcionalidades
 
@@ -82,28 +97,37 @@ O formulário possui máscaras para:
 
 ### Consulta de CEP
 
-Após o preenchimento de um CEP válido, a aplicação consulta a API ViaCEP e pode preencher automaticamente informações de endereço, estado e cidade.
+Após o preenchimento de um CEP válido, a aplicação consulta a API ViaCEP
+e pode preencher automaticamente informações de endereço, estado e cidade.
 
 ### Estados e cidades
 
-Os estados brasileiros são disponibilizados para seleção e as cidades são carregadas conforme o estado escolhido utilizando a API do IBGE.
+Os estados brasileiros são disponibilizados para seleção e as cidades são carregadas
+conforme o estado escolhido utilizando a API do IBGE.
 
 ### Persistência de dados
 
-O formulário possui armazenamento de rascunho utilizando `localStorage`, permitindo recuperar informações preenchidas anteriormente no navegador.
+O formulário possui armazenamento de rascunho utilizando `localStorage`,
+permitindo recuperar informações preenchidas anteriormente no navegador.
 
 ### Contribuições
 
-O utilizador pode selecionar trabalho voluntário e contribuição financeira. Quando as duas opções são selecionadas, a aplicação apresenta uma confirmação antes de continuar.
+O utilizador pode selecionar trabalho voluntário e contribuição financeira.
+Quando as duas opções são selecionadas, a aplicação apresenta uma confirmação antes de continuar.
 
 ### Validação acessível
 
-Os campos do formulário apresentam feedback visual conforme o estado de validação e utilizam o atributo `aria-invalid` para representar semanticamente campos válidos e inválidos.
+Os campos do formulário apresentam feedback visual conforme o estado de validação
+e utilizam o atributo `aria-invalid` para representar semanticamente campos válidos e inválidos.
 
 ## Estrutura do projeto
 
 ```text
 pingo-de-esperanca/
+│
+├── .github/
+│   └── workflows/
+│       └── deploy.yml
 │
 ├── css/
 │   └── style.css
@@ -128,7 +152,13 @@ pingo-de-esperanca/
 │   ├── votacao.js
 │   └── vue-widget.js
 │
-└── README.md
+├── .gitignore
+├── package.json
+├── package-lock.json
+├── README.md
+└── vite.config.js
+```
+
 ## Pré-requisitos
 
 Para executar o projeto localmente, é necessário:
@@ -136,54 +166,46 @@ Para executar o projeto localmente, é necessário:
 - Navegador web atualizado.
 - Visual Studio Code ou outro editor de código.
 - Git, caso seja necessário trabalhar com o repositório.
+- Node.js e npm.
 
-O projeto utiliza HTML, CSS e JavaScript e não possui, nesta etapa, instalação de dependências por gerenciador de pacotes.
+O projeto utiliza HTML, CSS, JavaScript, Vue 3 e Vite para gerenciamento
+do ambiente de desenvolvimento e geração do build de produção.
 
 ## Como executar
 
 1. Clone o repositório:
 
-```bash
-git clone https://github.com/Megurine22/pingo-de-esperanca.git
-```
+   `git clone https://github.com/Megurine22/pingo-de-esperanca.git`
 
 2. Acesse a pasta do projeto:
 
-```bash
-cd pingo-de-esperanca
-```
+   `cd pingo-de-esperanca`
 
 3. Abra o projeto no Visual Studio Code.
 
 4. Instale as dependências:
 
-```bash
-npm install
-```
+   `npm install`
 
 5. Inicie o servidor de desenvolvimento:
 
-```bash
-npm run dev
-```
+   `npm run dev`
 
 6. Abra no navegador:
 
-```text
-http://localhost:5173/html/index.html
-```
+   `http://localhost:5173/html/index.html`
 
-### Build de produção
+## Build de produção
 
 Para gerar a versão de produção:
 
-```bash
+```text
 npm run build
 ```
 
 Para visualizar localmente a versão de produção:
 
-```bash
+```text
 npm run preview
 ```
 
@@ -193,7 +215,7 @@ Acesse:
 http://localhost:4173/html/index.html
 ```
 
-### Site publicado
+## Site publicado
 
 A versão publicada do projeto está disponível em:
 
