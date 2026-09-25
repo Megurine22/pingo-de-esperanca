@@ -17,6 +17,628 @@
         rel="stylesheet"
         href="../css/style.css">
 
+    <script
+        type="module"
+        src="../js/tema.js">
+    </script>
+
+
+    <style>
+
+        /* =====================================================
+           CAMPANHAS E ATIVIDADES
+           Complemento da versão original
+           ===================================================== */
+
+        .campanhas-atividades {
+            text-align: center;
+        }
+
+        .texto-campanhas {
+            max-width: 820px;
+            margin: 0 auto var(--espaco-4);
+            color: var(--cor-texto-secundario);
+        }
+
+        .lista-campanhas {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: var(--espaco-3);
+            text-align: left;
+        }
+
+        .campanha-card {
+            grid-column: span 6;
+            min-width: 0;
+            padding: 24px;
+            background: var(--gradiente-card);
+            border: 1px solid var(--cor-neutro-borda-clara);
+            border-radius: var(--raio-lg);
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicao-padrao);
+        }
+
+        .campanha-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .campanha-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: var(--espaco-2);
+        }
+
+        .campanha-cabecalho h3 {
+            margin: 0 0 8px;
+        }
+
+        .campanha-icone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: rgba(255, 179, 199, 0.12);
+            color: var(--cor-destaque);
+            font-size: 20px;
+        }
+
+        .badge-status {
+            display: inline-flex;
+            padding: 4px 9px;
+            border-radius: 20px;
+            font-size: 0.68rem;
+            font-weight: 800;
+        }
+
+        .status-andamento {
+            color: #236b2a;
+            background: #e4f4e6;
+        }
+
+        .campanha-card > p {
+            margin: var(--espaco-2) 0;
+        }
+
+        .campanha-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--espaco-2);
+            margin-top: var(--espaco-2);
+            color: var(--cor-texto-secundario);
+            font-size: var(--texto-xs);
+        }
+
+        .campanha-meta strong {
+            color: var(--cor-azul-principal);
+        }
+
+        .barra-progresso {
+            width: 100%;
+            height: 9px;
+            margin: 8px 0 6px;
+            overflow: hidden;
+            border-radius: 20px;
+            background: #dceaf6;
+        }
+
+        .barra-progresso span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: var(--gradiente-botao);
+        }
+
+        .votacao-campanha {
+            margin-top: var(--espaco-5);
+            padding: var(--espaco-4);
+            background: var(--gradiente-claro);
+            border: 1px solid var(--cor-neutro-borda-clara);
+            border-radius: var(--raio-lg);
+        }
+
+        .opcoes-votacao {
+            display: grid;
+            grid-template-columns: repeat(12, minmax(0, 1fr));
+            gap: var(--espaco-2);
+        }
+
+        .opcao-votacao {
+            grid-column: span 4;
+            display: flex;
+            align-items: center;
+            gap: var(--espaco-2);
+            min-width: 0;
+            width: 100%;
+            padding: 15px;
+            border: 1px solid var(--cor-neutro-borda-clara);
+            border-radius: var(--raio-md);
+            background: var(--cor-branco);
+            color: var(--cor-texto);
+            text-align: left;
+            cursor: pointer;
+            transition: var(--transicao-padrao);
+        }
+
+        .opcao-votacao:hover {
+            border-color: #90caf9;
+            transform: translateY(-3px);
+            box-shadow: var(--sombra-suave);
+        }
+
+        .opcao-votacao:focus-visible {
+            outline: 3px solid var(--cor-destaque);
+            outline-offset: 3px;
+        }
+
+        .opcao-votacao.voto-selecionado {
+            border-color: var(--cor-sucesso);
+            background: #f1f8f3;
+            box-shadow: var(--sombra-sucesso);
+        }
+
+        .opcao-votacao:disabled {
+            cursor: not-allowed;
+        }
+
+        .icone-voto {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: rgba(255, 179, 199, 0.12);
+            color: var(--cor-destaque);
+            font-size: 20px;
+        }
+
+        .voto-selecionado .icone-voto {
+            background: var(--cor-sucesso);
+            color: var(--cor-branco);
+        }
+
+        .texto-voto {
+            display: flex;
+            flex-direction: column;
+            min-width: 0;
+            flex: 1;
+        }
+
+        .texto-voto small {
+            color: var(--cor-texto-secundario);
+            font-size: var(--texto-xs);
+        }
+
+        .contador-votos {
+            flex-shrink: 0;
+            color: var(--cor-azul-principal);
+            font-size: var(--texto-xs);
+            font-weight: 700;
+        }
+
+        .mensagem-votacao {
+            min-height: 24px;
+            margin: var(--espaco-2) 0 0;
+            color: var(--cor-sucesso);
+            font-weight: 700;
+        }
+
+        .painel-participacao {
+            margin-top: var(--espaco-4);
+            padding: var(--espaco-4);
+            background: var(--cor-branco);
+            border: 1px solid var(--cor-neutro-borda-clara);
+            border-radius: var(--raio-lg);
+            box-shadow: var(--sombra-suave);
+            text-align: left;
+        }
+
+        .painel-cabecalho {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--espaco-2);
+            margin-bottom: var(--espaco-3);
+        }
+
+        .painel-cabecalho h3 {
+            margin: 0;
+        }
+
+        .painel-cabecalho > span {
+            color: var(--cor-texto-secundario);
+            font-size: var(--texto-xs);
+        }
+
+        .barra-voto-item {
+            margin-bottom: var(--espaco-3);
+        }
+
+        .linha-voto {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .linha-voto strong {
+            flex: 1;
+        }
+
+        .linha-voto b {
+            color: var(--cor-azul-principal);
+            white-space: nowrap;
+        }
+
+        .barra-grafico {
+            width: 100%;
+            height: 12px;
+            overflow: hidden;
+            background: #dceaf6;
+            border-radius: 20px;
+        }
+
+        .barra-grafico span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: var(--gradiente-botao);
+            transition: width .3s ease;
+        }
+
+        .lista-propostas {
+            display: grid;
+            gap: var(--espaco-2);
+            margin-top: var(--espaco-3);
+        }
+
+        .proposta-item {
+            padding: 1rem 1.25rem;
+            background: #f1f8f3;
+            border: 1px solid #b9dfbe;
+            border-radius: var(--raio-md);
+        }
+
+        .proposta-item strong {
+            color: var(--cor-sucesso);
+        }
+
+        .proposta-item p {
+            margin: 4px 0;
+        }
+
+        .proposta-status {
+            color: var(--cor-texto-secundario);
+            font-size: var(--texto-xs);
+        }
+
+        .botao-detalhes,
+        .botao-iniciar-campanha {
+            display: block;
+            margin: var(--espaco-3) auto 0;
+            padding: 10px 20px;
+            border-radius: var(--raio-pill);
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .botao-detalhes {
+            border: 2px solid var(--cor-azul-principal);
+            background: var(--cor-branco);
+            color: var(--cor-azul-principal);
+        }
+
+        .botao-iniciar-campanha {
+            border: none;
+            background: var(--gradiente-botao);
+            color: var(--cor-branco);
+            box-shadow: var(--sombra-azul);
+        }
+
+        .detalhes-campanhas {
+            margin-top: var(--espaco-3);
+            padding: var(--espaco-3);
+            border-top: 1px solid var(--cor-neutro-borda-clara);
+            color: var(--cor-texto);
+        }
+
+        .detalhes-campanhas p {
+            margin: 10px 0;
+        }
+
+        .ultima-atualizacao {
+            text-align: center;
+        }
+
+        .form-campanha {
+            max-width: 100%;
+            margin: var(--espaco-3) 0 0;
+            text-align: left;
+        }
+
+        .form-campanha-grid {
+            display: grid;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: var(--espaco-2);
+        }
+
+        .campo-campanha {
+            min-width: 0;
+        }
+
+        .campo-campanha-largo {
+            grid-column: 1 / -1;
+        }
+
+        .campo-campanha label {
+            display: block;
+            margin-bottom: var(--espaco-1);
+            font-weight: 600;
+        }
+
+        .campo-campanha input,
+        .campo-campanha textarea {
+            width: 100%;
+            padding: 11px 13px;
+            border: 1px solid #b9cad9;
+            border-radius: var(--raio-sm);
+            background: var(--cor-branco);
+            color: var(--cor-texto);
+            font-family: inherit;
+            font-size: 15px;
+        }
+
+        .campo-campanha textarea {
+            resize: vertical;
+        }
+
+        .modal-campanha {
+            width: min(500px, 90vw);
+            border: none;
+            border-radius: var(--raio-xl);
+            padding: 0;
+            box-shadow: 0 20px 60px rgba(13, 71, 161, 0.25);
+        }
+
+        .modal-campanha::backdrop {
+            background: rgba(13, 47, 75, 0.45);
+            backdrop-filter: blur(2px);
+        }
+
+        .modal-campanha .modal-conteudo {
+            padding: var(--espaco-5);
+            text-align: center;
+        }
+
+        .modal-campanha .modal-icone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 52px;
+            height: 52px;
+            margin: 0 auto var(--espaco-2);
+            border-radius: 50%;
+            background: var(--cor-neutro-claro);
+            color: var(--cor-azul-principal);
+            font-size: 26px;
+            font-weight: bold;
+        }
+
+        /* =====================================================
+           AJUSTES DE VOLUNTARIADO E MODO ESCURO
+           ===================================================== */
+
+        .niveis-voluntariado {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+            gap: var(--espaco-2);
+            margin-top: var(--espaco-4);
+            text-align: left;
+        }
+
+        .nivel-voluntariado {
+            grid-column: span 3 !important;
+            display: block;
+            min-width: 0;
+            width: 100%;
+            padding: 18px;
+            box-sizing: border-box;
+            background: var(--gradiente-card);
+            border: 1px solid var(--cor-neutro-borda-clara);
+            border-radius: var(--raio-lg);
+            box-shadow: var(--sombra-suave);
+            transition: var(--transicao-padrao);
+        }
+
+        .nivel-voluntariado h3 {
+            margin: 0 0 4px;
+            line-height: 1.25;
+            word-break: normal;
+            overflow-wrap: anywhere;
+        }
+
+        .nivel-voluntariado p {
+            margin: 0 0 8px;
+            color: var(--cor-texto-secundario);
+            font-size: var(--texto-xs);
+            line-height: 1.45;
+        }
+
+        .nivel-icone {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 42px;
+            height: 42px;
+            flex: 0 0 42px;
+            border-radius: 50%;
+            background: rgba(255, 179, 199, 0.12);
+            color: var(--cor-destaque);
+            font-size: 20px;
+        }
+
+        .badge-nivel {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 28px;
+            padding: 4px 10px;
+            border-radius: var(--raio-pill);
+            font-size: 0.7rem;
+            font-weight: 800;
+            letter-spacing: 0.02em;
+        }
+
+        .badge-novo {
+            color: #0d47a1;
+            background: #d9edff;
+        }
+
+        .badge-ativo {
+            color: #2e5d31;
+            background: #e0f1e1;
+        }
+
+        .badge-destaque {
+            color: #7a2941;
+            background: #ffe0e8;
+        }
+
+        .badge-embaixador {
+            color: #6b4c00;
+            background: #fff1c7;
+        }
+
+        html[data-theme="dark"] .painel-participacao {
+            background: #17232e;
+            color: #f5f7fa;
+            border-color: #3f5364;
+        }
+
+        html[data-theme="dark"] .painel-cabecalho h3,
+        html[data-theme="dark"] .linha-voto strong {
+            color: #f5f7fa;
+        }
+
+        html[data-theme="dark"] .painel-cabecalho > span,
+        html[data-theme="dark"] .detalhes-campanhas,
+        html[data-theme="dark"] .detalhes-campanhas p,
+        html[data-theme="dark"] .proposta-status {
+            color: #d7e0e8;
+        }
+
+        html[data-theme="dark"] .proposta-item {
+            background: #19311f;
+            border-color: #3f7446;
+        }
+
+        html[data-theme="dark"] .proposta-item p:not(.proposta-status) {
+            color: #f5f7fa;
+        }
+
+        @media (max-width: 899px) {
+
+            .niveis-voluntariado {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+
+        }
+
+        @media (max-width: 699px) {
+
+            .niveis-voluntariado {
+                grid-template-columns: 1fr;
+            }
+
+            .nivel-voluntariado {
+                width: 100%;
+            }
+
+        }
+
+
+        html[data-theme="dark"] .barra-grafico,
+        html[data-theme="dark"] .barra-progresso {
+            background: #344451;
+        }
+
+        html[data-theme="dark"] .proposta-item {
+            background: #19311f;
+            border-color: #3f7446;
+        }
+
+        html[data-theme="dark"] .botao-detalhes {
+            background: #1e2933;
+        }
+
+        html[data-theme="dark"] .opcao-votacao {
+            background: #1e2933;
+        }
+
+        html[data-theme="dark"] .opcao-votacao.voto-selecionado {
+            background: #19311f;
+        }
+
+        html[data-theme="dark"] .campo-campanha input,
+        html[data-theme="dark"] .campo-campanha textarea {
+            background: #1e2933;
+            color: var(--cor-texto);
+            border-color: #64748b;
+        }
+
+        html[data-theme="dark"] .modal-campanha {
+            background: var(--cor-fundo-suave);
+            color: var(--cor-texto);
+        }
+
+        @media (max-width: 899px) {
+
+            .campanha-card {
+                grid-column: span 6;
+            }
+
+            .opcao-votacao {
+                grid-column: span 6;
+            }
+
+        }
+
+        @media (max-width: 699px) {
+
+            .campanha-card,
+            .opcao-votacao {
+                grid-column: 1 / -1;
+            }
+
+            .painel-participacao {
+                padding: var(--espaco-3);
+            }
+
+            .painel-cabecalho {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .form-campanha-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .campo-campanha,
+            .campo-campanha-largo {
+                grid-column: 1 / -1;
+            }
+
+        }
+
+    </style>
+
 </head>
 
 <body>
@@ -28,7 +650,6 @@
             <p>
                 Pingo de Esperança
             </p>
-
 
             <button
                 type="button"
@@ -43,13 +664,24 @@
 
             </button>
 
+            <button
+                type="button"
+                class="botao-tema"
+                id="botao-tema"
+                aria-label="Ativar modo escuro"
+                aria-pressed="false"
+                title="Ativar modo escuro">
+
+                🌙
+
+            </button>
+
         </div>
 
 
         <nav
             id="menu-principal"
             class="menu-principal">
-
 
             <a href="index.html">
 
@@ -91,7 +723,6 @@
                 <div
                     id="submenu-projetos"
                     class="submenu">
-
 
                     <a href="projetos.html">
 
@@ -136,7 +767,6 @@
                         </span>
 
                     </a>
-
 
                     <a href="#campanhas">
 
@@ -197,11 +827,6 @@
 
     <main>
 
-
-        <!-- =====================================================
-             INTRODUÇÃO
-             ===================================================== -->
-
         <section class="introducao-projetos">
 
             <span class="simbolo-projetos">
@@ -219,10 +844,6 @@
 
         </section>
 
-
-        <!-- =====================================================
-             PROJETOS SOCIAIS
-             ===================================================== -->
 
         <section
             class="projetos"
@@ -273,10 +894,6 @@
         </section>
 
 
-        <!-- =====================================================
-             VOLUNTARIADO
-             ===================================================== -->
-
         <section
             class="voluntariado"
             id="voluntariado">
@@ -309,34 +926,31 @@
                     Faça seu cadastro.
                 </li>
 
-                <li>
-                    Participe das ações e conquiste níveis e badges.
-                </li>
-
-                <li>
-                    Desbloqueie medalhas e benefícios conforme sua participação.
-                </li>
-
             </ol>
 
 
             <div class="niveis-voluntariado">
 
+                <article class="nivel-voluntariado">
 
-                <article class="nivel-voluntario">
+                    <div>
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                        <span
+                            class="nivel-icone"
+                            aria-hidden="true">
+                            ♡
+                        </span>
+
+                    </div>
 
                     <div>
 
                         <h3>
-                            Novo voluntário
+                            Nível 1 — Novo voluntário
                         </h3>
 
                         <p>
-                            0 a 2 ações
+                            Primeiros passos na causa.
                         </p>
 
                         <span class="badge-nivel badge-novo">
@@ -348,20 +962,26 @@
                 </article>
 
 
-                <article class="nivel-voluntario">
+                <article class="nivel-voluntariado">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span
+                            class="nivel-icone"
+                            aria-hidden="true">
+                            ✚
+                        </span>
+
+                    </div>
 
                     <div>
 
                         <h3>
-                            Voluntário ativo
+                            Nível 2 — Voluntário ativo
                         </h3>
 
                         <p>
-                            3 a 5 ações
+                            Participação frequente.
                         </p>
 
                         <span class="badge-nivel badge-ativo">
@@ -373,20 +993,26 @@
                 </article>
 
 
-                <article class="nivel-voluntario">
+                <article class="nivel-voluntariado">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span
+                            class="nivel-icone"
+                            aria-hidden="true">
+                            ♥
+                        </span>
+
+                    </div>
 
                     <div>
 
                         <h3>
-                            Voluntário destaque
+                            Nível 3 — Voluntário destaque
                         </h3>
 
                         <p>
-                            6 a 9 ações
+                            Apoio contínuo às ações.
                         </p>
 
                         <span class="badge-nivel badge-destaque">
@@ -398,20 +1024,26 @@
                 </article>
 
 
-                <article class="nivel-voluntario">
+                <article class="nivel-voluntariado">
 
-                    <span class="nivel-icone">
-                        ✦
-                    </span>
+                    <div>
+
+                        <span
+                            class="nivel-icone"
+                            aria-hidden="true">
+                            ★
+                        </span>
+
+                    </div>
 
                     <div>
 
                         <h3>
-                            Embaixador da causa
+                            Nível 4 — Embaixador
                         </h3>
 
                         <p>
-                            10 ou mais ações
+                            Representa a causa.
                         </p>
 
                         <span class="badge-nivel badge-embaixador">
@@ -422,10 +1054,10 @@
 
                 </article>
 
-
             </div>
 
         </section>
+
 
 
         <!-- =====================================================
@@ -436,7 +1068,9 @@
             class="campanhas-atividades"
             id="campanhas">
 
-            <span class="icone-secao">
+            <span
+                class="icone-secao"
+                aria-hidden="true">
                 ✦
             </span>
 
@@ -452,11 +1086,7 @@
 
             <div class="lista-campanhas">
 
-
-                <!-- CAMPANHA 1 -->
-
                 <article class="campanha-card">
-
 
                     <div class="campanha-cabecalho">
 
@@ -471,7 +1101,6 @@
                             </span>
 
                         </div>
-
 
                         <span
                             class="campanha-icone"
@@ -491,7 +1120,10 @@
                     <div class="campanha-meta">
 
                         <span>
-                            Meta: <strong>100 cestas</strong>
+                            Meta:
+                            <strong>
+                                100 cestas
+                            </strong>
                         </span>
 
                         <strong>
@@ -501,11 +1133,15 @@
                     </div>
 
 
-                    <div class="barra-progresso">
+                    <div
+                        class="barra-progresso"
+                        role="progressbar"
+                        aria-label="Progresso da campanha Cesta Solidária"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="67">
 
-                        <span
-                            style="width: 67%;">
-                        </span>
+                        <span style="width: 67%;"></span>
 
                     </div>
 
@@ -517,10 +1153,7 @@
                 </article>
 
 
-                <!-- CAMPANHA 2 -->
-
                 <article class="campanha-card">
-
 
                     <div class="campanha-cabecalho">
 
@@ -535,7 +1168,6 @@
                             </span>
 
                         </div>
-
 
                         <span
                             class="campanha-icone"
@@ -555,7 +1187,10 @@
                     <div class="campanha-meta">
 
                         <span>
-                            Meta: <strong>80 kg</strong>
+                            Meta:
+                            <strong>
+                                80 kg
+                            </strong>
                         </span>
 
                         <strong>
@@ -565,11 +1200,15 @@
                     </div>
 
 
-                    <div class="barra-progresso">
+                    <div
+                        class="barra-progresso"
+                        role="progressbar"
+                        aria-label="Progresso da campanha Apoio Animal"
+                        aria-valuemin="0"
+                        aria-valuemax="100"
+                        aria-valuenow="68">
 
-                        <span
-                            style="width: 68%;">
-                        </span>
+                        <span style="width: 68%;"></span>
 
                     </div>
 
@@ -580,15 +1219,12 @@
 
                 </article>
 
-
             </div>
 
 
-            <!-- =================================================
-                 VOTAÇÃO
-                 ================================================= -->
-
-            <div class="votacao-campanha">
+            <div
+                class="votacao-campanha"
+                id="votacao">
 
                 <h3>
                     Qual deve ser nossa próxima campanha?
@@ -605,16 +1241,14 @@
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="inverno"
+                        data-voto="inverno"
                         aria-pressed="false">
-
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             ❄
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -628,13 +1262,10 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="inverno">
-
+                            id="votos-inverno">
                             31 votos
-
                         </span>
 
                     </button>
@@ -643,16 +1274,14 @@
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="cesta"
+                        data-voto="cesta"
                         aria-pressed="false">
-
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             ♥
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -666,13 +1295,10 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="cesta">
-
-                            58 votos
-
+                            id="votos-cesta">
+                            59 votos
                         </span>
 
                     </button>
@@ -681,16 +1307,14 @@
                     <button
                         type="button"
                         class="opcao-votacao"
-                        data-campanha="animal"
+                        data-voto="animal"
                         aria-pressed="false">
-
 
                         <span
                             class="icone-voto"
                             aria-hidden="true">
                             🐾
                         </span>
-
 
                         <span class="texto-voto">
 
@@ -704,52 +1328,207 @@
 
                         </span>
 
-
                         <span
                             class="contador-votos"
-                            data-campanha="animal">
-
+                            id="votos-animal">
                             42 votos
-
                         </span>
 
                     </button>
-
 
                 </div>
 
 
                 <p
                     class="mensagem-votacao"
+                    id="mensagem-votacao"
                     aria-live="polite">
                 </p>
 
             </div>
 
 
-            <!-- =================================================
-                 INICIAR CAMPANHA
-                 ================================================= -->
+            <div class="painel-participacao">
 
-            <div class="acao-campanha">
+                <div class="painel-cabecalho">
+
+                    <h3>
+                        Participação nas campanhas
+                    </h3>
+
+                    <span>
+                        Comparativo de votos
+                    </span>
+
+                </div>
+
+
+                <div class="grafico-votos">
+
+                    <div class="barra-voto-item">
+
+                        <div class="linha-voto">
+
+                            <span aria-hidden="true">
+                                ❄
+                            </span>
+
+                            <strong>
+                                Inverno Solidário
+                            </strong>
+
+                            <b id="grafico-inverno">
+                                31 votos
+                            </b>
+
+                        </div>
+
+                        <div
+                            class="barra-grafico"
+                            aria-hidden="true">
+
+                            <span
+                                id="barra-inverno"
+                                style="width: 53%;">
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="barra-voto-item">
+
+                        <div class="linha-voto">
+
+                            <span aria-hidden="true">
+                                ♥
+                            </span>
+
+                            <strong>
+                                Cesta Solidária
+                            </strong>
+
+                            <b id="grafico-cesta">
+                                59 votos
+                            </b>
+
+                        </div>
+
+                        <div
+                            class="barra-grafico"
+                            aria-hidden="true">
+
+                            <span
+                                id="barra-cesta"
+                                style="width: 100%;">
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="barra-voto-item">
+
+                        <div class="linha-voto">
+
+                            <span aria-hidden="true">
+                                🐾
+                            </span>
+
+                            <strong>
+                                Apoio Animal
+                            </strong>
+
+                            <b id="grafico-animal">
+                                42 votos
+                            </b>
+
+                        </div>
+
+                        <div
+                            class="barra-grafico"
+                            aria-hidden="true">
+
+                            <span
+                                id="barra-animal"
+                                style="width: 71%;">
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="lista-propostas"
+                    class="lista-propostas">
+                </div>
+
 
                 <button
                     type="button"
-                    class="botao-campanha"
+                    class="botao-detalhes"
+                    id="botao-detalhes"
+                    aria-expanded="false"
+                    aria-controls="detalhes-campanhas">
+
+                    Mostrar detalhes ↓
+
+                </button>
+
+
+                <div
+                    id="detalhes-campanhas"
+                    class="detalhes-campanhas"
+                    hidden>
+
+                    <p>
+                        O gráfico apresenta a distribuição atual dos votos
+                        registrados nas campanhas disponíveis para votação.
+                    </p>
+
+                    <p>
+                        Os números são atualizados automaticamente quando
+                        uma nova votação é registrada.
+                    </p>
+
+                    <p>
+                        As propostas enviadas pelos usuários são armazenadas
+                        como pendentes até a análise da equipe responsável.
+                    </p>
+
+                    <p id="ultima-proposta"></p>
+
+                    <p class="ultima-atualizacao">
+
+                        Última atualização:
+
+                        <strong id="ultima-atualizacao">
+                        </strong>
+
+                    </p>
+
+                </div>
+
+
+                <button
+                    type="button"
+                    class="botao-iniciar-campanha"
                     id="botao-iniciar-campanha">
 
-                    ＋ Iniciar uma campanha
+                    + Iniciar uma campanha
 
                 </button>
 
             </div>
 
+
         </section>
 
-
-        <!-- =====================================================
-             DOAÇÕES
-             ===================================================== -->
 
         <section
             class="doacoes"
@@ -781,10 +1560,6 @@
         </section>
 
 
-        <!-- =====================================================
-             CHAMADA FINAL
-             ===================================================== -->
-
         <section class="chamada-projetos">
 
             <span class="icone-chamada">
@@ -813,86 +1588,83 @@
     </main>
 
 
-    <!-- =========================================================
-         MODAL - NOVA CAMPANHA
-         ========================================================= -->
+    <a
+        href="#fim-pagina"
+        class="botao-topo"
+        aria-label="Ir para o final da página"
+        title="Ir para o final da página">
+
+        ↓
+
+    </a>
+
+
 
     <dialog
-        id="modal-campanha"
-        class="modal-confirmacao"
-        aria-labelledby="titulo-modal-campanha">
-
+        id="modal-iniciar-campanha"
+        class="modal-campanha"
+        aria-labelledby="titulo-iniciar-campanha">
 
         <div class="modal-conteudo">
-
 
             <span
                 class="modal-icone"
                 aria-hidden="true">
-                ＋
+                +
             </span>
 
-
-            <h2 id="titulo-modal-campanha">
+            <h2 id="titulo-iniciar-campanha">
                 Iniciar uma campanha
             </h2>
 
-
             <p>
-                Preencha os dados básicos para registrar uma nova campanha.
+                Preencha os dados da nova campanha.
             </p>
 
-
             <form
-                id="form-campanha">
+                id="form-iniciar-campanha">
+
+                <div class="campo-campanha">
+
+                    <label for="nova-campanha-nome">
+                        Nome da campanha
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nova-campanha-nome"
+                        required>
+
+                </div>
+
+
+                <div class="campo-campanha">
+
+                    <label for="nova-campanha-objetivo">
+                        Objetivo
+                    </label>
+
+                    <textarea
+                        id="nova-campanha-objetivo"
+                        rows="4"
+                        required>
+                    </textarea>
+
+                </div>
 
 
                 <div class="form-campanha-grid">
 
-
-                    <div class="campo-campanha campo-campanha-largo">
-
-                        <label for="nome-campanha">
-                            Nome da campanha
-                        </label>
-
-                        <input
-                            type="text"
-                            id="nome-campanha"
-                            name="nome-campanha"
-                            placeholder="Ex.: Inverno Solidário"
-                            required>
-
-                    </div>
-
-
-                    <div class="campo-campanha campo-campanha-largo">
-
-                        <label for="objetivo-campanha">
-                            Objetivo
-                        </label>
-
-                        <input
-                            type="text"
-                            id="objetivo-campanha"
-                            name="objetivo-campanha"
-                            placeholder="Ex.: Arrecadar roupas e cobertores"
-                            required>
-
-                    </div>
-
-
                     <div class="campo-campanha">
 
-                        <label for="meta-campanha">
+                        <label for="nova-campanha-meta">
                             Meta
                         </label>
 
                         <input
                             type="text"
-                            id="meta-campanha"
-                            name="meta-campanha"
-                            placeholder="Ex.: 100"
+                            id="nova-campanha-meta"
+                            placeholder="Ex.: 100 cestas"
                             required>
 
                     </div>
@@ -900,29 +1672,26 @@
 
                     <div class="campo-campanha">
 
-                        <label for="data-inicio-campanha">
+                        <label for="nova-campanha-data">
                             Data de início
                         </label>
 
                         <input
                             type="date"
-                            id="data-inicio-campanha"
-                            name="data-inicio-campanha"
+                            id="nova-campanha-data"
                             required>
 
                     </div>
-
 
                 </div>
 
 
                 <div class="modal-acoes">
 
-
                     <button
                         type="button"
                         class="botao-modal cancelar"
-                        id="cancelar-campanha">
+                        id="fechar-iniciar-campanha">
 
                         Voltar
 
@@ -933,7 +1702,7 @@
                         type="submit"
                         class="botao-modal confirmar">
 
-                        Iniciar campanha
+                        Criar campanha
 
                     </button>
 
@@ -946,26 +1715,7 @@
     </dialog>
 
 
-    <!-- =========================================================
-         BOTÃO TOPO
-         ========================================================= -->
-
-    <a
-        href="#topo"
-        class="botao-topo"
-        aria-label="Voltar ao cabeçalho"
-        title="Voltar ao cabeçalho">
-
-        ↑
-
-    </a>
-
-
-    <!-- =========================================================
-         RODAPÉ
-         ========================================================= -->
-
-    <footer>
+    <footer id="fim-pagina">
 
         <p>
             &copy; 2026 Pingo de Esperança.
@@ -975,16 +1725,7 @@
     </footer>
 
 
-    <!-- =========================================================
-         JAVASCRIPT
-         ========================================================= -->
-
     <script>
-
-
-        /* =====================================================
-           MENU PRINCIPAL
-           ===================================================== */
 
         const botaoMenu =
             document.querySelector(
@@ -1170,99 +1911,427 @@
             }
         );
 
+    </script>
+
+
+    <script>
 
         /* =====================================================
-           VOTAÇÃO
+           BOTÃO DE ROLAGEM
            ===================================================== */
 
-        const botoesVotacao =
+        const botaoTopo =
+            document.querySelector(
+                ".botao-topo"
+            );
+
+
+        function atualizarBotaoTopo() {
+
+            if (!botaoTopo) {
+                return;
+            }
+
+
+            const estaNoTopo =
+                window.scrollY <= 120;
+
+
+            if (estaNoTopo) {
+
+                botaoTopo.textContent =
+                    "↓";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#fim-pagina"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Ir para o final da página"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Ir para o final da página"
+                );
+
+            } else {
+
+                botaoTopo.textContent =
+                    "↑";
+
+                botaoTopo.setAttribute(
+                    "href",
+                    "#topo"
+                );
+
+                botaoTopo.setAttribute(
+                    "aria-label",
+                    "Voltar ao cabeçalho"
+                );
+
+                botaoTopo.setAttribute(
+                    "title",
+                    "Voltar ao cabeçalho"
+                );
+
+            }
+
+        }
+
+
+        if (botaoTopo) {
+
+            botaoTopo.addEventListener(
+                "click",
+                function (event) {
+
+                    event.preventDefault();
+
+
+                    const estaNoTopo =
+                        window.scrollY <= 120;
+
+
+                    if (estaNoTopo) {
+
+                        const alturaMaxima =
+                            Math.max(
+                                document.body.scrollHeight,
+                                document.documentElement.scrollHeight
+                            ) -
+                            window.innerHeight;
+
+
+                        window.scrollTo({
+                            top: Math.max(
+                                alturaMaxima,
+                                0
+                            ),
+                            behavior: "smooth"
+                        });
+
+                    } else {
+
+                        window.scrollTo({
+                            top: 0,
+                            behavior: "smooth"
+                        });
+
+                    }
+
+                }
+            );
+
+
+            window.addEventListener(
+                "scroll",
+                atualizarBotaoTopo,
+                { passive: true }
+            );
+
+
+            atualizarBotaoTopo();
+
+        }
+
+    </script>
+
+
+    <script>
+
+        /* =====================================================
+           VOTAÇÃO E CAMPANHAS
+           ===================================================== */
+
+        const opcoesVotacao =
             document.querySelectorAll(
                 ".opcao-votacao"
             );
 
-
         const mensagemVotacao =
-            document.querySelector(
-                ".mensagem-votacao"
+            document.getElementById(
+                "mensagem-votacao"
             );
 
+        const chaveVotos =
+            "pingo-de-esperanca-votos";
 
-        const votos = {
+        const chaveVotoUsuario =
+            "pingo-de-esperanca-voto";
 
+        const chavePropostas =
+            "pingo-de-esperanca-propostas";
+
+
+        const votosPadrao = {
             inverno: 31,
-
-            cesta: 58,
-
+            cesta: 59,
             animal: 42
-
         };
 
 
-        botoesVotacao.forEach(
-            function (botao) {
+        function lerJson(
+            chave,
+            valorPadrao
+        ) {
 
-                botao.addEventListener(
+            try {
+
+                const salvo =
+                    localStorage.getItem(
+                        chave
+                    );
+
+                if (!salvo) {
+                    return valorPadrao;
+                }
+
+                const valor =
+                    JSON.parse(
+                        salvo
+                    );
+
+                return valor ?? valorPadrao;
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível ler os dados salvos.",
+                    erro
+                );
+
+                return valorPadrao;
+
+            }
+
+        }
+
+
+        function salvarJson(
+            chave,
+            valor
+        ) {
+
+            try {
+
+                localStorage.setItem(
+                    chave,
+                    JSON.stringify(valor)
+                );
+
+            } catch (erro) {
+
+                console.warn(
+                    "Não foi possível salvar os dados.",
+                    erro
+                );
+
+            }
+
+        }
+
+
+        let votos =
+            lerJson(
+                chaveVotos,
+                {
+                    ...votosPadrao
+                }
+            );
+
+
+        let votoUsuario =
+            localStorage.getItem(
+                chaveVotoUsuario
+            );
+
+
+        function atualizarGrafico() {
+
+            const maior =
+                Math.max(
+                    votos.inverno || 0,
+                    votos.cesta || 0,
+                    votos.animal || 0,
+                    1
+                );
+
+
+            const itens = [
+                {
+                    chave: "inverno",
+                    texto: "grafico-inverno",
+                    barra: "barra-inverno"
+                },
+                {
+                    chave: "cesta",
+                    texto: "grafico-cesta",
+                    barra: "barra-cesta"
+                },
+                {
+                    chave: "animal",
+                    texto: "grafico-animal",
+                    barra: "barra-animal"
+                }
+            ];
+
+
+            itens.forEach(
+                function (item) {
+
+                    const quantidade =
+                        Number(
+                            votos[item.chave] || 0
+                        );
+
+
+                    document.getElementById(
+                        item.texto
+                    ).textContent =
+                        quantidade +
+                        (
+                            quantidade === 1
+                                ? " voto"
+                                : " votos"
+                        );
+
+
+                    document.getElementById(
+                        item.barra
+                    ).style.width =
+                        (
+                            quantidade /
+                            maior *
+                            100
+                        ) +
+                        "%";
+
+                }
+            );
+
+        }
+
+
+        function atualizarOpcoesVotacao() {
+
+            opcoesVotacao.forEach(
+                function (opcao) {
+
+                    const selecionada =
+                        opcao.dataset.voto ===
+                        votoUsuario;
+
+
+                    opcao.classList.toggle(
+                        "voto-selecionado",
+                        selecionada
+                    );
+
+
+                    opcao.setAttribute(
+                        "aria-pressed",
+                        selecionada
+                            ? "true"
+                            : "false"
+                    );
+
+
+                    opcao.disabled =
+                        Boolean(
+                            votoUsuario
+                        );
+
+                }
+            );
+
+
+            if (
+                votoUsuario
+            ) {
+
+                mensagemVotacao.textContent =
+                    "Seu voto já foi registrado neste navegador.";
+
+            } else {
+
+                mensagemVotacao.textContent =
+                    "";
+
+            }
+
+        }
+
+
+        function atualizarTudo() {
+
+            atualizarOpcoesVotacao();
+
+            atualizarGrafico();
+
+        }
+
+
+        opcoesVotacao.forEach(
+            function (opcao) {
+
+                opcao.addEventListener(
                     "click",
                     function () {
 
-                        const campanha =
-                            botao.dataset.campanha;
+                        if (votoUsuario) {
+                            return;
+                        }
 
 
-                        votos[campanha]++;
+                        const escolha =
+                            opcao.dataset.voto;
 
 
-                        const contador =
-                            document.querySelector(
-                                '.contador-votos[data-campanha="' +
-                                campanha +
-                                '"]'
-                            );
+                        if (
+                            !Object.prototype.hasOwnProperty.call(
+                                votos,
+                                escolha
+                            )
+                        ) {
+
+                            return;
+
+                        }
 
 
-                        contador.textContent =
-                            votos[campanha] +
-                            " votos";
+                        votos[escolha] =
+                            Number(
+                                votos[escolha] || 0
+                            ) + 1;
 
 
-                        botoesVotacao.forEach(
-                            function (outroBotao) {
-
-                                outroBotao.disabled =
-                                    true;
+                        votoUsuario =
+                            escolha;
 
 
-                                outroBotao.classList.remove(
-                                    "voto-selecionado"
-                                );
-
-
-                                outroBotao.setAttribute(
-                                    "aria-pressed",
-                                    "false"
-                                );
-
-                            }
+                        salvarJson(
+                            chaveVotos,
+                            votos
                         );
 
 
-                        botao.disabled =
-                            true;
-
-
-                        botao.classList.add(
-                            "voto-selecionado"
+                        localStorage.setItem(
+                            chaveVotoUsuario,
+                            votoUsuario
                         );
 
 
-                        botao.setAttribute(
-                            "aria-pressed",
-                            "true"
+                        atualizarTudo();
+
+
+                        document.dispatchEvent(
+                            new CustomEvent(
+                                "pingo:voto-atualizado"
+                            )
                         );
-
-
-                        mensagemVotacao.textContent =
-                            "Seu voto foi registrado. Obrigado por participar!";
 
                     }
                 );
@@ -1271,13 +2340,231 @@
         );
 
 
+        atualizarTudo();
+
+
         /* =====================================================
-           MODAL DE NOVA CAMPANHA
+           PROPOSTAS
+           ===================================================== */
+
+        const listaPropostas =
+            document.getElementById(
+                "lista-propostas"
+            );
+
+
+        const ultimaProposta =
+            document.getElementById(
+                "ultima-proposta"
+            );
+
+
+        function obterPropostas() {
+
+            return lerJson(
+                chavePropostas,
+                []
+            );
+
+        }
+
+
+        function renderizarPropostas() {
+
+            const propostas =
+                obterPropostas();
+
+
+            listaPropostas.innerHTML =
+                "";
+
+
+            propostas.forEach(
+                function (proposta) {
+
+                    const item =
+                        document.createElement(
+                            "article"
+                        );
+
+
+                    item.className =
+                        "proposta-item";
+
+
+                    const titulo =
+                        document.createElement(
+                            "strong"
+                        );
+
+
+                    titulo.textContent =
+                        "✓ Proposta enviada para análise";
+
+
+                    const nome =
+                        document.createElement(
+                            "p"
+                        );
+
+
+                    nome.textContent =
+                        proposta.nome ||
+                        "Nova campanha";
+
+
+                    const status =
+                        document.createElement(
+                            "p"
+                        );
+
+
+                    status.className =
+                        "proposta-status";
+
+
+                    let textoStatus =
+                        "Status: aguardando análise da equipe responsável.";
+
+
+                    if (
+                        proposta.data
+                    ) {
+
+                        textoStatus +=
+                            " Enviada em "
+                            +
+                            new Date(
+                                proposta.data
+                            ).toLocaleString(
+                                "pt-BR"
+                            );
+
+                    }
+
+
+                    status.textContent =
+                        textoStatus;
+
+
+                    item.appendChild(
+                        titulo
+                    );
+
+                    item.appendChild(
+                        nome
+                    );
+
+                    item.appendChild(
+                        status
+                    );
+
+
+                    listaPropostas.appendChild(
+                        item
+                    );
+
+                }
+            );
+
+
+            if (
+                propostas.length
+            ) {
+
+                const ultima =
+                    propostas[
+                        propostas.length - 1
+                    ];
+
+
+                ultimaProposta.textContent =
+                    "Última proposta: "
+                    +
+                    (
+                        ultima.nome ||
+                        "Nova campanha"
+                    )
+                    +
+                    " — aguardando análise.";
+
+            } else {
+
+                ultimaProposta.textContent =
+                    "";
+
+            }
+
+        }
+
+
+        renderizarPropostas();
+
+
+        /* =====================================================
+           DETALHES
+           ===================================================== */
+
+        const botaoDetalhes =
+            document.getElementById(
+                "botao-detalhes"
+            );
+
+
+        const detalhesCampanhas =
+            document.getElementById(
+                "detalhes-campanhas"
+            );
+
+
+        botaoDetalhes.addEventListener(
+            "click",
+            function () {
+
+                const aberto =
+                    botaoDetalhes.getAttribute(
+                        "aria-expanded"
+                    ) === "true";
+
+
+                botaoDetalhes.setAttribute(
+                    "aria-expanded",
+                    String(!aberto)
+                );
+
+
+                detalhesCampanhas.hidden =
+                    aberto;
+
+
+                botaoDetalhes.textContent =
+                    aberto
+                        ? "Mostrar detalhes ↓"
+                        : "Ocultar detalhes ↑";
+
+            }
+        );
+
+
+        document.getElementById(
+            "ultima-atualizacao"
+        ).textContent =
+            new Date().toLocaleTimeString(
+                "pt-BR",
+                {
+                    hour: "2-digit",
+                    minute: "2-digit"
+                }
+            );
+
+
+        /* =====================================================
+           MODAL INICIAR CAMPANHA
            ===================================================== */
 
         const modalCampanha =
             document.getElementById(
-                "modal-campanha"
+                "modal-iniciar-campanha"
             );
 
 
@@ -1287,15 +2574,15 @@
             );
 
 
-        const botaoCancelarCampanha =
+        const fecharModalCampanha =
             document.getElementById(
-                "cancelar-campanha"
+                "fechar-iniciar-campanha"
             );
 
 
-        const formCampanha =
+        const formIniciarCampanha =
             document.getElementById(
-                "form-campanha"
+                "form-iniciar-campanha"
             );
 
 
@@ -1309,7 +2596,7 @@
         );
 
 
-        botaoCancelarCampanha.addEventListener(
+        fecharModalCampanha.addEventListener(
             "click",
             function () {
 
@@ -1319,42 +2606,49 @@
         );
 
 
-        formCampanha.addEventListener(
+        formIniciarCampanha.addEventListener(
             "submit",
             function (event) {
 
                 event.preventDefault();
 
 
-                const nome =
-                    document.getElementById(
-                        "nome-campanha"
-                    ).value.trim();
+                const proposta = {
 
+                    nome:
+                        document.getElementById(
+                            "nova-campanha-nome"
+                        ).value.trim(),
 
-                const objetivo =
-                    document.getElementById(
-                        "objetivo-campanha"
-                    ).value.trim();
+                    objetivo:
+                        document.getElementById(
+                            "nova-campanha-objetivo"
+                        ).value.trim(),
 
+                    meta:
+                        document.getElementById(
+                            "nova-campanha-meta"
+                        ).value.trim(),
 
-                const meta =
-                    document.getElementById(
-                        "meta-campanha"
-                    ).value.trim();
+                    dataInicio:
+                        document.getElementById(
+                            "nova-campanha-data"
+                        ).value,
 
+                    status:
+                        "aguardando análise",
 
-                const data =
-                    document.getElementById(
-                        "data-inicio-campanha"
-                    ).value;
+                    data:
+                        new Date().toISOString()
+
+                };
 
 
                 if (
-                    !nome ||
-                    !objetivo ||
-                    !meta ||
-                    !data
+                    !proposta.nome ||
+                    !proposta.objetivo ||
+                    !proposta.meta ||
+                    !proposta.dataInicio
                 ) {
 
                     return;
@@ -1362,93 +2656,32 @@
                 }
 
 
-                const listaCampanhas =
-                    document.querySelector(
-                        ".lista-campanhas"
-                    );
+                const propostas =
+                    obterPropostas();
 
 
-                const novaCampanha =
-                    document.createElement(
-                        "article"
-                    );
-
-
-                novaCampanha.className =
-                    "campanha-card";
-
-
-                const dataFormatada =
-                    data.split("-").reverse().join("/");
-
-
-                novaCampanha.innerHTML = `
-
-                    <div class="campanha-cabecalho">
-
-                        <div>
-
-                            <h3>
-                                ${nome}
-                            </h3>
-
-                            <span class="badge-status status-planejada">
-                                PLANEJADA
-                            </span>
-
-                        </div>
-
-
-                        <span
-                            class="campanha-icone"
-                            aria-hidden="true">
-                            ✦
-                        </span>
-
-                    </div>
-
-
-                    <p>
-                        ${objetivo}
-                    </p>
-
-
-                    <div class="campanha-meta">
-
-                        <span>
-                            Meta: <strong>${meta}</strong>
-                        </span>
-
-                        <strong>
-                            0%
-                        </strong>
-
-                    </div>
-
-
-                    <div class="barra-progresso">
-
-                        <span
-                            style="width: 0%;">
-                        </span>
-
-                    </div>
-
-
-                    <small>
-                        Início previsto: ${dataFormatada}
-                    </small>
-
-                `;
-
-
-                listaCampanhas.appendChild(
-                    novaCampanha
+                propostas.push(
+                    proposta
                 );
 
 
-                formCampanha.reset();
+                salvarJson(
+                    chavePropostas,
+                    propostas
+                );
 
+
+                renderizarPropostas();
+
+
+                document.dispatchEvent(
+                    new CustomEvent(
+                        "pingo:campanha-enviada"
+                    )
+                );
+
+
+                formIniciarCampanha.reset();
 
                 modalCampanha.close();
 
@@ -1456,18 +2689,32 @@
         );
 
 
-        modalCampanha.addEventListener(
-            "click",
-            function (event) {
+        /* =====================================================
+           ATUALIZAÇÃO ENTRE ABAS
+           ===================================================== */
 
-                if (
-                    event.target ===
-                    modalCampanha
-                ) {
+        window.addEventListener(
+            "storage",
+            function () {
 
-                    modalCampanha.close();
+                votos =
+                    lerJson(
+                        chaveVotos,
+                        {
+                            ...votosPadrao
+                        }
+                    );
 
-                }
+
+                votoUsuario =
+                    localStorage.getItem(
+                        chaveVotoUsuario
+                    );
+
+
+                atualizarTudo();
+
+                renderizarPropostas();
 
             }
         );
